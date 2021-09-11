@@ -1,0 +1,29 @@
+<ion-content>
+  
+  <ion-grid class="logo">
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-img src="\assets\icon\logo.svg"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="user-inputs">
+
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input  type="password"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="navigateToPage(['/home'])" expand="block">INICIAR SESION</ion-button>
+
+    <p class="pass-hover" (click)="navigateToPage(['/password'])">Recuperar contraseña</p>
+
+  </div>
+
+</ion-content>

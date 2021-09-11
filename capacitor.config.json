@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "registrApp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
