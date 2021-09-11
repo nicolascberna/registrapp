@@ -12,13 +12,14 @@
 
     <ion-item>
       <ion-label position="floating">Usuario</ion-label>
-      <ion-input></ion-input>
+      <ion-input type="email" required="true"></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input  type="password"></ion-input>
+      <ion-input  type="password" required="true"></ion-input>
     </ion-item>
+
 
     <ion-button (click)="navigateToPage(['/home'])" expand="block">INICIAR SESION</ion-button>
 

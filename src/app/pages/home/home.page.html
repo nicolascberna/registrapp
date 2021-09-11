@@ -1,15 +1,33 @@
-<ion-content [fullscreen]="true">
+<ion-app>
 
-  <ion-icon name="settings-outline"></ion-icon>
+  <ion-header translucent>
+    <ion-toolbar class="ion-text-end">
+      <ion-icon name="settings-outline"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
 
-  <ion-avatar>
-    <img src="\assets\img\profile.png">
-  </ion-avatar>
+  <ion-content [fullscreen]="true">
 
-  <h1>Nicolas Canete</h1>
-  <h2>Analista programador computacional</h2>
-  <ion-icon name="location-outline"></ion-icon>
-  <h3>SEDE VIÑA DEL MAR</h3>
+  <div class="avatar ion-text-center">
+  <img src="\assets\img\profile.png">
+  </div>
+
+  <ion-text class="ion-text-center">
+    <h3>Nicolas Canete</h3>
+    <h6>Analista programador computacional</h6>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-end" size="3">
+            <ion-icon name="location-outline"></ion-icon>
+        </ion-col>
+        <ion-col class="ion-text-start">
+            <h6>Sede Viña del Mar</h6>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+
+  </ion-text>
 
   <ion-grid>
     <ion-row>
@@ -25,3 +43,5 @@
   <ion-button expand="block">ESCANEAR CODIGO QR</ion-button>
   
 </ion-content>
+
+</ion-app>
