@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -8,7 +9,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class HomePage implements OnInit{
 
-  constructor(public alertController: AlertController) {}
+  constructor(public alertController: AlertController, private router: Router) {}
 
   ngOnInit() {
   }
@@ -17,9 +18,14 @@ export class HomePage implements OnInit{
   async salir() {
     const alert = await this.alertController.create({
       message: '¿Seguro deseas salir?',
-      buttons: ['Cancelar','Aceptar']
-    });
-
+      buttons: [{
+        text: 'Cancelar'
+      },{
+        text: 'Aceptar',
+        handler: () => {
+        this.router.navigate(['/login']);}
+    }]
+  });
     await alert.present();
   }
 }

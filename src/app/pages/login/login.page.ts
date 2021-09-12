@@ -8,12 +8,12 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  navigateToPage(page) {
+  ingresar(page) {
     this.router.navigate(page);
   }
 
