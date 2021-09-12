@@ -13,7 +13,6 @@ ion-button {
 
 .avatar{
   margin-top: 20px;
-  margin-bottom: 20px;
   img{
     height: 80px;
     height: 80px;
@@ -21,6 +20,19 @@ ion-button {
   }
 }
 
-.sede{
-  font-size: xx-small;
+.set{
+  margin-right: 15px;
 }
+
+.sede{
+  margin-top: 5px;
+  h6{
+    font-size: 80%;
+  }
+}
+
+.icon{
+  padding-bottom: 25px;
+  margin-left: 15px;
+}
+
