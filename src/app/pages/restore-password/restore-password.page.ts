@@ -8,13 +8,17 @@ import { Router } from '@angular/router';
 })
 export class RestorePasswordPage implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   navigateToPage() {
     this.router.navigate(['/login']);
+  }
+
+  back(page) {
+    this.router.navigate(page);
   }
 
 }
