@@ -1,46 +1,48 @@
 
+<ion-app>
+
+  <ion-header translucent>
+    <ion-toolbar class="ion-text-end">
+      <ion-icon (click)="salir()" class="set" name="exit-outline"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+
+
+
   <ion-content [fullscreen]="true">
 
     <div class="container">
-
-      <div class="ion-text-end">
-        <ion-icon size="large" name="settings-outline"></ion-icon>
-      </div>
-    
-      <div class="avatar ion-text-center">
-        <img src="\assets\img\profile.png">
-        </div>
-      
-        <ion-text class="ion-text-center">
-          <h3>Nicolas Canete</h3>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <h3><b> Nicolas Canete </b></h3>
           <h6>Analista programador computacional</h6>
-          <ion-grid>
-            <ion-row>
-              <ion-col class="ion-text-end" size="3">
-                  <ion-icon name="location-outline"></ion-icon>
-              </ion-col>
-              <ion-col class="ion-text-start">
-                  <h6>Sede Viña del Mar</h6>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-          
-      
-        </ion-text>
-      
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-      
-            </ion-col>
-            <ion-col>
-      
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      
-        <ion-button expand="block">ESCANEAR CODIGO QR</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="icon ion-text-end" size="3">
+            <ion-icon name="location-outline"></ion-icon>
+        </ion-col>
+        <ion-col class="sede ion-text-start">
+            <h6><b> Sede Viña del Mar </b></h6>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-    </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+    <ion-button expand="block">ESCANEAR CODIGO QR</ion-button>
   
-</ion-content>
+  </ion-content>
+
+</ion-app>
+
