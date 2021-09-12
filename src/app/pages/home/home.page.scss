@@ -14,6 +14,8 @@ ion-button {
   font-weight: bold;
   color: black;
   margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .avatar{
@@ -27,12 +29,14 @@ ion-button {
 
 .set{
   margin-right: 15px;
+  margin-top: 50px;
+  font-size: 24px;
 }
 
 .sede{
-  margin-top: 5px;
+  margin-top: 7px;
   h6{
-    font-size: 80%;
+    font-size: 70%;
   }
 }
 
@@ -41,3 +45,24 @@ ion-button {
   margin-left: 15px;
 }
 
+p {
+  margin-top: 35px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.pass-hover {
+  margin-top: 0px;
+  color: rgb(70, 152, 228);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.clases {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.text {
+  font-size: 10px;
+}
