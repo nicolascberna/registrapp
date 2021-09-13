@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import { HorarioPage } from '../horario/horario.page';
@@ -10,10 +10,22 @@ import { HorarioPage } from '../horario/horario.page';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit{
+  /* variable de tipo any que permite cualquiero tipo de dato */
+dato: any;
 
-  constructor(public alertController: AlertController, 
-              private router: Router, 
-              public modalController: ModalController) {}
+  constructor(public alertController: AlertController,
+              private router: Router,
+              public modalController: ModalController,
+              private activeroute: ActivatedRoute) {
+                this.activeroute.queryParams.subscribe(params => {
+                  /* validar si la navegacion tiene parametros */
+                  if (this.router.getCurrentNavigation().extras.state){
+                    /* si existen parametros los rescata en una variable */
+                    this.dato = this.router.getCurrentNavigation().extras.state.user;
+                    console.log(this.dato);
+                  }
+                });
+              }
 
   ngOnInit() {
   }

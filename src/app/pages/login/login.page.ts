@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,13 +8,25 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
+  /* tabla que guardara el usuario y contraseña */
+
+  user={
+    usuario:'',
+    pass:''
+  };
+
   constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   ingresar(page) {
-    this.router.navigate(page);
+    const navigationExtras: NavigationExtras={
+      state:{
+        user: this.user.usuario
+      }
+    };
+    this.router.navigate(page, navigationExtras);
   }
 
 }
