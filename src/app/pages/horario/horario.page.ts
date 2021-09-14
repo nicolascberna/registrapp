@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-horario',
@@ -8,13 +8,15 @@ import { Router } from '@angular/router';
 })
 export class HorarioPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(public modalController: ModalController) { }
 
   ngOnInit() {
   }
 
-  back(page) {
-    this.router.navigate(page);
+  dismiss() {
+    this.modalController.dismiss({
+      'dismissed': true
+    });
   }
 
 }
