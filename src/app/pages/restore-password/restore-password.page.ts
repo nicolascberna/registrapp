@@ -13,11 +13,7 @@ export class RestorePasswordPage implements OnInit {
   ngOnInit() {
   }
 
-  navigateToPage() {
-    this.router.navigate(['/login']);
-  }
-
-  back(page) {
+  navigate(page) {
     this.router.navigate(page);
   }
 

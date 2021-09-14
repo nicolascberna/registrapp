@@ -13,11 +13,7 @@ export class PasswordPage implements OnInit {
   ngOnInit() {
   }
 
-  enviar() {
-    this.router.navigate(['/restore-password']);
-  }
-
-  back(page) {
+  navigate(page) {
     this.router.navigate(page);
   }
 
