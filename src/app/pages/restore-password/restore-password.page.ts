@@ -19,7 +19,7 @@ export class RestorePasswordPage implements OnInit {
     const toast = await this.toastController.create({
       message: 'Contraseña reestablecida',
       position: 'bottom',
-      duration: 10000,
+      //duration: 10000,
       buttons: [{
           text: 'Aceptar',
           handler: () => {
