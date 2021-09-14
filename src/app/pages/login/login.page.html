@@ -12,12 +12,12 @@
 
     <ion-item>
       <ion-label position="floating">Usuario</ion-label>
-      <ion-input type="email" required="true" [(ngModel)]="user.usuario" minlength=3 maxlength=8></ion-input>
+      <ion-input type="email" required="true" [(ngModel)]="user.usuario" minlength=3 maxlength=15 clear-input='true'></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input  type="password" [(ngModel)]="user.pass" required="true"></ion-input>
+      <ion-input  type="password" [(ngModel)]="user.pass" required="true" clear-input='true'></ion-input>
     </ion-item>
 
 
