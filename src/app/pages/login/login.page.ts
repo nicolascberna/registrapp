@@ -21,18 +21,13 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-/*   ingresar(page) {
-    const navigationExtras: NavigationExtras={
-      state:{
-        user: this.user.usuario
-      }
-    };
-    this.router.navigate(page, navigationExtras);
-  } */
+  recovery(page){
+    this.router.navigate(page);
+  }
 
   /* validado en bruto usuarios 'malcom', 'nicolas', contraseña '123', donde se muestra un */
   async ingresar(page){
-    if(this.user.usuario == 'malcom' || this.user.usuario == 'nicolas' && this.user.pass == '123')
+    if(this.user.usuario == 'malcom' && this.user.pass == '123' || this.user.usuario == 'nicolas' && this.user.pass == '123')
     {  const navigationExtras: NavigationExtras={
         state:{
           user: this.user.usuario
