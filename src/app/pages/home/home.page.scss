@@ -12,7 +12,6 @@ ion-icon {
 ion-button {
   font-size: 12px;
   font-weight: bold;
-  color: black;
   margin-top: 30px;
   margin-left: 20px;
   margin-right: 20px;
@@ -29,8 +28,9 @@ ion-button {
 
 .set{
   margin-right: 15px;
-  margin-top: 50px;
+  margin-bottom: 15px;
   font-size: 24px;
+  color: white;
 }
 
 .sede{
@@ -53,7 +53,7 @@ p {
 
 .pass-hover {
   margin-top: 0px;
-  color: rgb(70, 152, 228);
+  color: #00162b;
   text-decoration: underline;
   cursor: pointer;
 }
