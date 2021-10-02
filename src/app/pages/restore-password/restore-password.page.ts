@@ -8,8 +8,8 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./restore-password.page.scss'],
 })
 export class RestorePasswordPage implements OnInit {
-pass1: any;
-pass2: any;
+pass1: number;
+pass2: number;
 
   constructor(private router: Router, public toastController: ToastController) { }
 
@@ -26,7 +26,7 @@ pass2: any;
         duration: 2000
       });
       await toast.present();
-    } else if (this.pass1 != null && this.pass2 != null && this.pass1 != this.pass2){
+    } else if (this.pass1 != this.pass2){
       const toast = await this.toastController.create({
         message: 'Las contraseñas deben ser iguales.',
         position: 'bottom',
