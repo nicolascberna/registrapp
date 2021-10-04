@@ -8,6 +8,8 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./restore-password.page.scss'],
 })
 export class RestorePasswordPage implements OnInit {
+pass1: number;
+pass2: number;
 
   constructor(private router: Router, public toastController: ToastController) { }
 
@@ -16,23 +18,28 @@ export class RestorePasswordPage implements OnInit {
 
   /* este metodo llamara al metodo mostrar por medio de una alert */
   async crearPass() {
+    if(this.pass1 != null && this.pass2 != null && this.pass1 == this.pass2){
+      this.router.navigate(['/login']);
+      const toast = await this.toastController.create({
+        message: '¡Contraseña reestablecida!',
+        position: 'bottom',
+        duration: 2000
+      });
+      await toast.present();
+    } else if (this.pass1 != this.pass2){
+      const toast = await this.toastController.create({
+        message: 'Las contraseñas deben ser iguales.',
+        position: 'bottom',
+        duration: 2000
+      });
+      await toast.present();
+    } else if(this.pass1 == null && this.pass2 == null){
     const toast = await this.toastController.create({
-      message: 'Contraseña reestablecida',
+      message: 'Debe rellenar los campos.',
       position: 'bottom',
-      //duration: 10000,
-      buttons: [{
-          text: 'Aceptar',
-          handler: () => {
-            this.router.navigate(['/login']);
-          }
-        }
-      ]
+      duration: 2000
     });
     await toast.present();
   }
-
-  navigate(page) {
-    this.router.navigate(page);
-  }
-
+}
 }

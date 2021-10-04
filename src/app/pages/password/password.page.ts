@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-password',
@@ -8,22 +8,33 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./password.page.scss'],
 })
 export class PasswordPage implements OnInit {
+correo: any;
 
-  constructor(private router: Router, public alertController: AlertController) { }
+  constructor(private router: Router, public alertController: AlertController, public toastController: ToastController) { }
 
   ngOnInit() {
   }
 
   async correoEnviado() {
-    const alert = await this.alertController.create({
-      message: 'Correo enviado satisfactoriamente',
-      buttons: [{
-        text: 'Aceptar',
-        handler: () => {
-        this.router.navigate(['/restore-password']);}
-    }]
-  });
-    await alert.present();
+    if(this.correo == null)
+    {
+      const toast = await this.toastController.create({
+        message: 'Debe ingresar un correo valido.',
+        position: 'bottom',
+        duration: 2000
+      });
+      await toast.present();
+    } else {
+      const alert = await this.alertController.create({
+        message: 'Correo enviado satisfactoriamente',
+        buttons: [{
+          text: 'Aceptar',
+          handler: () => {
+          this.router.navigate(['/restore-password']);}
+      }]
+    });
+      await alert.present();
+    }
   }
 
   navigate(page) {

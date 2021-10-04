@@ -1,8 +1,10 @@
-<ion-app [fullscreen]="true">
+<ion-app>
 
-    <ion-toolbar class="ion-text-end">
-      <ion-icon (click)="salir()" class="set" name="exit-outline"></ion-icon>
-    </ion-toolbar>
+    <ion-header>
+      <ion-toolbar class="ion-text-end">
+          <ion-icon (click)="salir()" class="set" name="exit-outline"></ion-icon>
+      </ion-toolbar>
+    </ion-header>
 
   <ion-content  scroll-y="false">
 
@@ -14,16 +16,17 @@
       <ion-row>
         <ion-col class="ion-text-center">
           <h3 #title ><b> {{dato}} </b></h3>
-          <h6>Analista programador computacional</h6>
+          <h6><b>Analista programador computacional</b></h6>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col class="icon ion-text-end" size="3">
-            <ion-icon name="location-outline"></ion-icon>
+        <ion-col class="icon ion-text-center"> 
+            <ion-icon name="location"></ion-icon>
+            <h4>SEDE VIÑA DEL MAR</h4>
         </ion-col>
-        <ion-col class="sede ion-text-start">
+        <!-- <ion-col class="sede ion-text-start">
             <h6>SEDE VIÑA DEL MAR</h6>
-        </ion-col>
+        </ion-col> -->
       </ion-row>
     </ion-grid>
 
