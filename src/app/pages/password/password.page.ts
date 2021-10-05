@@ -36,9 +36,4 @@ correo: any;
       await alert.present();
     }
   }
-
-  navigate(page) {
-    this.router.navigate(page);
-  }
-
 }
