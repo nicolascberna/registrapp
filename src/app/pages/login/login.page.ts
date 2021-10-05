@@ -1,25 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-import { AlertController, ToastController } from '@ionic/angular';
+import { AlertController, ToastController, AnimationController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class LoginPage implements AfterViewInit {
+  @ViewChild('logo',{read: ElementRef, static:true}) logo: ElementRef;
 
   /* tabla que guardara el usuario y contraseña */
-
   user={
     usuario:'',
     pass:''
   };
 
-  constructor(private router: Router, public alertController: AlertController, public toastController: ToastController) { }
-
-  ngOnInit() {
+  constructor(private router: Router,
+              public alertController: AlertController,
+              public toastController: ToastController,
+              private animationCtrl: AnimationController) { }
+  ngAfterViewInit() {
+    const animation = this.animationCtrl
+      .create()
+      .addElement(this.logo.nativeElement)
+      .duration(2000)
+      .iterations(Infinity)
+      .keyframes([
+        { offset: 0, transform: 'scale(1)', opacity: '1' },
+        { offset: 0.5, transform: 'scale(1.1)', opacity: '0.8' },
+        { offset: 1, transform: 'scale(1)', opacity: '1' }
+      ]);
+    animation.play();
   }
+
 
   recovery(page){
     this.router.navigate(page);
