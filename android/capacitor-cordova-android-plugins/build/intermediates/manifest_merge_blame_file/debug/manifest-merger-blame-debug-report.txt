@@ -1,0 +1,36 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:amazon="http://schemas.amazon.com/apk/res/android"
+3    xmlns:android="http://schemas.android.com/apk/res/android"
+4    package="capacitor.android.plugins" >
+5
+6    <uses-sdk
+7        android:minSdkVersion="21"
+7-->C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+8        android:targetSdkVersion="30" />
+8-->C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+9
+10    <uses-permission
+10-->C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:8:1-85
+11        android:name="android.permission.CAMERA"
+11-->C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:8:18-58
+12        android:required="false" />
+12-->C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:8:59-83
+13
+14    <uses-feature
+14-->C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:9:1-80
+15        android:name="android.hardware.camera"
+15-->C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:9:15-53
+16        android:required="false" />
+16-->C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:9:54-78
+17    <uses-feature
+17-->C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:10:1-86
+18        android:name="android.hardware.camera.front"
+18-->C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:10:15-59
+19        android:required="false" />
+19-->C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:10:60-84
+20
+21    <application>
+21-->C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:5:1-7:15
+22    </application>
+23
+24</manifest>
