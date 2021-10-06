@@ -27,13 +27,12 @@ export class LoginPage implements AfterViewInit {
       .duration(2000)
       .iterations(Infinity)
       .keyframes([
-        { offset: 0, transform: 'scale(1)', opacity: '1' },
-        { offset: 0.5, transform: 'scale(1.1)', opacity: '0.8' },
-        { offset: 1, transform: 'scale(1)', opacity: '1' }
+        { offset: 0.7, transform: 'scale(1)', opacity: '1' },
+        { offset: 0.8, transform: 'scale(1.1)', opacity: '0.8' },
+        { offset: 0.9, transform: 'scale(1)', opacity: '1' }
       ]);
     animation.play();
   }
-
 
   recovery(page){
     this.router.navigate(page);
