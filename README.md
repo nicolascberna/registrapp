@@ -1,5 +1,7 @@
 # registrapp
 
+npm install --save-dev @angular-devkit/build-angular
+
 Para realizar pruebas del sistema hibrido corriendo en lab se debe usa las credenciales "malcom" o "nicolas" para usuario y para contraseña por defecto es 123.
 
 Mockup:
