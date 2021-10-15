@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content class="ion-padding">
   
   <ion-grid class="logo">
     <ion-row class="ion-align-items-center">
@@ -8,23 +8,40 @@
     </ion-row>
   </ion-grid>
 
-  <div class="user-inputs">
+  <div>
+    <form #formulario="ngForm" (ngSubmit)="submit()">
 
-    <ion-item>
-      <ion-label position="floating">Usuario</ion-label>
-      <ion-input required [(ngModel)]="user.usuario" minlength=3 maxlength=15 clear-input='true'></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input required [(ngModel)]="user.pass" type="password" clear-input='true'></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input  required 
+                    name="user"
+                    [(ngModel)]="user.usuario" 
+                    minlength=3 
+                    maxlength=15 
+                    clear-input='true'>
+        </ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input  required 
+                    name="pass"
+                    [(ngModel)]="user.pass" 
+                    type="password" 
+                    clear-input='true'>
+        </ion-input>
+      </ion-item>
 
 
-    <ion-button (click)="ingresar(['/home'])" expand="block">INICIAR SESION</ion-button>
-
+      <ion-button (click)="ingresar(['/home'])" 
+                  type="submit"
+                  expand="block"
+                  [disabled]="formulario.invalid">
+          INICIAR SESION
+      </ion-button>
+    </form>
     <p class="pass-hover" (click)="recovery(['/password'])">Recuperar contraseña</p>
-
   </div>
+  
 
 </ion-content>
