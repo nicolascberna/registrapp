@@ -10,7 +10,7 @@ import { AlertController, ToastController, AnimationController } from '@ionic/an
 export class LoginPage implements AfterViewInit {
   @ViewChild('logo',{read: ElementRef, static:true}) logo: ElementRef;
 
-  /* tabla que guardara el usuario y contraseña */
+  /* objeto que guardara el usuario y contraseña */
   user={
     usuario:'',
     pass:''
@@ -20,6 +20,7 @@ export class LoginPage implements AfterViewInit {
               public alertController: AlertController,
               public toastController: ToastController,
               private animationCtrl: AnimationController) { }
+              
   ngAfterViewInit() {
     const animation = this.animationCtrl
       .create()

@@ -30,7 +30,7 @@ correo: any;
         buttons: [{
           text: 'Aceptar',
           handler: () => {
-          this.router.navigate(['/restore-password']);}
+          this.router.navigate(['/login']);}
       }]
     });
       await alert.present();
