@@ -20,7 +20,7 @@ export class LoginPage implements AfterViewInit {
               public alertController: AlertController,
               public toastController: ToastController,
               private animationCtrl: AnimationController) { }
-              
+
   ngAfterViewInit() {
     const animation = this.animationCtrl
       .create()

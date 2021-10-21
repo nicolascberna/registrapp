@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HorarioPageRoutingModule } from './horario-routing.module';
+import { NotFoundPageRoutingModule } from './not-found-routing.module';
 
-import { HorarioPage } from './horario.page';
-import { ComponentsModule } from 'src/app/components/components.module';
+import { NotFoundPage } from './not-found.page';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HorarioPageRoutingModule,
+    NotFoundPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [HorarioPage]
+  declarations: [NotFoundPage]
 })
-export class HorarioPageModule {}
+export class NotFoundPageModule {}
