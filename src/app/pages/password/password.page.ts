@@ -15,6 +15,10 @@ correo: any;
   ngOnInit() {
   }
 
+  submit(){
+    console.log('Correo ingresado es '+this.correo);
+  }
+
   async correoEnviado() {
     if(this.correo == null)
     {
