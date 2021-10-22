@@ -30,6 +30,7 @@ correo: any;
       await toast.present();
     } else {
       const alert = await this.alertController.create({
+        backdropDismiss: false,
         message: 'Correo enviado satisfactoriamente',
         buttons: [{
           text: 'Aceptar',
