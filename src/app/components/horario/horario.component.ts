@@ -8,7 +8,7 @@ import { Asignatura } from 'src/app/interfaces/horariointerface';
 })
 export class HorarioComponent implements OnInit {
 
-  @Input() asignatura: Asignatura[]=[];
+  @Input() horario: Asignatura[]=[];
 
   constructor() { }
 
