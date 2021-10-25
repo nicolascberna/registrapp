@@ -7,7 +7,7 @@ import { Horario } from '../interfaces/horariointerface';
 })
 export class HorarioService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getHorario()
   {

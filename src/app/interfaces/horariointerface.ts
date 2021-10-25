@@ -11,4 +11,4 @@ export interface Asignatura {
   nombre: string;
   horaInicio: string;
   horaTermino: string;
-}    
+}
