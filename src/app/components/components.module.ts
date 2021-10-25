@@ -16,7 +16,6 @@ import { AsignaturaComponent } from './asignatura/asignatura.component';
   exports:[
     HeaderComponent,
     HorarioComponent,
-    AsignaturaComponent
   ],
   imports: [
     CommonModule,
