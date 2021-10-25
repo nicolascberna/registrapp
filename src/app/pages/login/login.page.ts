@@ -11,7 +11,7 @@ export class LoginPage implements AfterViewInit {
   @ViewChild('logo',{read: ElementRef, static:true}) logo: ElementRef;
 
   /* objeto que guardara el usuario y contraseña */
-  user={
+  user: any ={
     usuario:'',
     pass:''
   };
@@ -20,7 +20,7 @@ export class LoginPage implements AfterViewInit {
               public alertController: AlertController,
               public toastController: ToastController,
               private animationCtrl: AnimationController) { }
-              
+
   ngAfterViewInit() {
     const animation = this.animationCtrl
       .create()
@@ -48,6 +48,8 @@ export class LoginPage implements AfterViewInit {
         }
       };
       this.router.navigate(page, navigationExtras);
+      this.user.usuario='';
+      this.user.pass='';
     } else if (this.user.usuario != 'malcom' && this.user.usuario != 'nicolas' || this.user.pass != '123'){
       this.router.navigate(['/login']);
       const toast = await this.toastController.create({
@@ -56,6 +58,8 @@ export class LoginPage implements AfterViewInit {
         duration: 2000
       });
       await toast.present();
+      this.user.usuario='';
+      this.user.pass='';
     }
   }
 }

@@ -15,6 +15,10 @@ correo: any;
   ngOnInit() {
   }
 
+  submit(){
+    console.log('Correo ingresado es '+this.correo);
+  }
+
   async correoEnviado() {
     if(this.correo == null)
     {
@@ -26,6 +30,7 @@ correo: any;
       await toast.present();
     } else {
       const alert = await this.alertController.create({
+        backdropDismiss: false,
         message: 'Correo enviado satisfactoriamente',
         buttons: [{
           text: 'Aceptar',
