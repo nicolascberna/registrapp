@@ -11,6 +11,6 @@ export class HorarioService {
 
   getHorario()
   {
-    return this.http.get<Horario>(`http://localhost:3000/horario`);
+    return this.http.get<Horario>('http://localhost:3000/horario');
   }
 }

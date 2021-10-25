@@ -11,7 +11,7 @@ import { Asignatura } from 'src/app/interfaces/horariointerface';
 })
 export class HorarioPage implements OnInit {
 
-  asignaturas: Asignatura[] = [];
+  asignatura: Asignatura[] = [];
 
   constructor(public modalController: ModalController,
               private horarioService: HorarioService
@@ -20,8 +20,8 @@ export class HorarioPage implements OnInit {
   ngOnInit() {
     this.horarioService.getHorario().subscribe(resp=>
       {
-        console.log('horario', resp.lunes);
-        this.asignaturas.push(...resp.lunes);
+        console.log('horario lunes', resp.lunes);
+        this.asignatura.push(...resp.lunes);
       });
   }
 

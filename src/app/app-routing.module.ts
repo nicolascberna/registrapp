@@ -24,10 +24,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/password/password.module').then( m => m.PasswordPageModule)
   },
   {
-    path: 'restore-password',
-    loadChildren: () => import('./pages/restore-password/restore-password.module').then( m => m.RestorePasswordPageModule)
-  },
-  {
     path: 'horario',
     loadChildren: () => import('./pages/horario/horario.module').then( m => m.HorarioPageModule)
   },
