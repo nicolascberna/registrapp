@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { RestorePasswordPage } from './restore-password.page';
+import { HorarioComponent } from './horario.component';
 
-describe('RestorePasswordPage', () => {
-  let component: RestorePasswordPage;
-  let fixture: ComponentFixture<RestorePasswordPage>;
+describe('HorarioComponent', () => {
+  let component: HorarioComponent;
+  let fixture: ComponentFixture<HorarioComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ RestorePasswordPage ],
+      declarations: [ HorarioComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(RestorePasswordPage);
+    fixture = TestBed.createComponent(HorarioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
