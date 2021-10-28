@@ -1,12 +1,12 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #00EBB2;
+  --ion-color-primary: #307FE2;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #12d1a5;
-  --ion-color-primary-tint: #12d1a5;
+  --ion-color-primary-shade: #ad7d02;
+  --ion-color-primary-tint: #ad7d02;
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
   --ion-color-secondary-rgb: 61, 194, 255;
@@ -1230,6 +1230,19 @@ sub {
 }
 .ion-align-items-baseline {
   align-items: baseline !important;
+}
+ion-button {
+  --background: #FFB800;
+  color: #004280;
+}
+.firstScreen {
+  --background: #012c56;
+}
+ion-toolbar {
+  --background: #012c56;
+}
+ion-back-button {
+  --color: white;
 }
 
 

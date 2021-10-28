@@ -1,47 +1,29 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:2:1-11:12
+ADDED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:2:1-9:12
+INJECTED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:2:1-9:12
+INJECTED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:2:1-9:12
 	xmlns:amazon
-		ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:4:1-57
+		ADDED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:4:1-57
 	package
-		ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:2:11-46
-		INJECTED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+		ADDED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:2:11-46
+		INJECTED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:3:1-59
+		ADDED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:3:1-59
 application
-ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:5:1-7:15
-uses-permission#android.permission.CAMERA
-ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:8:1-85
-	android:required
-		ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:8:59-83
-	android:name
-		ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:8:18-58
-uses-feature#android.hardware.camera
-ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:9:1-80
-	android:required
-		ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:9:54-78
-	android:name
-		ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:9:15-53
-uses-feature#android.hardware.camera.front
-ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:10:1-86
-	android:required
-		ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:10:60-84
-	android:name
-		ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:10:15-59
+ADDED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml:5:1-7:15
 uses-sdk
-INJECTED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
-INJECTED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
-INJECTED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
-INJECTED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+INJECTED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+INJECTED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+INJECTED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+INJECTED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+		ADDED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
-		ADDED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\nicol\Desktop\Ionic\registrApp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+		ADDED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\src\main\AndroidManifest.xml

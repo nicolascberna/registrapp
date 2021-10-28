@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/46b82488d73461a86463f4ecd7bd0ebc/transformed/lifecycle-livedata-core-2.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/46b82488d73461a86463f4ecd7bd0ebc/transformed/lifecycle-livedata-core-2.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/46b82488d73461a86463f4ecd7bd0ebc/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/808adb91ccc8ae7440439271a660dd2f/transformed/lifecycle-livedata-core-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/32037e15ac0755e65803d1552899293e/transformed/lifecycle-livedata-core-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/32037e15ac0755e65803d1552899293e/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/32037e15ac0755e65803d1552899293e/transformed/lifecycle-livedata-core-2.0.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

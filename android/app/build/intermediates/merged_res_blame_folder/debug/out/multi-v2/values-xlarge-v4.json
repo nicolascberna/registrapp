@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\nicol\\Desktop\\Ionic\\registrApp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
+            "outputFile": "C:\\Users\\malco\\Desktop\\registrapp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\nicol\\.gradle\\caches\\transforms-3\\ce3f79a523d89320dd464c2b2de6183e\\transformed\\appcompat-1.2.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\malco\\.gradle\\caches\\transforms-3\\393393c1bbd83df1dd999d3897a2caae\\transformed\\appcompat-1.2.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

@@ -7,17 +7,6 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="30" />
 
-    <uses-permission
-        android:name="android.permission.CAMERA"
-        android:required="false" />
-
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.camera.front"
-        android:required="false" />
-
     <application>
     </application>
 
