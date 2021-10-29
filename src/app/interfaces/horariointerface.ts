@@ -14,13 +14,11 @@ export interface Asignatura {
 }
 
 export interface Usuario {
+  id: number;
   username: string;
   password: string;
   email: string;
   carrera: string;
   sede: string;
-  horario: Horario
+  horario: Horario[]
 }
-
-
-

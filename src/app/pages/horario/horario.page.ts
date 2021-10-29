@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 import { HorarioService } from 'src/app/services/horario.service';
-import { Asignatura } from 'src/app/interfaces/horariointerface';
+import { Horario, Usuario, Asignatura } from 'src/app/interfaces/horariointerface';
 
 @Component({
   selector: 'app-horario',
@@ -11,17 +11,19 @@ import { Asignatura } from 'src/app/interfaces/horariointerface';
 })
 export class HorarioPage implements OnInit {
 
-  horario: Asignatura[] = [];
+  horario: Horario[] = [];
+  //usuario: Usuario;
 
   constructor(public modalController: ModalController,
               private horarioService: HorarioService
     ) { }
 
   ngOnInit() {
-    this.horarioService.getHorario().subscribe(resp=>
+    this.horarioService.getUsuario().subscribe(resp=>
       {
-        console.log('horario lunes', resp.lunes);
-        this.horario.push(...resp.lunes);
+        console.log('horario', resp.horario);
+        this.horario.push(...resp.horario);
+        //this.usuario = resp;
       });
   }
 

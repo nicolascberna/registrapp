@@ -5,6 +5,9 @@ import { AlertController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import { HorarioPage } from '../horario/horario.page';
 
+import { HorarioService } from 'src/app/services/horario.service';
+import { Usuario } from 'src/app/interfaces/horariointerface';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -12,9 +15,11 @@ import { HorarioPage } from '../horario/horario.page';
 })
 export class HomePage{
   /* variable de tipo any que permite cualquiero tipo de dato */
-dato: any;
+  dato: any;
+  usuario: Usuario;
 
-  constructor(public alertController: AlertController,
+  constructor(private horarioService: HorarioService,
+              public alertController: AlertController,
               private router: Router,
               public modalController: ModalController,
               private activeroute: ActivatedRoute,) {
@@ -28,6 +33,14 @@ dato: any;
                 });
               }
 
+  ngOnInit() {
+    this.horarioService.getUsuario().subscribe(resp=>
+      {
+        console.log('usuario', resp);
+        this.usuario = resp;
+      });
+  }
+            
   /* este metodo llamara al metodo mostrar por medio de una alert */
   async salir() {
     const alert = await this.alertController.create({
