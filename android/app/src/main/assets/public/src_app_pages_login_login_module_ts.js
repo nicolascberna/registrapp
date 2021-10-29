@@ -105,17 +105,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let LoginPage = class LoginPage {
-    constructor(router, alertController, toastController) {
+    constructor(router, alertController, toastController, animationCtrl) {
         this.router = router;
         this.alertController = alertController;
         this.toastController = toastController;
-        /* tabla que guardara el usuario y contraseña */
+        this.animationCtrl = animationCtrl;
+        /* objeto que guardara el usuario y contraseña */
         this.user = {
             usuario: '',
             pass: ''
         };
     }
-    ngOnInit() {
+    ngAfterViewInit() {
+        const animation = this.animationCtrl
+            .create()
+            .addElement(this.logo.nativeElement)
+            .duration(2000)
+            .iterations(Infinity)
+            .keyframes([
+            { offset: 0.7, transform: 'scale(1)', opacity: '1' },
+            { offset: 0.8, transform: 'scale(1.1)', opacity: '0.8' },
+            { offset: 0.9, transform: 'scale(1)', opacity: '1' }
+        ]);
+        animation.play();
     }
     recovery(page) {
         this.router.navigate(page);
@@ -130,6 +142,8 @@ let LoginPage = class LoginPage {
                     }
                 };
                 this.router.navigate(page, navigationExtras);
+                this.user.usuario = '';
+                this.user.pass = '';
             }
             else if (this.user.usuario != 'malcom' && this.user.usuario != 'nicolas' || this.user.pass != '123') {
                 this.router.navigate(['/login']);
@@ -139,6 +153,8 @@ let LoginPage = class LoginPage {
                     duration: 2000
                 });
                 yield toast.present();
+                this.user.usuario = '';
+                this.user.pass = '';
             }
         });
     }
@@ -146,8 +162,12 @@ let LoginPage = class LoginPage {
 LoginPage.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__.Router },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.AlertController },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.ToastController }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.ToastController },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.AnimationController }
 ];
+LoginPage.propDecorators = {
+    logo: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_5__.ViewChild, args: ['logo', { read: _angular_core__WEBPACK_IMPORTED_MODULE_5__.ElementRef, static: true },] }]
+};
 LoginPage = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
         selector: 'app-login',
@@ -171,7 +191,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".logo {\n  margin-top: 130px;\n  margin-bottom: 40px;\n  width: 35%;\n}\n\n.user-inputs {\n  margin-left: 20px;\n  margin-right: 25px;\n}\n\nion-button {\n  font-size: 12px;\n  font-weight: bold;\n  color: black;\n  margin-top: 40px;\n}\n\np {\n  margin-top: 35px;\n  text-align: center;\n  font-size: 12px;\n}\n\n.pass-hover {\n  color: #4698e4;\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvZ2luLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGlCQUFpQjtFQUNqQixtQkFBbUI7RUFDbkIsVUFBVTtBQUNkOztBQUVBO0VBQ0ksaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUN0Qjs7QUFFQTtFQUNJLGVBQWU7RUFDZixpQkFBaUI7RUFDakIsWUFBWTtFQUNaLGdCQUFnQjtBQUNwQjs7QUFDQTtFQUNJLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsZUFBZTtBQUVuQjs7QUFDQTtFQUNJLGNBQXdCO0VBQ3hCLDBCQUEwQjtFQUMxQixlQUFlO0FBRW5CIiwiZmlsZSI6ImxvZ2luLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb2dvIHtcclxuICAgIG1hcmdpbi10b3A6IDEzMHB4O1xyXG4gICAgbWFyZ2luLWJvdHRvbTogNDBweDtcclxuICAgIHdpZHRoOiAzNSU7XHJcbn1cclxuXHJcbi51c2VyLWlucHV0cyB7XHJcbiAgICBtYXJnaW4tbGVmdDogMjBweDtcclxuICAgIG1hcmdpbi1yaWdodDogMjVweDtcclxufVxyXG5cclxuaW9uLWJ1dHRvbiB7XHJcbiAgICBmb250LXNpemU6IDEycHg7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGNvbG9yOiBibGFjaztcclxuICAgIG1hcmdpbi10b3A6IDQwcHg7XHJcbn1cclxucCB7XHJcbiAgICBtYXJnaW4tdG9wOiAzNXB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgZm9udC1zaXplOiAxMnB4O1xyXG59XHJcblxyXG4ucGFzcy1ob3ZlciB7XHJcbiAgICBjb2xvcjogcmdiKDcwLCAxNTIsIDIyOCk7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxufSJdfQ== */");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".logo {\n  margin-top: 130px;\n  margin-bottom: 40px;\n  width: 45%;\n}\n\n.user-inputs {\n  margin-left: 20px;\n  margin-right: 25px;\n}\n\nion-button {\n  font-size: 12px;\n  font-weight: bold;\n  margin-top: 40px;\n}\n\np {\n  margin-top: 35px;\n  text-align: center;\n  font-size: 12px;\n}\n\n.pass-hover {\n  color: #00162b;\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvZ2luLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGlCQUFpQjtFQUNqQixtQkFBbUI7RUFDbkIsVUFBVTtBQUNkOztBQUVBO0VBQ0ksaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUN0Qjs7QUFDQTtFQUNJLGVBQWU7RUFDZixpQkFBaUI7RUFDakIsZ0JBQWdCO0FBRXBCOztBQUFBO0VBQ0ksZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixlQUFlO0FBR25COztBQUFBO0VBQ0ksY0FBYztFQUNkLDBCQUEwQjtFQUMxQixlQUFlO0FBR25CIiwiZmlsZSI6ImxvZ2luLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb2dvIHtcclxuICAgIG1hcmdpbi10b3A6IDEzMHB4O1xyXG4gICAgbWFyZ2luLWJvdHRvbTogNDBweDtcclxuICAgIHdpZHRoOiA0NSU7XHJcbn1cclxuXHJcbi51c2VyLWlucHV0cyB7XHJcbiAgICBtYXJnaW4tbGVmdDogMjBweDtcclxuICAgIG1hcmdpbi1yaWdodDogMjVweDtcclxufVxyXG5pb24tYnV0dG9uIHtcclxuICAgIGZvbnQtc2l6ZTogMTJweDtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgbWFyZ2luLXRvcDogNDBweDtcclxufVxyXG5wIHtcclxuICAgIG1hcmdpbi10b3A6IDM1cHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXNpemU6IDEycHg7XHJcbn1cclxuXHJcbi5wYXNzLWhvdmVyIHtcclxuICAgIGNvbG9yOiAjMDAxNjJiO1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -186,7 +206,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-content>\r\n  \r\n  <ion-grid class=\"logo\">\r\n    <ion-row class=\"ion-align-items-center\">\r\n      <ion-col>\r\n        <ion-img src=\"\\assets\\icon\\logo.svg\"></ion-img>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n\r\n  <div class=\"user-inputs\">\r\n\r\n    <ion-item>\r\n      <ion-label position=\"floating\">Usuario</ion-label>\r\n      <ion-input type=\"email\" required=\"true\" [(ngModel)]=\"user.usuario\" minlength=3 maxlength=15 clear-input='true'></ion-input>\r\n    </ion-item>\r\n  \r\n    <ion-item>\r\n      <ion-label position=\"floating\">Contraseña</ion-label>\r\n      <ion-input  type=\"password\" [(ngModel)]=\"user.pass\" required=\"true\" clear-input='true'></ion-input>\r\n    </ion-item>\r\n\r\n\r\n    <ion-button (click)=\"ingresar(['/home'])\" expand=\"block\">INICIAR SESION</ion-button>\r\n\r\n    <p class=\"pass-hover\" (click)=\"recovery(['/password'])\">Recuperar contraseña</p>\r\n\r\n  </div>\r\n\r\n</ion-content>\r\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-content class=\"ion-padding\">\r\n  \r\n  <ion-grid class=\"logo\">\r\n    <ion-row class=\"ion-align-items-center\">\r\n      <ion-col>\r\n        <ion-img #logo src=\"\\assets\\icon\\logo.svg\"></ion-img>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n\r\n  <div>\r\n    <form #formulario=\"ngForm\" (ngSubmit)=\"submit()\">\r\n\r\n      <ion-item>\r\n        <ion-label position=\"floating\">Usuario</ion-label>\r\n        <ion-input  required \r\n                    name=\"user\"\r\n                    [(ngModel)]=\"user.usuario\" \r\n                    minlength=3 \r\n                    maxlength=15 \r\n                    clear-input='true'>\r\n        </ion-input>\r\n      </ion-item>\r\n    \r\n      <ion-item>\r\n        <ion-label position=\"floating\">Contraseña</ion-label>\r\n        <ion-input  required \r\n                    name=\"pass\"\r\n                    [(ngModel)]=\"user.pass\" \r\n                    type=\"password\" \r\n                    clear-input='true'>\r\n        </ion-input>\r\n      </ion-item>\r\n\r\n\r\n      <ion-button (click)=\"ingresar(['/home'])\" \r\n                  type=\"submit\"\r\n                  expand=\"block\"\r\n                  [disabled]=\"formulario.invalid\">\r\n          INICIAR SESION\r\n      </ion-button>\r\n    </form>\r\n    <p class=\"pass-hover\" (click)=\"recovery(['/password'])\">Recuperar contraseña</p>\r\n  </div>\r\n  \r\n\r\n</ion-content>\r\n");
 
 /***/ })
 

@@ -143,7 +143,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("ion-content {\n  --background: linear-gradient(#00EBB2, #109475);\n}\n\n.logo {\n  margin-top: 250px;\n  width: 35%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNwbGFzaHNjcmVlbi5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSwrQ0FBYTtBQUNqQjs7QUFFQTtFQUNJLGlCQUFpQjtFQUNqQixVQUFVO0FBQ2QiLCJmaWxlIjoic3BsYXNoc2NyZWVuLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1jb250ZW50IHtcclxuICAgIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KCMwMEVCQjIsICMxMDk0NzUpO1xyXG59XHJcblxyXG4ubG9nbyB7XHJcbiAgICBtYXJnaW4tdG9wOiAyNTBweDtcclxuICAgIHdpZHRoOiAzNSU7XHJcbn0iXX0= */");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".logo {\n  margin-top: 250px;\n  width: 35%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNwbGFzaHNjcmVlbi5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxpQkFBaUI7RUFDakIsVUFBVTtBQUNkIiwiZmlsZSI6InNwbGFzaHNjcmVlbi5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9nbyB7XHJcbiAgICBtYXJnaW4tdG9wOiAyNTBweDtcclxuICAgIHdpZHRoOiAzNSU7XHJcbn0iXX0= */");
 
 /***/ }),
 
@@ -158,7 +158,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-content [fullscreen]=\"true\">\n\n  <ion-grid class=\"logo\">\n    <ion-row class=\"ion-align-items-center\">\n      <ion-col>\n        <ion-img src=\"\\assets\\icon\\light-logo.svg\"></ion-img>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  \n</ion-content>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-content class=\"firstScreen\" [fullscreen]=\"true\">\r\n\r\n  <ion-grid class=\"logo\">\r\n    <ion-row class=\"ion-align-items-center\">\r\n      <ion-col>\r\n        <ion-img src=\"\\assets\\icon\\light-logo.svg\"></ion-img>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n  \r\n</ion-content>\r\n");
 
 /***/ })
 
