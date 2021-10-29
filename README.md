@@ -7,6 +7,14 @@ Para realizar pruebas del sistema hibrido corriendo en lab se debe usa las crede
 Instalacion de json-server: npm install -g json-server
 Para correr api local: json-server --watch db.json
 
+Para correr la app en el celular o en el emulador de Android:
+1.- npm install @capacitor/android
+2.- npx cap add android
+3.- ionic capacitor sync android
+4.- npx cap open android
+
+Dentro de Android Studio ejecutar la virtualizacion con android Pie (9) para prevenir errores de lanzamiento.
+
 Mockup:
 https://www.figma.com/file/U40Vt2Vq6C8Xgg397WD34r/RegistrAPP-Grupo-08?node-id=0%3A1
 
