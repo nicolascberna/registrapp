@@ -7,6 +7,7 @@ import { HorarioPage } from '../horario/horario.page';
 
 import { HorarioService } from 'src/app/services/horario.service';
 import { Usuario } from 'src/app/interfaces/horariointerface';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,8 @@ export class HomePage{
               public alertController: AlertController,
               private router: Router,
               public modalController: ModalController,
-              private activeroute: ActivatedRoute,) {
+              private activeroute: ActivatedRoute,
+              private barcodeScanner: BarcodeScanner) {
                 this.activeroute.queryParams.subscribe(params => {
                   /* validar si la navegacion tiene parametros */
                   if (this.router.getCurrentNavigation().extras.state){
@@ -33,14 +35,27 @@ export class HomePage{
                 });
               }
 
-  ngOnInit() {
+  ionViewDidEnter() {
     this.horarioService.getUsuario().subscribe(resp=>
       {
         console.log('usuario', resp);
         this.usuario = resp;
       });
   }
-            
+
+  ionViewWillEnter() {
+    this.scan();
+  }
+
+  /* metodo para escanear QR */
+  scan(){
+    this.barcodeScanner.scan().then(barcodeData => {
+      console.log('Barcode data', barcodeData);
+    }).catch(err => {
+        console.log('Error', err);
+    });
+  }
+
   /* este metodo llamara al metodo mostrar por medio de una alert */
   async salir() {
     const alert = await this.alertController.create({
