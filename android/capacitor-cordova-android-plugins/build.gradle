@@ -50,7 +50,6 @@ dependencies {
 
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "cordova.variables.gradle"
-apply from: "../../node_modules/cordova-plugin-qrscanner/src/android/qrscanner.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 for (def func : cdvPluginPostBuildExtras) {
