@@ -12,12 +12,12 @@
         "source": "C:\\Users\\malco\\Desktop\\registrapp\\android\\app\\src\\main\\res\\drawable-port-xhdpi\\splash.png"
     },
     {
-        "merged": "C:\\Users\\malco\\Desktop\\registrapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-hdpi_splash.png.flat",
-        "source": "C:\\Users\\malco\\Desktop\\registrapp\\android\\app\\src\\main\\res\\drawable-port-hdpi\\splash.png"
-    },
-    {
         "merged": "C:\\Users\\malco\\Desktop\\registrapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-mdpi_splash.png.flat",
         "source": "C:\\Users\\malco\\Desktop\\registrapp\\android\\app\\src\\main\\res\\drawable-port-mdpi\\splash.png"
+    },
+    {
+        "merged": "C:\\Users\\malco\\Desktop\\registrapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-hdpi_splash.png.flat",
+        "source": "C:\\Users\\malco\\Desktop\\registrapp\\android\\app\\src\\main\\res\\drawable-port-hdpi\\splash.png"
     },
     {
         "merged": "C:\\Users\\malco\\Desktop\\registrapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",

@@ -1,6 +1,6 @@
 (self["webpackChunkregistrApp"] = self["webpackChunkregistrApp"] || []).push([["polyfills-core-js"],{
 
-/***/ 7656:
+/***/ 8982:
 /*!****************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/polyfills/core-js.js ***!
   \****************************************************************/
