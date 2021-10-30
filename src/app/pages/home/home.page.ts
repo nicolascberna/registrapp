@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/member-ordering */
-import { Component, ElementRef, ViewChild } from '@angular/core';
+
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
@@ -35,6 +35,7 @@ export class HomePage{
                 });
               }
 
+  /* se dispara cuando ya la page carga */
   ionViewDidEnter() {
     this.horarioService.getUsuario().subscribe(resp=>
       {
@@ -42,19 +43,21 @@ export class HomePage{
         this.usuario = resp;
       });
   }
-
+  /* se dispara apenas entra */
   ionViewWillEnter() {
+    console.log('ionViewWillEnter');
     this.scan();
   }
 
   /* metodo para escanear QR */
-  scan(){
+  scan() {
     this.barcodeScanner.scan().then(barcodeData => {
       console.log('Barcode data', barcodeData);
     }).catch(err => {
-        console.log('Error', err);
+      console.log('Error', err);
     });
   }
+
 
   /* este metodo llamara al metodo mostrar por medio de una alert */
   async salir() {

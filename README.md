@@ -21,6 +21,10 @@ Para correr la app en el celular o en el emulador de Android con CAPACITOR:
 
 Dentro de Android Studio ejecutar la virtualizacion con android Pie (9) para prevenir errores de lanzamiento.
 
+----- PARA AGREGAR NUEVOS CAMBIOS A LA APLICACION ANDROID -----
+1.- npx cap sync
+2.- ionic capacitor copy android
+
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 implementacion del plugin BARCODE SCANNER

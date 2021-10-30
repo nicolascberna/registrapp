@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { IonicStorageModule } from '@ionic/storage-angular';
 import { HttpClientModule } from '@angular/common/http';
+
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 
@@ -20,9 +21,9 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    IonicStorageModule.forRoot({
+    /* IonicStorageModule.forRoot({
       name: "mydatabase"
-    })
+    }) */
   ],
   providers: [
     BarcodeScanner,

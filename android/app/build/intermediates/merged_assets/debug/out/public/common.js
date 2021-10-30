@@ -1,19 +1,19 @@
+"use strict";
 (self["webpackChunkregistrApp"] = self["webpackChunkregistrApp"] || []).push([["common"],{
 
-/***/ 8225:
+/***/ 631:
 /*!*********************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/button-active-d4bd4f74.js ***!
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "c": () => (/* binding */ createButtonActiveGesture)
 /* harmony export */ });
-/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ 3150);
-/* harmony import */ var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./haptic-27b3f981.js */ 2954);
-/* harmony import */ var _index_34cb2743_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index-34cb2743.js */ 9461);
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ 6842);
+/* harmony import */ var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./haptic-27b3f981.js */ 9502);
+/* harmony import */ var _index_34cb2743_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index-34cb2743.js */ 8910);
 
 
 
@@ -82,64 +82,75 @@ const createButtonActiveGesture = (el, isButton) => {
 
 /***/ }),
 
-/***/ 7330:
+/***/ 5709:
 /*!**************************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/framework-delegate-4392cd63.js ***!
   \**************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "a": () => (/* binding */ attachComponent),
 /* harmony export */   "d": () => (/* binding */ detachComponent)
 /* harmony export */ });
-/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ 2377);
+/* harmony import */ var C_Users_malco_Desktop_registrapp_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@angular-devkit/build-angular/node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ 151);
+/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ 693);
 
 
-const attachComponent = async (delegate, container, component, cssClasses, componentProps) => {
-  if (delegate) {
-    return delegate.attachViewToDom(container, component, componentProps, cssClasses);
-  }
-  if (typeof component !== 'string' && !(component instanceof HTMLElement)) {
-    throw new Error('framework delegate is missing');
-  }
-  const el = (typeof component === 'string')
-    ? container.ownerDocument && container.ownerDocument.createElement(component)
-    : component;
-  if (cssClasses) {
-    cssClasses.forEach(c => el.classList.add(c));
-  }
-  if (componentProps) {
-    Object.assign(el, componentProps);
-  }
-  container.appendChild(el);
-  await new Promise(resolve => (0,_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_0__.c)(el, resolve));
-  return el;
-};
+
+const attachComponent = /*#__PURE__*/function () {
+  var _ref = (0,C_Users_malco_Desktop_registrapp_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)(function* (delegate, container, component, cssClasses, componentProps) {
+    if (delegate) {
+      return delegate.attachViewToDom(container, component, componentProps, cssClasses);
+    }
+
+    if (typeof component !== 'string' && !(component instanceof HTMLElement)) {
+      throw new Error('framework delegate is missing');
+    }
+
+    const el = typeof component === 'string' ? container.ownerDocument && container.ownerDocument.createElement(component) : component;
+
+    if (cssClasses) {
+      cssClasses.forEach(c => el.classList.add(c));
+    }
+
+    if (componentProps) {
+      Object.assign(el, componentProps);
+    }
+
+    container.appendChild(el);
+    yield new Promise(resolve => (0,_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_1__.c)(el, resolve));
+    return el;
+  });
+
+  return function attachComponent(_x, _x2, _x3, _x4, _x5) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
 const detachComponent = (delegate, element) => {
   if (element) {
     if (delegate) {
       const container = element.parentElement;
       return delegate.removeViewFromDom(container, element);
     }
+
     element.remove();
   }
+
   return Promise.resolve();
 };
 
 
 
-
 /***/ }),
 
-/***/ 2954:
+/***/ 9502:
 /*!**************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/haptic-27b3f981.js ***!
   \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "a": () => (/* binding */ hapticSelectionStart),
@@ -258,13 +269,12 @@ const hapticImpact = (options) => {
 
 /***/ }),
 
-/***/ 408:
+/***/ 5907:
 /*!***********************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/spinner-configs-cd7845af.js ***!
   \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "S": () => (/* binding */ SPINNERS)
@@ -383,13 +393,12 @@ const SPINNERS = spinners;
 
 /***/ }),
 
-/***/ 1269:
+/***/ 3784:
 /*!*************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/theme-ff3fc52f.js ***!
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "c": () => (/* binding */ createColorClasses),
@@ -397,64 +406,81 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "h": () => (/* binding */ hostContext),
 /* harmony export */   "o": () => (/* binding */ openURL)
 /* harmony export */ });
+/* harmony import */ var C_Users_malco_Desktop_registrapp_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@angular-devkit/build-angular/node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ 151);
+
+
 const hostContext = (selector, el) => {
   return el.closest(selector) !== null;
 };
 /**
  * Create the mode and color classes for the component based on the classes passed in
  */
+
+
 const createColorClasses = (color, cssClassMap) => {
-  return (typeof color === 'string' && color.length > 0) ? Object.assign({ 'ion-color': true, [`ion-color-${color}`]: true }, cssClassMap) : cssClassMap;
+  return typeof color === 'string' && color.length > 0 ? Object.assign({
+    'ion-color': true,
+    [`ion-color-${color}`]: true
+  }, cssClassMap) : cssClassMap;
 };
-const getClassList = (classes) => {
+
+const getClassList = classes => {
   if (classes !== undefined) {
     const array = Array.isArray(classes) ? classes : classes.split(' ');
-    return array
-      .filter(c => c != null)
-      .map(c => c.trim())
-      .filter(c => c !== '');
+    return array.filter(c => c != null).map(c => c.trim()).filter(c => c !== '');
   }
+
   return [];
 };
-const getClassMap = (classes) => {
+
+const getClassMap = classes => {
   const map = {};
   getClassList(classes).forEach(c => map[c] = true);
   return map;
 };
-const SCHEME = /^[a-z][a-z0-9+\-.]*:/;
-const openURL = async (url, ev, direction, animation) => {
-  if (url != null && url[0] !== '#' && !SCHEME.test(url)) {
-    const router = document.querySelector('ion-router');
-    if (router) {
-      if (ev != null) {
-        ev.preventDefault();
-      }
-      return router.push(url, direction, animation);
-    }
-  }
-  return false;
-};
 
+const SCHEME = /^[a-z][a-z0-9+\-.]*:/;
+
+const openURL = /*#__PURE__*/function () {
+  var _ref = (0,C_Users_malco_Desktop_registrapp_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)(function* (url, ev, direction, animation) {
+    if (url != null && url[0] !== '#' && !SCHEME.test(url)) {
+      const router = document.querySelector('ion-router');
+
+      if (router) {
+        if (ev != null) {
+          ev.preventDefault();
+        }
+
+        return router.push(url, direction, animation);
+      }
+    }
+
+    return false;
+  });
+
+  return function openURL(_x, _x2, _x3, _x4) {
+    return _ref.apply(this, arguments);
+  };
+}();
 
 
 
 /***/ }),
 
-/***/ 2361:
+/***/ 7759:
 /*!***************************************************************!*\
   !*** ./src/app/components/asignatura/asignatura.component.ts ***!
   \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AsignaturaComponent": () => (/* binding */ AsignaturaComponent)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 4762);
-/* harmony import */ var _raw_loader_asignatura_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./asignatura.component.html */ 8313);
-/* harmony import */ var _asignatura_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./asignatura.component.scss */ 2852);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 7716);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
+/* harmony import */ var _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_asignatura_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./asignatura.component.html */ 6893);
+/* harmony import */ var _asignatura_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./asignatura.component.scss */ 8601);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2316);
 
 
 
@@ -470,8 +496,8 @@ AsignaturaComponent.propDecorators = {
 AsignaturaComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
         selector: 'app-asignatura',
-        template: _raw_loader_asignatura_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
-        styles: [_asignatura_component_scss__WEBPACK_IMPORTED_MODULE_1__.default]
+        template: _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_asignatura_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        styles: [_asignatura_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], AsignaturaComponent);
 
@@ -485,18 +511,17 @@ AsignaturaComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
   \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ComponentsModule": () => (/* binding */ ComponentsModule)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 4762);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 7716);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ 8583);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ 476);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ 4364);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ 7602);
 /* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header/header.component */ 3646);
 /* harmony import */ var _horario_horario_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./horario/horario.component */ 23);
-/* harmony import */ var _asignatura_asignatura_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./asignatura/asignatura.component */ 2361);
+/* harmony import */ var _asignatura_asignatura_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./asignatura/asignatura.component */ 7759);
 
 
 
@@ -534,15 +559,14 @@ ComponentsModule = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
   \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "HeaderComponent": () => (/* binding */ HeaderComponent)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 4762);
-/* harmony import */ var _raw_loader_header_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./header.component.html */ 7911);
-/* harmony import */ var _header_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.component.scss */ 4993);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 7716);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
+/* harmony import */ var _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./header.component.html */ 669);
+/* harmony import */ var _header_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.component.scss */ 294);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2316);
 
 
 
@@ -560,8 +584,8 @@ HeaderComponent.propDecorators = {
 HeaderComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
         selector: 'app-header',
-        template: _raw_loader_header_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
-        styles: [_header_component_scss__WEBPACK_IMPORTED_MODULE_1__.default]
+        template: _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        styles: [_header_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], HeaderComponent);
 
@@ -575,15 +599,14 @@ HeaderComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
   \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "HorarioComponent": () => (/* binding */ HorarioComponent)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 4762);
-/* harmony import */ var _raw_loader_horario_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./horario.component.html */ 357);
-/* harmony import */ var _horario_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./horario.component.scss */ 7711);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 7716);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
+/* harmony import */ var _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_horario_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./horario.component.html */ 1720);
+/* harmony import */ var _horario_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./horario.component.scss */ 6362);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2316);
 
 
 
@@ -601,8 +624,8 @@ HorarioComponent.propDecorators = {
 HorarioComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
         selector: 'app-horarioclases',
-        template: _raw_loader_horario_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
-        styles: [_horario_component_scss__WEBPACK_IMPORTED_MODULE_1__.default]
+        template: _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_horario_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        styles: [_horario_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], HorarioComponent);
 
@@ -610,23 +633,22 @@ HorarioComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
 
 /***/ }),
 
-/***/ 879:
+/***/ 6492:
 /*!***********************************************!*\
   !*** ./src/app/pages/horario/horario.page.ts ***!
   \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "HorarioPage": () => (/* binding */ HorarioPage)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 4762);
-/* harmony import */ var _raw_loader_horario_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./horario.page.html */ 5519);
-/* harmony import */ var _horario_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./horario.page.scss */ 8254);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 7716);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ 476);
-/* harmony import */ var src_app_services_horario_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/horario.service */ 7218);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 3786);
+/* harmony import */ var _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_horario_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./horario.page.html */ 1638);
+/* harmony import */ var _horario_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./horario.page.scss */ 4713);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ 7602);
+/* harmony import */ var src_app_services_horario_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/horario.service */ 8856);
 
 
 
@@ -634,15 +656,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let HorarioPage = class HorarioPage {
+    //usuario: Usuario;
     constructor(modalController, horarioService) {
         this.modalController = modalController;
         this.horarioService = horarioService;
         this.horario = [];
     }
     ngOnInit() {
-        this.horarioService.getHorario().subscribe(resp => {
-            console.log('horario lunes', resp.lunes);
-            this.horario.push(...resp.lunes);
+        this.horarioService.getUsuario().subscribe(resp => {
+            console.log('horario', resp.horario);
+            this.horario.push(...resp.horario);
+            //this.usuario = resp;
         });
     }
     dismiss() {
@@ -658,8 +682,8 @@ HorarioPage.ctorParameters = () => [
 HorarioPage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
         selector: 'app-horario',
-        template: _raw_loader_horario_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
-        styles: [_horario_page_scss__WEBPACK_IMPORTED_MODULE_1__.default]
+        template: _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_horario_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        styles: [_horario_page_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], HorarioPage);
 
@@ -667,20 +691,19 @@ HorarioPage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
 
 /***/ }),
 
-/***/ 7218:
+/***/ 8856:
 /*!*********************************************!*\
   !*** ./src/app/services/horario.service.ts ***!
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "HorarioService": () => (/* binding */ HorarioService)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ 4762);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 7716);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 1841);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ 3786);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ 3882);
 
 
 
@@ -688,8 +711,11 @@ let HorarioService = class HorarioService {
     constructor(http) {
         this.http = http;
     }
-    getHorario() {
-        return this.http.get('http://localhost:3000/horario');
+    getUsuario() {
+        return this.http.get('http://localhost:3000/usuario/1');
+    }
+    getUsuarioo(username) {
+        return this.http.get(`http://localhost:3000/usuario?username=${username}`);
     }
 };
 HorarioService.ctorParameters = () => [
@@ -705,88 +731,26 @@ HorarioService = (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__decorate)([
 
 /***/ }),
 
-/***/ 2852:
-/*!*****************************************************************!*\
-  !*** ./src/app/components/asignatura/asignatura.component.scss ***!
-  \*****************************************************************/
+/***/ 6893:
+/*!********************************************************************************************************************************!*\
+  !*** ./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./src/app/components/asignatura/asignatura.component.html ***!
+  \********************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhc2lnbmF0dXJhLmNvbXBvbmVudC5zY3NzIn0= */");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-card>\r\n  <ion-item>\r\n    <ion-icon name=\"book-outline\" slot=\"start\"></ion-icon>\r\n    <ion-label>{{asignatura.nombre}}</ion-label>\r\n  </ion-item>\r\n\r\n  <ion-card-content class=\"ion-text-center\">\r\n    <p>FECHA: 02/11/2021</p>\r\n    <p>HORARIO: {{asignatura.horaInicio}} - {{asignatura.horaTermino}}</p>\r\n    <p>ESTADO: {{asignatura.estado}}</p>\r\n  </ion-card-content>\r\n</ion-card>");
 
 /***/ }),
 
-/***/ 4993:
-/*!*********************************************************!*\
-  !*** ./src/app/components/header/header.component.scss ***!
-  \*********************************************************/
+/***/ 669:
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./src/app/components/header/header.component.html ***!
+  \************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJoZWFkZXIuY29tcG9uZW50LnNjc3MifQ== */");
-
-/***/ }),
-
-/***/ 7711:
-/*!***********************************************************!*\
-  !*** ./src/app/components/horario/horario.component.scss ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJob3JhcmlvLmNvbXBvbmVudC5zY3NzIn0= */");
-
-/***/ }),
-
-/***/ 8254:
-/*!*************************************************!*\
-  !*** ./src/app/pages/horario/horario.page.scss ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("ion-title {\n  font-size: 16px;\n}\n\nh6 {\n  color: #00162b;\n  margin-right: 14px;\n  margin-bottom: 18px;\n}\n\n.cerrar {\n  cursor: pointer;\n  color: white;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhvcmFyaW8ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZUFBZTtBQUNuQjs7QUFFQTtFQUNJLGNBQWM7RUFDZCxrQkFBa0I7RUFDbEIsbUJBQW1CO0FBQ3ZCOztBQUVBO0VBQ0ksZUFBZTtFQUNmLFlBQVk7QUFDaEIiLCJmaWxlIjoiaG9yYXJpby5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tdGl0bGUge1xyXG4gICAgZm9udC1zaXplOiAxNnB4O1xyXG59XHJcblxyXG5oNiB7XHJcbiAgICBjb2xvcjogIzAwMTYyYjtcclxuICAgIG1hcmdpbi1yaWdodDogMTRweDtcclxuICAgIG1hcmdpbi1ib3R0b206IDE4cHg7XHJcbn1cclxuXHJcbi5jZXJyYXIge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59Il19 */");
-
-/***/ }),
-
-/***/ 8313:
-/*!*******************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/asignatura/asignatura.component.html ***!
-  \*******************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-card>\r\n  <ion-item>\r\n    <ion-icon name=\"book-outline\" slot=\"start\"></ion-icon>\r\n    <ion-label>{{asignatura.nombre}}</ion-label>\r\n  </ion-item>\r\n\r\n  <ion-card-content class=\"ion-text-center\">\r\n    <p>FECHA: 25/10/2021</p>\r\n    <p>HORARIO: {{asignatura.horaInicio}} - {{asignatura.horaTermino}}</p>\r\n    <p>ESTADO: AUSENTE</p>\r\n  </ion-card-content>\r\n</ion-card>");
-
-/***/ }),
-
-/***/ 7911:
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/header/header.component.html ***!
-  \***********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -795,13 +759,12 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 357:
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/horario/horario.component.html ***!
-  \*************************************************************************************************/
+/***/ 1720:
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./src/app/components/horario/horario.component.html ***!
+  \**************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -810,18 +773,57 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 5519:
-/*!***************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/horario/horario.page.html ***!
-  \***************************************************************************************/
+/***/ 1638:
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./src/app/pages/horario/horario.page.html ***!
+  \****************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title color=\"light\">Miercoles 15 de Septiembre</ion-title>\r\n    <h6 class=\"cerrar\" (click)=\"dismiss()\" slot=\"end\">Cerrar</h6>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"ion-padding\">\r\n\r\n  <app-horarioclases [horario]=\"horario\"></app-horarioclases>\r\n\r\n</ion-content>\r\n");
+
+/***/ }),
+
+/***/ 8601:
+/*!*****************************************************************!*\
+  !*** ./src/app/components/asignatura/asignatura.component.scss ***!
+  \*****************************************************************/
+/***/ ((module) => {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhc2lnbmF0dXJhLmNvbXBvbmVudC5zY3NzIn0= */";
+
+/***/ }),
+
+/***/ 294:
+/*!*********************************************************!*\
+  !*** ./src/app/components/header/header.component.scss ***!
+  \*********************************************************/
+/***/ ((module) => {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJoZWFkZXIuY29tcG9uZW50LnNjc3MifQ== */";
+
+/***/ }),
+
+/***/ 6362:
+/*!***********************************************************!*\
+  !*** ./src/app/components/horario/horario.component.scss ***!
+  \***********************************************************/
+/***/ ((module) => {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJob3JhcmlvLmNvbXBvbmVudC5zY3NzIn0= */";
+
+/***/ }),
+
+/***/ 4713:
+/*!*************************************************!*\
+  !*** ./src/app/pages/horario/horario.page.scss ***!
+  \*************************************************/
+/***/ ((module) => {
+
+module.exports = "ion-title {\n  font-size: 16px;\n}\n\nh6 {\n  color: #00162b;\n  margin-right: 14px;\n  margin-bottom: 18px;\n}\n\n.cerrar {\n  cursor: pointer;\n  color: white;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhvcmFyaW8ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZUFBZTtBQUNuQjs7QUFFQTtFQUNJLGNBQWM7RUFDZCxrQkFBa0I7RUFDbEIsbUJBQW1CO0FBQ3ZCOztBQUVBO0VBQ0ksZUFBZTtFQUNmLFlBQVk7QUFDaEIiLCJmaWxlIjoiaG9yYXJpby5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tdGl0bGUge1xyXG4gICAgZm9udC1zaXplOiAxNnB4O1xyXG59XHJcblxyXG5oNiB7XHJcbiAgICBjb2xvcjogIzAwMTYyYjtcclxuICAgIG1hcmdpbi1yaWdodDogMTRweDtcclxuICAgIG1hcmdpbi1ib3R0b206IDE4cHg7XHJcbn1cclxuXHJcbi5jZXJyYXIge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59Il19 */";
 
 /***/ })
 
