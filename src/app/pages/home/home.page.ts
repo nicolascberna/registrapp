@@ -35,18 +35,14 @@ export class HomePage{
                 });
               }
 
-  /* se dispara cuando ya la page carga */
-  ionViewDidEnter() {
+  /* se dispara apenas entra */
+  ionViewWillEnter() {
+    console.log('ionViewWillEnter');
     this.horarioService.getUsuario().subscribe(resp=>
       {
         console.log('usuario', resp);
         this.usuario = resp;
       });
-  }
-  /* se dispara apenas entra */
-  ionViewWillEnter() {
-    console.log('ionViewWillEnter');
-    this.scan();
   }
 
   /* metodo para escanear QR */

@@ -1052,6 +1052,22 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\malco\\Desktop\\registrapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-watch-v21_values-watch-v21.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\malco\\.gradle\\caches\\transforms-3\\ce3f79a523d89320dd464c2b2de6183e\\transformed\\appcompat-1.2.0\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\malco\\Desktop\\registrapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-ro_values-ro.arsc.flat",
             "map": [
                 {
@@ -1103,22 +1119,6 @@
                         "startOffsets": "11859",
                         "endColumns": "100",
                         "endOffsets": "11955"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\malco\\Desktop\\registrapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\values-watch-v21_values-watch-v21.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\malco\\.gradle\\caches\\transforms-3\\ce3f79a523d89320dd464c2b2de6183e\\transformed\\appcompat-1.2.0\\res\\values-watch-v21\\values-watch-v21.xml",
-                    "from": {
-                        "startLines": "2,6,10",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,271,499",
-                        "endLines": "5,9,13",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "266,494,724"
                     }
                 }
             ]

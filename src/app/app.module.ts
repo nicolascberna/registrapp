@@ -21,9 +21,9 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    /* IonicStorageModule.forRoot({
+    IonicStorageModule.forRoot({
       name: "mydatabase"
-    }) */
+    }),
   ],
   providers: [
     BarcodeScanner,
