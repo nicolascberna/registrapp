@@ -29,9 +29,7 @@ export class DataLocalService {
   async cargarEscaneo() {
       const storageData = await this.storage.create();
       this.memoria = storageData;
-      const registros = await this.memoria.get('registros');
-      if (registros) {
-        this.guardados = registros;
+      this.guardados = await this.memoria.get('registros') || [];
       }
   }
-}
+

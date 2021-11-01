@@ -11,6 +11,8 @@ export class Registro {
         this.format = format;
         this.text = text;
         this.created = new Date();
+
+        this.tipoRegistro();
     }
 
     private tipoRegistro(): void {
@@ -21,8 +23,8 @@ export class Registro {
             case 'http':
                 this.type = 'http';
                 break;
-            case 'geo:':
-                this.type = 'geo';
+            case 'text:':
+                this.type = 'text';
                 break;
             default:
                 this.type = 'No reconocido';
