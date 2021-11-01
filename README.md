@@ -8,8 +8,19 @@ Para realizar pruebas del sistema hibrido corriendo en lab se debe usa las crede
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+----     ACTUALMENTE CONSUMIENDO JSON DESDE GITHUB    ----
 Instalacion de json-server: npm install -g json-server
 Para correr api local: json-server --watch db.json
+----     ACTUALMENTE CONSUMIENDO JSON DESDE GITHUB    ----
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Instalacion del storage de angular
+1.- npm install @ionic/storage
+2.- npm install @ionic/storage-angular.
+3.- Importar en el app.module.ts: import { IonicStorageModule } from '@ionic/storage-angular';
+4.- Agregar en el app.module.ts: IonicStorageModule.forRoot()
+
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

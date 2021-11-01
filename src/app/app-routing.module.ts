@@ -28,6 +28,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/horario/horario.module').then( m => m.HorarioPageModule)
   },
   {
+    path: 'escaneo',
+    loadChildren: () => import('./pages/escaneo/escaneo.module').then( m => m.EscaneoPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
   },

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="light">QR Escaneados</ion-title>
+    <h6 class="cerrar" (click)="dismiss()" slot="end">Cerrar</h6>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let escaneo of dataLocal.guardados" (click)="verEscaneo(escaneo)">
+      <ion-icon name="book-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h2>{{escaneo.text}}</h2>
+        <p>{{escaneo.created | date: 'medium'}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

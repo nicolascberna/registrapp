@@ -1,12 +1,5 @@
 {
-    "usuario": [
-        {
-        "id": 1,
-        "username": "nicolas",
-        "password": "123",
-        "email": "nicolas@duocuc.cl",
-        "carrera": "Analista Programador Computacional",
-        "sede": "Viña del Mar",
+    
         "horario": [
             {
                 "idAsignatura": "CSY4111",
@@ -23,30 +16,5 @@
                 "estado": "ausente"
             }
         ]
-        },
-        {
-            "id": 2,
-            "username": "malcom",
-            "password": "123",
-            "email": "malcom@duocuc.cl",
-            "carrera": "Analista Programador Computacional",
-            "sede": "Viña del Mar",
-            "horario": [
-                {
-                    "idAsignatura": "CSY4111",
-                    "nombre": "Calidad de Software",
-                    "horaInicio": "22:16",
-                    "horaTermino": "23:45",
-                    "estado": "ausente"
-                },
-                {
-                    "idAsignatura": "PGY4121",
-                    "nombre": "Programación de aplicaciones móviles",
-                    "horaInicio": "19:15",
-                    "horaTermino": "21:30",
-                    "estado": "ausente"
-                }
-            ]
-            }
-    ]
+        
 }
