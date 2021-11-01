@@ -1,12 +1,16 @@
 # registrapp
 
-npm install --save-dev @angular-devkit/build-angular
+Instalacion de dependencias node: <br>
+<b>npm install --save-dev @angular-devkit/build-angular</b>
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++
 
-Para realizar pruebas del sistema hibrido corriendo en lab se debe usa las credenciales "malcom" o "nicolas" para usuario y para contraseña por defecto es 123.
+Credenciales para testear app: <br>
+usuario: "malcom" o "nicolas" <br>
+contraseña: 123 <br>
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++
+
 
 ----     ACTUALMENTE CONSUMIENDO JSON DESDE GITHUB    ----
 Instalacion de json-server: npm install -g json-server
@@ -21,20 +25,19 @@ Instalacion del storage de angular
 3.- Importar en el app.module.ts: import { IonicStorageModule } from '@ionic/storage-angular';
 4.- Agregar en el app.module.ts: IonicStorageModule.forRoot()
 
++++++++++++++++++++++++++++++++++++
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Para correr la app en el celular o en el emulador de Android con CAPACITOR: <br>
+1.- npm install @capacitor/android <br>
+2.- npx cap add android <br>
+3.- ionic capacitor sync android <br>
+4.- npx cap open android <br>
 
-Para correr la app en el celular o en el emulador de Android con CAPACITOR:
-1.- npm install @capacitor/android
-2.- npx cap add android
-3.- ionic capacitor sync android
-4.- npx cap open android
+Dentro de Android Studio ejecutar la virtualizacion con android Pie (9) para prevenir errores de lanzamiento. <br>
 
-Dentro de Android Studio ejecutar la virtualizacion con android Pie (9) para prevenir errores de lanzamiento.
-
------ PARA AGREGAR NUEVOS CAMBIOS A LA APLICACION ANDROID -----
-1.- npx cap sync
-2.- ionic capacitor copy android
+----- PARA AGREGAR NUEVOS CAMBIOS A LA APLICACION ANDROID ----- <br>
+1.- npx cap sync <br>
+2.- ionic capacitor copy android <br>
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
