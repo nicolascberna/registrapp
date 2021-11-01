@@ -39,7 +39,12 @@
                   [disabled]="formulario.invalid">
           INICIAR SESION
       </ion-button>
+      <ion-item>
+        <ion-checkbox color="secondary" slot="start"></ion-checkbox>
+        <ion-label>Guardar sesión</ion-label>
+      </ion-item>
     </form>
+    
     <p class="pass-hover" (click)="recovery(['/password'])">Recuperar contraseña</p>
   </div>
   

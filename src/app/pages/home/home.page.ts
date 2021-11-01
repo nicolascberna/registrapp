@@ -77,6 +77,7 @@ export class HomePage{
       },{
         text: 'Aceptar',
         handler: () => {
+          localStorage.removeItem("usuario");
         this.router.navigate(['/login']);}
     }]
   });
