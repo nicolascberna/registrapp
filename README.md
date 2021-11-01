@@ -1,29 +1,32 @@
 # registrapp
 
-npm install --save-dev @angular-devkit/build-angular
+Instalacion de dependencias node: <br>
+<b>npm install --save-dev @angular-devkit/build-angular</b>
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++
 
-Para realizar pruebas del sistema hibrido corriendo en lab se debe usa las credenciales "malcom" o "nicolas" para usuario y para contraseña por defecto es 123.
+Credenciales para testear app: <br>
+usuario: "malcom" o "nicolas" <br>
+contraseña: 123 <br>
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++
 
-Instalacion de json-server: npm install -g json-server
-Para correr api local: json-server --watch db.json
+Instalacion de json-server: <br> <b>npm install -g json-server</b> <br><br>
+Para correr api local:<br> <b>json-server --watch db.json</b> <br>
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++
 
-Para correr la app en el celular o en el emulador de Android con CAPACITOR:
-1.- npm install @capacitor/android
-2.- npx cap add android
-3.- ionic capacitor sync android
-4.- npx cap open android
+Para correr la app en el celular o en el emulador de Android con CAPACITOR: <br>
+1.- npm install @capacitor/android <br>
+2.- npx cap add android <br>
+3.- ionic capacitor sync android <br>
+4.- npx cap open android <br>
 
-Dentro de Android Studio ejecutar la virtualizacion con android Pie (9) para prevenir errores de lanzamiento.
+Dentro de Android Studio ejecutar la virtualizacion con android Pie (9) para prevenir errores de lanzamiento. <br>
 
------ PARA AGREGAR NUEVOS CAMBIOS A LA APLICACION ANDROID -----
-1.- npx cap sync
-2.- ionic capacitor copy android
+----- PARA AGREGAR NUEVOS CAMBIOS A LA APLICACION ANDROID ----- <br>
+1.- npx cap sync <br>
+2.- ionic capacitor copy android <br>
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
