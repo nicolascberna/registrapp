@@ -19,7 +19,7 @@ import { EscaneoPage } from '../escaneo/escaneo.page';
 })
 export class HomePage{
   /* variable de tipo any que permite cualquiero tipo de dato */
-  dato: any;
+  dato = localStorage.getItem("usuario");
   usuario: Usuario;
 
   constructor(private horarioService: HorarioService,

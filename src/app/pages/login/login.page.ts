@@ -42,7 +42,9 @@ export class LoginPage implements AfterViewInit {
   /* validado en bruto usuarios 'malcom', 'nicolas', contraseña '123', donde se muestra un */
   async ingresar(page){
     if(this.user.usuario == 'malcom' && this.user.pass == '123' || this.user.usuario == 'nicolas' && this.user.pass == '123')
-    {  const navigationExtras: NavigationExtras={
+    {  
+      localStorage.setItem('usuario',this.user.usuario);
+      const navigationExtras: NavigationExtras={
         state:{
           user: this.user.usuario
         }
