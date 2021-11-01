@@ -10,6 +10,7 @@
 <ol>
   <li>npm install @ionic/storage</li>
   <li>npm install @ionic/storage-angular</li>
+  <li>npm install @ionic/storage@2.3.1 --save--save-exact</li>
 </ol>
 <hr>
 
