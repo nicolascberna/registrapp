@@ -12,11 +12,16 @@ export class SplashscreenPage implements OnInit {
   constructor( private router: Router) { }
 
   ngOnInit() {
+
   }
 
   ionViewDidEnter() {
     setTimeout(() => {
-      this.navigateToPage();
+      if(localStorage.getItem("usuario")) {
+        this.router.navigate(['/home'])
+      } else {
+        this.navigateToPage();
+      }
     }, 1000);
   }
 
