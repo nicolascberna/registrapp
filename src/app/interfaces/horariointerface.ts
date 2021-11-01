@@ -20,5 +20,5 @@ export interface Usuario {
   email: string;
   carrera: string;
   sede: string;
-  horario: Horario[]
+  horario: Horario[];
 }

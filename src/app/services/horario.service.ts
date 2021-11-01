@@ -11,11 +11,11 @@ export class HorarioService {
 
   getUsuario()
   {
-    return this.http.get<Usuario>('http://localhost:3000/usuario/1');
+    return this.http.get<Usuario>('https://malcompozo.github.io/Data/db.json');
   }
 
-  getUsuarioo(username)
+  getUsuarioo(username: any)
   {
-    return this.http.get<Usuario>(`http://localhost:3000/usuario?username=${username}`);
+    return this.http.get<Usuario>(`https://malcompozo.github.io/Data/db.json=${username}`);
   }
 }

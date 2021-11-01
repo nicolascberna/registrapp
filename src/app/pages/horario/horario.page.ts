@@ -12,7 +12,7 @@ import { Horario, Usuario, Asignatura } from 'src/app/interfaces/horariointerfac
 export class HorarioPage implements OnInit {
 
   horario: Horario[] = [];
-  //usuario: Usuario;
+  date: Date = new Date();
 
   constructor(public modalController: ModalController,
               private horarioService: HorarioService
@@ -21,7 +21,7 @@ export class HorarioPage implements OnInit {
   ngOnInit() {
     this.horarioService.getUsuario().subscribe(resp=>
       {
-        console.log('horario', resp.horario);
+        console.log(resp.horario);
         this.horario.push(...resp.horario);
         //this.usuario = resp;
       });

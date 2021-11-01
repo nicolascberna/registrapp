@@ -11,8 +11,19 @@ contraseña: 123 <br>
 
 +++++++++++++++++++++++++++++++++++
 
-Instalacion de json-server: <br> <b>npm install -g json-server</b> <br><br>
-Para correr api local:<br> <b>json-server --watch db.json</b> <br>
+
+----     ACTUALMENTE CONSUMIENDO JSON DESDE GITHUB    ----
+Instalacion de json-server: npm install -g json-server
+Para correr api local: json-server --watch db.json
+----     ACTUALMENTE CONSUMIENDO JSON DESDE GITHUB    ----
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Instalacion del storage de angular
+1.- npm install @ionic/storage
+2.- npm install @ionic/storage-angular.
+3.- Importar en el app.module.ts: import { IonicStorageModule } from '@ionic/storage-angular';
+4.- Agregar en el app.module.ts: IonicStorageModule.forRoot()
 
 +++++++++++++++++++++++++++++++++++
 
