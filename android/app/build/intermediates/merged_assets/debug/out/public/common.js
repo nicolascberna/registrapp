@@ -633,6 +633,97 @@ HorarioComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
 
 /***/ }),
 
+/***/ 3362:
+/*!******************************************!*\
+  !*** ./src/app/models/registro.model.ts ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Registro": () => (/* binding */ Registro)
+/* harmony export */ });
+class Registro {
+    constructor(format, text) {
+        this.format = format;
+        this.text = text;
+        this.created = new Date();
+        this.tipoRegistro();
+    }
+    tipoRegistro() {
+        const ini = this.text.substr(0, 4);
+        console.log(ini);
+        switch (ini) {
+            case 'http':
+                this.type = 'http';
+                break;
+            case 'text:':
+                this.type = 'text';
+                break;
+            default:
+                this.type = 'No reconocido';
+                break;
+        }
+    }
+}
+
+
+/***/ }),
+
+/***/ 7846:
+/*!***********************************************!*\
+  !*** ./src/app/pages/escaneo/escaneo.page.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "EscaneoPage": () => (/* binding */ EscaneoPage)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 3786);
+/* harmony import */ var _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_escaneo_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./escaneo.page.html */ 2926);
+/* harmony import */ var _escaneo_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./escaneo.page.scss */ 711);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ 7602);
+/* harmony import */ var _services_data_local_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/data-local.service */ 9324);
+
+
+
+
+
+
+let EscaneoPage = class EscaneoPage {
+    constructor(modalController, dataLocal) {
+        this.modalController = modalController;
+        this.dataLocal = dataLocal;
+    }
+    ngOnInit() {
+    }
+    dismiss() {
+        this.modalController.dismiss({
+            dismissed: true
+        });
+    }
+    verEscaneo(escaneo) {
+        console.log(escaneo);
+    }
+};
+EscaneoPage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__.ModalController },
+    { type: _services_data_local_service__WEBPACK_IMPORTED_MODULE_2__.DataLocalService }
+];
+EscaneoPage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
+        selector: 'app-escaneo',
+        template: _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_escaneo_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        styles: [_escaneo_page_scss__WEBPACK_IMPORTED_MODULE_1__]
+    })
+], EscaneoPage);
+
+
+
+/***/ }),
+
 /***/ 6492:
 /*!***********************************************!*\
   !*** ./src/app/pages/horario/horario.page.ts ***!
@@ -656,15 +747,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let HorarioPage = class HorarioPage {
-    //usuario: Usuario;
     constructor(modalController, horarioService) {
         this.modalController = modalController;
         this.horarioService = horarioService;
         this.horario = [];
+        this.date = new Date();
     }
     ngOnInit() {
         this.horarioService.getUsuario().subscribe(resp => {
-            console.log('horario', resp.horario);
+            console.log(resp.horario);
             this.horario.push(...resp.horario);
             //this.usuario = resp;
         });
@@ -691,6 +782,60 @@ HorarioPage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
 
 /***/ }),
 
+/***/ 9324:
+/*!************************************************!*\
+  !*** ./src/app/services/data-local.service.ts ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "DataLocalService": () => (/* binding */ DataLocalService)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ 3786);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/storage */ 2314);
+/* harmony import */ var _models_registro_model__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/registro.model */ 3362);
+
+
+
+
+let DataLocalService = class DataLocalService {
+    /* private memoria: Storage | null = null; */
+    constructor(storage) {
+        this.storage = storage;
+        /* se declara un arreglo vacio que guardara los escaneos QR realizados */
+        this.guardados = [];
+        /* CARGAR REGISTROS (PERSISTENCIA DE DATOS)*/
+        this.cargarEscaneo();
+    }
+    /* funcion para guardar los escaneos */
+    /* async */ guardarRegistro(fomat, texto) {
+        const nuevoRegistro = new _models_registro_model__WEBPACK_IMPORTED_MODULE_0__.Registro(fomat, texto); /* se crea un nuevo objeto de tipo Registro */
+        this.guardados.unshift(nuevoRegistro); /* para siempre mostrar el ultimo escaneo en la parte superior */
+        console.log(this.guardados);
+        /* await this.cargarEscaneo(); */ /* se guarda en el arreglo */
+        this.storage.set('registros', this.guardados); /* 'GUARDAR REGISTROS (PERSISTENCIA DE DATOS)' */
+    }
+    cargarEscaneo() {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__awaiter)(this, void 0, void 0, function* () {
+            this.guardados = (yield this.storage.get('registros')) || [];
+        });
+    }
+};
+DataLocalService.ctorParameters = () => [
+    { type: _ionic_storage__WEBPACK_IMPORTED_MODULE_2__.Storage }
+];
+DataLocalService = (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.Injectable)({
+        providedIn: 'root'
+    })
+], DataLocalService);
+
+
+
+/***/ }),
+
 /***/ 8856:
 /*!*********************************************!*\
   !*** ./src/app/services/horario.service.ts ***!
@@ -712,10 +857,10 @@ let HorarioService = class HorarioService {
         this.http = http;
     }
     getUsuario() {
-        return this.http.get('http://localhost:3000/usuario/1');
+        return this.http.get('https://malcompozo.github.io/Data/db.json');
     }
     getUsuarioo(username) {
-        return this.http.get(`http://localhost:3000/usuario?username=${username}`);
+        return this.http.get(`https://malcompozo.github.io/Data/db.json=${username}`);
     }
 };
 HorarioService.ctorParameters = () => [
@@ -773,6 +918,20 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 2926:
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./src/app/pages/escaneo/escaneo.page.html ***!
+  \****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\n  <ion-toolbar>\n    <ion-title color=\"light\">QR Escaneados</ion-title>\n    <h6 class=\"cerrar\" (click)=\"dismiss()\" slot=\"end\">Cerrar</h6>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-list>\n    <ion-item *ngFor=\"let escaneo of dataLocal.guardados\" (click)=\"verEscaneo(escaneo)\">\n      <ion-icon name=\"book-outline\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <h2>{{escaneo.text}}</h2>\n        <p>{{escaneo.created | date: 'medium'}}</p>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n");
+
+/***/ }),
+
 /***/ 1638:
 /*!****************************************************************************************************************!*\
   !*** ./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./src/app/pages/horario/horario.page.html ***!
@@ -783,7 +942,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title color=\"light\">Miercoles 15 de Septiembre</ion-title>\r\n    <h6 class=\"cerrar\" (click)=\"dismiss()\" slot=\"end\">Cerrar</h6>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"ion-padding\">\r\n\r\n  <app-horarioclases [horario]=\"horario\"></app-horarioclases>\r\n\r\n</ion-content>\r\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title color=\"light\">{{date | date: 'dd/MM/YYYY'}}</ion-title>\r\n    <h6 class=\"cerrar\" (click)=\"dismiss()\" slot=\"end\">Cerrar</h6>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"ion-padding\">\r\n\r\n  <app-horarioclases [horario]=\"horario\"></app-horarioclases>\r\n\r\n</ion-content>\r\n");
 
 /***/ }),
 
@@ -817,13 +976,23 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 
 /***/ }),
 
+/***/ 711:
+/*!*************************************************!*\
+  !*** ./src/app/pages/escaneo/escaneo.page.scss ***!
+  \*************************************************/
+/***/ ((module) => {
+
+module.exports = "ion-title {\n  font-size: 16px;\n}\n\n.cerrar {\n  cursor: pointer;\n  color: white;\n  margin-right: 14px;\n  margin-bottom: 18px;\n}\n\nion-icon {\n  color: #FFB800;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVzY2FuZW8ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZUFBZTtBQUNuQjs7QUFFQTtFQUNJLGVBQWU7RUFDZixZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLG1CQUFtQjtBQUN2Qjs7QUFFQTtFQUNJLGNBQWM7QUFDbEIiLCJmaWxlIjoiZXNjYW5lby5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tdGl0bGUge1xyXG4gICAgZm9udC1zaXplOiAxNnB4O1xyXG59XHJcblxyXG4uY2VycmFyIHtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIG1hcmdpbi1yaWdodDogMTRweDtcclxuICAgIG1hcmdpbi1ib3R0b206IDE4cHg7XHJcbn1cclxuXHJcbmlvbi1pY29ue1xyXG4gICAgY29sb3I6ICNGRkI4MDA7XHJcbn0iXX0= */";
+
+/***/ }),
+
 /***/ 4713:
 /*!*************************************************!*\
   !*** ./src/app/pages/horario/horario.page.scss ***!
   \*************************************************/
 /***/ ((module) => {
 
-module.exports = "ion-title {\n  font-size: 16px;\n}\n\nh6 {\n  color: #00162b;\n  margin-right: 14px;\n  margin-bottom: 18px;\n}\n\n.cerrar {\n  cursor: pointer;\n  color: white;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhvcmFyaW8ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZUFBZTtBQUNuQjs7QUFFQTtFQUNJLGNBQWM7RUFDZCxrQkFBa0I7RUFDbEIsbUJBQW1CO0FBQ3ZCOztBQUVBO0VBQ0ksZUFBZTtFQUNmLFlBQVk7QUFDaEIiLCJmaWxlIjoiaG9yYXJpby5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tdGl0bGUge1xyXG4gICAgZm9udC1zaXplOiAxNnB4O1xyXG59XHJcblxyXG5oNiB7XHJcbiAgICBjb2xvcjogIzAwMTYyYjtcclxuICAgIG1hcmdpbi1yaWdodDogMTRweDtcclxuICAgIG1hcmdpbi1ib3R0b206IDE4cHg7XHJcbn1cclxuXHJcbi5jZXJyYXIge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59Il19 */";
+module.exports = "ion-title {\n  font-size: 16px;\n}\n\n.cerrar {\n  cursor: pointer;\n  color: white;\n  margin-right: 14px;\n  margin-bottom: 18px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhvcmFyaW8ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZUFBZTtBQUNuQjs7QUFFQTtFQUNJLGVBQWU7RUFDZixZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLG1CQUFtQjtBQUN2QiIsImZpbGUiOiJob3JhcmlvLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi10aXRsZSB7XHJcbiAgICBmb250LXNpemU6IDE2cHg7XHJcbn1cclxuXHJcbi5jZXJyYXIge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gICAgbWFyZ2luLXJpZ2h0OiAxNHB4O1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMThweDtcclxufSJdfQ== */";
 
 /***/ })
 
