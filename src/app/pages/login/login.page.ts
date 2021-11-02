@@ -16,6 +16,8 @@ export class LoginPage implements AfterViewInit {
     pass:''
   };
 
+  guardado: boolean = false;
+
   constructor(private router: Router,
               public alertController: AlertController,
               public toastController: ToastController,
@@ -63,5 +65,9 @@ export class LoginPage implements AfterViewInit {
       this.user.usuario='';
       this.user.pass='';
     }
+  }
+
+  guardarUsuario() {
+    console.log(this.guardado);
   }
 }
