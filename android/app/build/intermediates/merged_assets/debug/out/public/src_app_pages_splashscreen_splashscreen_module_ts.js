@@ -108,12 +108,7 @@ let SplashscreenPage = class SplashscreenPage {
     }
     ionViewDidEnter() {
         setTimeout(() => {
-            if (localStorage.getItem("usuario")) {
-                this.router.navigate(['/home']);
-            }
-            else {
-                this.navigateToPage();
-            }
+            this.navigateToPage();
         }, 1000);
     }
     navigateToPage() {

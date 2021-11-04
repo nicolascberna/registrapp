@@ -33,17 +33,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AppRoutingModule": () => (/* binding */ AppRoutingModule)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 2316);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 1258);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 3786);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 1258);
+/* harmony import */ var _guards_no_ingresado_guard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./guards/no-ingresado.guard */ 3813);
+/* harmony import */ var _guards_ingresado_guard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./guards/ingresado.guard */ 826);
+
+
 
 
 
 const routes = [
-    {
-        path: 'home',
-        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_home_home_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/home/home.module */ 7994)).then(m => m.HomePageModule)
-    },
     {
         path: '',
         redirectTo: 'splashscreen',
@@ -51,23 +51,33 @@ const routes = [
     },
     {
         path: 'splashscreen',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_splashscreen_splashscreen_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/splashscreen/splashscreen.module */ 4236)).then(m => m.SplashscreenPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_splashscreen_splashscreen_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/splashscreen/splashscreen.module */ 4236)).then(m => m.SplashscreenPageModule),
+        canActivate: [_guards_no_ingresado_guard__WEBPACK_IMPORTED_MODULE_0__.NoIngresadoGuard]
     },
     {
         path: 'login',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_login_login_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/login/login.module */ 1053)).then(m => m.LoginPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_login_login_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/login/login.module */ 1053)).then(m => m.LoginPageModule),
+        canActivate: [_guards_no_ingresado_guard__WEBPACK_IMPORTED_MODULE_0__.NoIngresadoGuard]
+    },
+    {
+        path: 'home',
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_home_home_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/home/home.module */ 7994)).then(m => m.HomePageModule),
+        canActivate: [_guards_ingresado_guard__WEBPACK_IMPORTED_MODULE_1__.ProteccionGuard]
     },
     {
         path: 'password',
-        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_password_password_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/password/password.module */ 2302)).then(m => m.PasswordPageModule)
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_password_password_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/password/password.module */ 2302)).then(m => m.PasswordPageModule),
+        canActivate: [_guards_no_ingresado_guard__WEBPACK_IMPORTED_MODULE_0__.NoIngresadoGuard]
     },
     {
         path: 'horario',
-        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_horario_horario_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/horario/horario.module */ 8612)).then(m => m.HorarioPageModule)
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_horario_horario_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/horario/horario.module */ 8612)).then(m => m.HorarioPageModule),
+        canActivate: [_guards_ingresado_guard__WEBPACK_IMPORTED_MODULE_1__.ProteccionGuard]
     },
     {
         path: 'escaneo',
-        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_escaneo_escaneo_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/escaneo/escaneo.module */ 1425)).then(m => m.EscaneoPageModule)
+        loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_escaneo_escaneo_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/escaneo/escaneo.module */ 1425)).then(m => m.EscaneoPageModule),
+        canActivate: [_guards_ingresado_guard__WEBPACK_IMPORTED_MODULE_1__.ProteccionGuard]
     },
     {
         path: '**',
@@ -76,12 +86,12 @@ const routes = [
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
-AppRoutingModule = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.NgModule)({
+AppRoutingModule = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.NgModule)({
         imports: [
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterModule.forRoot(routes, { preloadingStrategy: _angular_router__WEBPACK_IMPORTED_MODULE_2__.PreloadAllModules })
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forRoot(routes, { preloadingStrategy: _angular_router__WEBPACK_IMPORTED_MODULE_4__.PreloadAllModules })
         ],
-        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterModule]
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule]
     })
 ], AppRoutingModule);
 
@@ -176,6 +186,94 @@ AppModule = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent],
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ 826:
+/*!*******************************************!*\
+  !*** ./src/app/guards/ingresado.guard.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ProteccionGuard": () => (/* binding */ ProteccionGuard)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ 3786);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ionic/angular */ 7602);
+
+
+
+let ProteccionGuard = class ProteccionGuard {
+    constructor(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    canActivate(route, state) {
+        if (localStorage.getItem('ingresado')) {
+            return true;
+        }
+        else {
+            this.navCtrl.navigateRoot('/login');
+            return false;
+        }
+    }
+};
+ProteccionGuard.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_0__.NavController }
+];
+ProteccionGuard = (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Injectable)({
+        providedIn: 'root'
+    })
+], ProteccionGuard);
+
+
+
+/***/ }),
+
+/***/ 3813:
+/*!**********************************************!*\
+  !*** ./src/app/guards/no-ingresado.guard.ts ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "NoIngresadoGuard": () => (/* binding */ NoIngresadoGuard)
+/* harmony export */ });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tslib */ 3786);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ionic/angular */ 7602);
+
+
+
+let NoIngresadoGuard = class NoIngresadoGuard {
+    constructor(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    canActivate(route, state) {
+        if (localStorage.getItem('ingresado')) {
+            this.navCtrl.navigateRoot('/home');
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+};
+NoIngresadoGuard.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_0__.NavController }
+];
+NoIngresadoGuard = (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Injectable)({
+        providedIn: 'root'
+    })
+], NoIngresadoGuard);
 
 
 
