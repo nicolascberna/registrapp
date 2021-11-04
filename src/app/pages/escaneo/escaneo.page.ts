@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { DataLocalService } from '../../services/data-local.service';
 
@@ -10,7 +11,8 @@ import { DataLocalService } from '../../services/data-local.service';
 export class EscaneoPage implements OnInit {
 
   constructor(  public modalController: ModalController,
-                public dataLocal: DataLocalService ) { }
+                public dataLocal: DataLocalService,
+                private router: Router ) { }
 
   ngOnInit() {
   }
@@ -23,6 +25,13 @@ export class EscaneoPage implements OnInit {
 
   verEscaneo(escaneo) {
     console.log(escaneo);
+  }
+
+  error404() {
+    this.router.navigate(['/404']);
+    this.modalController.dismiss({
+      dismissed: true
+    });
   }
 
 }

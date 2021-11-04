@@ -1,8 +1,7 @@
 
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
-import { ModalController } from '@ionic/angular';
+import { AlertController, ModalController, NavController } from '@ionic/angular';
 
 
 import { HorarioService } from 'src/app/services/horario.service';
@@ -19,7 +18,7 @@ import { EscaneoPage } from '../escaneo/escaneo.page';
 })
 export class HomePage{
   /* variable de tipo any que permite cualquiero tipo de dato */
-  dato = localStorage.getItem("usuario");
+  dato = localStorage.getItem('usuario');
   usuario: Usuario;
 
   constructor(private horarioService: HorarioService,
@@ -28,7 +27,8 @@ export class HomePage{
               public modalController: ModalController,
               private activeroute: ActivatedRoute,
               private barcodeScanner: BarcodeScanner,
-              private dataLocal: DataLocalService) {
+              private dataLocal: DataLocalService,
+              public navCtrl: NavController) {
                 this.activeroute.queryParams.subscribe(params => {
                   /* validar si la navegacion tiene parametros */
                   if (this.router.getCurrentNavigation().extras.state){
@@ -77,8 +77,10 @@ export class HomePage{
       },{
         text: 'Aceptar',
         handler: () => {
-          localStorage.removeItem("usuario");
-        this.router.navigate(['/login']);}
+          localStorage.removeItem('usuario');
+          localStorage.removeItem('ingresado');
+          this.navCtrl.navigateRoot('login');
+        }
     }]
   });
     await alert.present();

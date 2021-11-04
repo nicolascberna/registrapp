@@ -30,6 +30,7 @@ export class DataLocalService {
 
   async cargarEscaneo() {
 
+    /* this.storage.clear(); */ /* limpiar la memoria */
     this.guardados = (await this.storage.get('registros')) || [];
 
   }

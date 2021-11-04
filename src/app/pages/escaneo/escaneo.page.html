@@ -8,7 +8,7 @@
 <ion-content>
 
   <ion-list>
-    <ion-item *ngFor="let escaneo of dataLocal.guardados" (click)="verEscaneo(escaneo)">
+    <ion-item *ngFor="let escaneo of dataLocal.guardados">
       <ion-icon name="book-outline" slot="start"></ion-icon>
       <ion-label>
         <h2>{{escaneo.text}}</h2>
@@ -16,5 +16,11 @@
       </ion-label>
     </ion-item>
   </ion-list>
+  <ion-label>
+    <ion-button (click)="error404()"
+                expand="full">
+      Borrar Historial
+    </ion-button>
+  </ion-label>
 
 </ion-content>

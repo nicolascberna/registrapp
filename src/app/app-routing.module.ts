@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes,  } from '@angular/router';
+import { NoIngresadoGuard } from './guards/no-ingresado.guard';
+import { ProteccionGuard } from './guards/ingresado.guard';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
-  },
   {
     path: '',
     redirectTo: 'splashscreen',
@@ -13,23 +11,33 @@ const routes: Routes = [
   },
   {
     path: 'splashscreen',
-    loadChildren: () => import('./pages/splashscreen/splashscreen.module').then( m => m.SplashscreenPageModule)
+    loadChildren: () => import('./pages/splashscreen/splashscreen.module').then( m => m.SplashscreenPageModule),
+    canActivate: [NoIngresadoGuard]
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
+    canActivate: [NoIngresadoGuard]
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule),
+    canActivate: [ProteccionGuard]
   },
   {
     path: 'password',
-    loadChildren: () => import('./pages/password/password.module').then( m => m.PasswordPageModule)
+    loadChildren: () => import('./pages/password/password.module').then( m => m.PasswordPageModule),
+    canActivate: [NoIngresadoGuard]
   },
   {
     path: 'horario',
-    loadChildren: () => import('./pages/horario/horario.module').then( m => m.HorarioPageModule)
+    loadChildren: () => import('./pages/horario/horario.module').then( m => m.HorarioPageModule),
+    canActivate: [ProteccionGuard]
   },
   {
     path: 'escaneo',
-    loadChildren: () => import('./pages/escaneo/escaneo.module').then( m => m.EscaneoPageModule)
+    loadChildren: () => import('./pages/escaneo/escaneo.module').then( m => m.EscaneoPageModule),
+    canActivate: [ProteccionGuard]
   },
   {
     path: '**',

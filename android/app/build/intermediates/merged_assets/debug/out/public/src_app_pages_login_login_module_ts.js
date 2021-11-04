@@ -113,6 +113,7 @@ let LoginPage = class LoginPage {
             usuario: '',
             pass: ''
         };
+        this.guardado = false;
     }
     ngAfterViewInit() {
         const animation = this.animationCtrl
@@ -134,6 +135,7 @@ let LoginPage = class LoginPage {
     ingresar(page) {
         return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__awaiter)(this, void 0, void 0, function* () {
             if (this.user.usuario == 'malcom' && this.user.pass == '123' || this.user.usuario == 'nicolas' && this.user.pass == '123') {
+                localStorage.setItem('usuario', this.user.usuario);
                 const navigationExtras = {
                     state: {
                         user: this.user.usuario
@@ -155,6 +157,9 @@ let LoginPage = class LoginPage {
                 this.user.pass = '';
             }
         });
+    }
+    guardarUsuario() {
+        console.log(this.guardado);
     }
 };
 LoginPage.ctorParameters = () => [
@@ -188,7 +193,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-content class=\"ion-padding\">\r\n  \r\n  <ion-grid class=\"logo\">\r\n    <ion-row class=\"ion-align-items-center\">\r\n      <ion-col>\r\n        <ion-img #logo src=\"\\assets\\icon\\logo.svg\"></ion-img>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n\r\n  <div>\r\n    <form #formulario=\"ngForm\" (ngSubmit)=\"submit()\">\r\n\r\n      <ion-item>\r\n        <ion-label position=\"floating\">Usuario</ion-label>\r\n        <ion-input  required \r\n                    name=\"user\"\r\n                    [(ngModel)]=\"user.usuario\" \r\n                    minlength=3 \r\n                    maxlength=15 \r\n                    clear-input='true'>\r\n        </ion-input>\r\n      </ion-item>\r\n    \r\n      <ion-item>\r\n        <ion-label position=\"floating\">Contraseña</ion-label>\r\n        <ion-input  required \r\n                    name=\"pass\"\r\n                    [(ngModel)]=\"user.pass\" \r\n                    type=\"password\" \r\n                    clear-input='true'>\r\n        </ion-input>\r\n      </ion-item>\r\n\r\n\r\n      <ion-button (click)=\"ingresar(['/home'])\" \r\n                  type=\"submit\"\r\n                  expand=\"block\"\r\n                  [disabled]=\"formulario.invalid\">\r\n          INICIAR SESION\r\n      </ion-button>\r\n    </form>\r\n    <p class=\"pass-hover\" (click)=\"recovery(['/password'])\">Recuperar contraseña</p>\r\n  </div>\r\n  \r\n\r\n</ion-content>\r\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-content class=\"ion-padding\">\r\n  \r\n  <ion-grid class=\"logo\">\r\n    <ion-row class=\"ion-align-items-center\">\r\n      <ion-col>\r\n        <ion-img #logo src=\"\\assets\\icon\\logo.svg\"></ion-img>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n\r\n  <div>\r\n    <form #formulario=\"ngForm\" (ngSubmit)=\"submit()\">\r\n\r\n      <ion-item>\r\n        <ion-label position=\"floating\">Usuario</ion-label>\r\n        <ion-input  required \r\n                    name=\"user\"\r\n                    [(ngModel)]=\"user.usuario\" \r\n                    minlength=3 \r\n                    maxlength=15 \r\n                    clear-input='true'>\r\n        </ion-input>\r\n      </ion-item>\r\n    \r\n      <ion-item>\r\n        <ion-label position=\"floating\">Contraseña</ion-label>\r\n        <ion-input  required \r\n                    name=\"pass\"\r\n                    [(ngModel)]=\"user.pass\" \r\n                    type=\"password\" \r\n                    clear-input='true'>\r\n        </ion-input>\r\n      </ion-item>\r\n\r\n\r\n      <ion-button (click)=\"ingresar(['/home'])\" \r\n                  type=\"submit\"\r\n                  expand=\"block\"\r\n                  [disabled]=\"formulario.invalid\">\r\n          INICIAR SESION\r\n      </ion-button>\r\n      \r\n    </form>\r\n    <!-- <ion-item>\r\n      <ion-checkbox (click)=\"guardarUsuario()\"\r\n                    [(ngModel)]=\"guardado\"\r\n                    color=\"secondary\" \r\n                    slot=\"start\"></ion-checkbox>\r\n      <ion-label>Guardar sesión</ion-label>\r\n    </ion-item> -->\r\n    \r\n    <p class=\"pass-hover\" (click)=\"recovery(['/password'])\">Recuperar contraseña</p>\r\n  </div>\r\n  \r\n\r\n</ion-content>\r\n");
 
 /***/ }),
 
