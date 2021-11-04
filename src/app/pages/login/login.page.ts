@@ -45,9 +45,8 @@ export class LoginPage implements AfterViewInit {
   /* validado en bruto usuarios 'malcom', 'nicolas', contraseña '123', donde se muestra un */
   async ingresar(page){
     if(this.user.usuario == 'malcom' && this.user.pass == '123' || this.user.usuario == 'nicolas' && this.user.pass == '123'){
-      this.user.usuario='';
-      this.user.pass='';
-      /* localStorage.setItem('usuario',this.user.usuario); */
+
+      localStorage.setItem('usuario',this.user.usuario);
       localStorage.setItem('ingresado','true');
       const navigationExtras: NavigationExtras={
         state:{
@@ -55,6 +54,9 @@ export class LoginPage implements AfterViewInit {
         }
       };
       this.navCtrl.navigateRoot(page,navigationExtras);
+      this.user.usuario='';
+      this.user.pass='';
+
     } else if (this.user.usuario != 'malcom' && this.user.usuario != 'nicolas' || this.user.pass != '123'){
       this.router.navigate(['/login']);
       const toast = await this.toastController.create({

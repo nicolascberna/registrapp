@@ -1,8 +1,7 @@
 
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
-import { ModalController } from '@ionic/angular';
+import { AlertController, ModalController, NavController } from '@ionic/angular';
 
 
 import { HorarioService } from 'src/app/services/horario.service';
@@ -28,7 +27,8 @@ export class HomePage{
               public modalController: ModalController,
               private activeroute: ActivatedRoute,
               private barcodeScanner: BarcodeScanner,
-              private dataLocal: DataLocalService) {
+              private dataLocal: DataLocalService,
+              public navCtrl: NavController) {
                 this.activeroute.queryParams.subscribe(params => {
                   /* validar si la navegacion tiene parametros */
                   if (this.router.getCurrentNavigation().extras.state){
@@ -66,9 +66,6 @@ export class HomePage{
     });
   }
 
-  error404() {
-    this.router.navigate(['/404']);
-  }
 
   /* este metodo llamara al alert exit*/
   async salir() {
@@ -81,7 +78,9 @@ export class HomePage{
         text: 'Aceptar',
         handler: () => {
           localStorage.removeItem('usuario');
-        this.router.navigate(['/login']);}
+          localStorage.removeItem('ingresado');
+          this.navCtrl.navigateRoot('login');
+        }
     }]
   });
     await alert.present();

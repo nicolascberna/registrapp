@@ -17,11 +17,7 @@ export class SplashscreenPage implements OnInit {
 
   ionViewDidEnter() {
     setTimeout(() => {
-      if(localStorage.getItem("usuario")) {
-        this.router.navigate(['/home'])
-      } else {
         this.navigateToPage();
-      }
     }, 1000);
   }
 
