@@ -112,9 +112,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 let HomePage = class HomePage {
-    constructor(horarioService, alertController, router, modalController, activeroute, barcodeScanner, dataLocal) {
+    constructor(horarioService, alertController, router, modalController, activeroute, barcodeScanner, dataLocal, navCtrl) {
         this.horarioService = horarioService;
         this.alertController = alertController;
         this.router = router;
@@ -122,8 +121,9 @@ let HomePage = class HomePage {
         this.activeroute = activeroute;
         this.barcodeScanner = barcodeScanner;
         this.dataLocal = dataLocal;
+        this.navCtrl = navCtrl;
         /* variable de tipo any que permite cualquiero tipo de dato */
-        this.dato = localStorage.getItem("usuario");
+        this.dato = localStorage.getItem('usuario');
         this.activeroute.queryParams.subscribe(params => {
             /* validar si la navegacion tiene parametros */
             if (this.router.getCurrentNavigation().extras.state) {
@@ -166,8 +166,9 @@ let HomePage = class HomePage {
                     }, {
                         text: 'Aceptar',
                         handler: () => {
-                            localStorage.removeItem("usuario");
-                            this.router.navigate(['/login']);
+                            localStorage.removeItem('usuario');
+                            localStorage.removeItem('ingresado');
+                            this.navCtrl.navigateRoot('login');
                         }
                     }]
             });
@@ -201,7 +202,8 @@ HomePage.ctorParameters = () => [
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_8__.ModalController },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_9__.ActivatedRoute },
     { type: _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_3__.BarcodeScanner },
-    { type: _services_data_local_service__WEBPACK_IMPORTED_MODULE_4__.DataLocalService }
+    { type: _services_data_local_service__WEBPACK_IMPORTED_MODULE_4__.DataLocalService },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_8__.NavController }
 ];
 HomePage = (0,tslib__WEBPACK_IMPORTED_MODULE_7__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_10__.Component)({
@@ -225,7 +227,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-app>\r\n\r\n    <ion-header>\r\n      <ion-toolbar class=\"ion-text-end\">\r\n          <ion-icon (click)=\"salir()\" class=\"set\" name=\"exit-outline\"></ion-icon>\r\n      </ion-toolbar>\r\n    </ion-header>\r\n\r\n  <ion-content class=\"ion-padding\" scroll-y=\"false\" [fullscreen]=true>\r\n\r\n    <div class=\"avatar ion-text-center\">\r\n      <img src=\"\\assets\\img\\profile.png\">\r\n    </div>\r\n\r\n    <ion-grid>\r\n      <ion-row>\r\n        <ion-col class=\"ion-text-center\">\r\n          <h3 style=\"text-transform: capitalize;\"><b> Bienvenido {{dato}} </b></h3>\r\n          <h6><b>Analista Programador Computacional</b></h6>\r\n        </ion-col>\r\n      </ion-row>\r\n      <ion-row class=\"ion-text-center\">\r\n        <ion-col> \r\n            <ion-icon name=\"location\"></ion-icon>\r\n            Sede Viña del Mar\r\n        </ion-col>\r\n      </ion-row>\r\n    </ion-grid>\r\n\r\n  <div class=\"verHorario\">\r\n    <ion-label>\r\n      <p class=\"pass-hover\" (click)=\"presentModal()\">Ver horario de clases</p>\r\n    </ion-label>\r\n  \r\n    <ion-label>\r\n      <p class=\"pass-hover\" (click)=\"escaneos()\">Historial de escaneos</p>\r\n    </ion-label>\r\n  </div>\r\n  \r\n  <ion-label>\r\n    <ion-button (click)=\"scan()\"\r\n                expand=\"full\">\r\n      ESCANEAR CODIGO QR\r\n    </ion-button>\r\n  </ion-label>\r\n    \r\n  </ion-content>\r\n\r\n</ion-app>\r\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-app>\r\n\r\n    <ion-header>\r\n      \r\n      <ion-toolbar>\r\n        <ion-title slot=\"start\" color=\"light\">\r\n          RegistrApp\r\n        </ion-title>\r\n          <ion-icon slot=\"end\" (click)=\"salir()\" class=\"set\" name=\"exit-outline\"></ion-icon>\r\n      </ion-toolbar>\r\n      \r\n    </ion-header>\r\n\r\n  <ion-content class=\"ion-padding\" scroll-y=\"false\" [fullscreen]=true>\r\n\r\n    <div class=\"avatar ion-text-center\">\r\n      <img src=\"\\assets\\img\\profile.png\">\r\n    </div>\r\n\r\n    <ion-grid>\r\n      <ion-row>\r\n        <ion-col class=\"ion-text-center\">\r\n          <h3 style=\"text-transform: capitalize;\"><b> Bienvenido {{dato}} </b></h3>\r\n          <h6><b>Analista Programador Computacional</b></h6>\r\n        </ion-col>\r\n      </ion-row>\r\n      <ion-row class=\"ion-text-center\">\r\n        <ion-col> \r\n            <ion-icon name=\"location\"></ion-icon>\r\n            Sede Viña del Mar\r\n        </ion-col>\r\n      </ion-row>\r\n    </ion-grid>\r\n\r\n  <div class=\"verHorario\">\r\n    <ion-label>\r\n      <p class=\"pass-hover\" (click)=\"presentModal()\">Ver horario de clases</p>\r\n    </ion-label>\r\n  \r\n    <ion-label>\r\n      <p class=\"pass-hover\" (click)=\"escaneos()\">Historial de escaneos</p>\r\n    </ion-label>\r\n  </div>\r\n  \r\n  </ion-content>\r\n\r\n  <ion-label>\r\n    <ion-button (click)=\"scan()\"\r\n                expand=\"full\">\r\n      ESCANEAR CODIGO QR\r\n      <ion-icon name=\"qr-code-outline\"></ion-icon>\r\n    </ion-button>\r\n  </ion-label>\r\n\r\n</ion-app>\r\n");
 
 /***/ }),
 
@@ -235,7 +237,7 @@ __webpack_require__.r(__webpack_exports__);
   \*******************************************/
 /***/ ((module) => {
 
-module.exports = ".container {\n  margin-top: 20px;\n  margin-left: 20px;\n  margin-right: 20px;\n}\n\nion-button {\n  font-size: 12px;\n  font-weight: bold;\n  margin-top: 30px;\n  margin-left: 20px;\n  margin-right: 20px;\n}\n\n.avatar {\n  margin-top: 10px;\n}\n\n.avatar img {\n  height: 80px;\n  border-radius: 40px;\n}\n\n.set {\n  margin-right: 12px;\n  font-size: 22px;\n  color: white;\n}\n\np {\n  margin-top: 35px;\n  text-align: center;\n  font-size: 12px;\n}\n\n.pass-hover {\n  margin-top: 0px;\n  color: #00162b;\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n.text {\n  font-size: 6px;\n}\n\n.verHorario {\n  margin-top: 60px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7O0FBR0E7RUFDRSxlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLGdCQUFnQjtFQUNoQixpQkFBaUI7RUFDakIsa0JBQWtCO0FBQXBCOztBQUdBO0VBQ0UsZ0JBQWdCO0FBQWxCOztBQURBO0VBR0ksWUFBWTtFQUNaLG1CQUFtQjtBQUV2Qjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixlQUFlO0VBQ2YsWUFBWTtBQUNkOztBQUdBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixlQUFlO0FBQWpCOztBQUdBO0VBQ0UsZUFBZTtFQUNmLGNBQWM7RUFDZCwwQkFBMEI7RUFDMUIsZUFBZTtBQUFqQjs7QUFHQTtFQUNFLGNBQWM7QUFBaEI7O0FBR0E7RUFDRSxnQkFBZ0I7QUFBbEIiLCJmaWxlIjoiaG9tZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcclxuICBtYXJnaW4tdG9wOiAyMHB4O1xyXG4gIG1hcmdpbi1sZWZ0OiAyMHB4O1xyXG4gIG1hcmdpbi1yaWdodDogMjBweDtcclxufVxyXG5cclxuXHJcbmlvbi1idXR0b24ge1xyXG4gIGZvbnQtc2l6ZTogMTJweDtcclxuICBmb250LXdlaWdodDogYm9sZDtcclxuICBtYXJnaW4tdG9wOiAzMHB4O1xyXG4gIG1hcmdpbi1sZWZ0OiAyMHB4O1xyXG4gIG1hcmdpbi1yaWdodDogMjBweDtcclxufVxyXG5cclxuLmF2YXRhcntcclxuICBtYXJnaW4tdG9wOiAxMHB4O1xyXG4gIGltZ3tcclxuICAgIGhlaWdodDogODBweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDQwcHg7XHJcbiAgfVxyXG59XHJcblxyXG4uc2V0e1xyXG4gIG1hcmdpbi1yaWdodDogMTJweDtcclxuICBmb250LXNpemU6IDIycHg7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG59XHJcblxyXG5cclxucCB7XHJcbiAgbWFyZ2luLXRvcDogMzVweDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgZm9udC1zaXplOiAxMnB4O1xyXG59XHJcblxyXG4ucGFzcy1ob3ZlciB7XHJcbiAgbWFyZ2luLXRvcDogMHB4O1xyXG4gIGNvbG9yOiAjMDAxNjJiO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG5cclxuLnRleHQge1xyXG4gIGZvbnQtc2l6ZTogNnB4O1xyXG59XHJcblxyXG4udmVySG9yYXJpbyB7XHJcbiAgbWFyZ2luLXRvcDogNjBweDtcclxufVxyXG5cclxuXHJcbiJdfQ== */";
+module.exports = "ion-button {\n  font-size: 12px;\n  font-weight: bold;\n  margin-top: 30px;\n  margin-left: 20px;\n  margin-right: 20px;\n  margin-bottom: 20px;\n}\n\n.avatar {\n  margin-top: 20%;\n  margin-bottom: 15%;\n}\n\n.avatar img {\n  height: 150px;\n  border-radius: 100px;\n}\n\n.set {\n  margin-right: 12px;\n  font-size: 22px;\n  color: white;\n}\n\np {\n  margin-top: 35px;\n  text-align: center;\n  font-size: 17px;\n}\n\n.pass-hover {\n  margin-top: 0px;\n  color: #00162b;\n  text-decoration: underline;\n  cursor: pointer;\n}\n\n.verHorario {\n  margin-top: 60px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQixtQkFBbUI7QUFEckI7O0FBSUE7RUFDRSxlQUFlO0VBQ2Ysa0JBQWtCO0FBRHBCOztBQURBO0VBSUksYUFBYTtFQUNiLG9CQUFvQjtBQUN4Qjs7QUFHQTtFQUNFLGtCQUFrQjtFQUNsQixlQUFlO0VBQ2YsWUFBWTtBQUFkOztBQUlBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixlQUFlO0FBRGpCOztBQUlBO0VBQ0UsZUFBZTtFQUNmLGNBQWM7RUFDZCwwQkFBMEI7RUFDMUIsZUFBZTtBQURqQjs7QUFJQTtFQUNFLGdCQUFnQjtBQURsQiIsImZpbGUiOiJob21lLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG5cclxuaW9uLWJ1dHRvbiB7XHJcbiAgZm9udC1zaXplOiAxMnB4O1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gIG1hcmdpbi10b3A6IDMwcHg7XHJcbiAgbWFyZ2luLWxlZnQ6IDIwcHg7XHJcbiAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xyXG4gIG1hcmdpbi1ib3R0b206IDIwcHg7XHJcbn1cclxuXHJcbi5hdmF0YXJ7XHJcbiAgbWFyZ2luLXRvcDogMjAlO1xyXG4gIG1hcmdpbi1ib3R0b206IDE1JTtcclxuICBpbWd7XHJcbiAgICBoZWlnaHQ6IDE1MHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogMTAwcHg7XHJcbiAgfVxyXG59XHJcblxyXG4uc2V0e1xyXG4gIG1hcmdpbi1yaWdodDogMTJweDtcclxuICBmb250LXNpemU6IDIycHg7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG59XHJcblxyXG5cclxucCB7XHJcbiAgbWFyZ2luLXRvcDogMzVweDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgZm9udC1zaXplOiAxN3B4O1xyXG59XHJcblxyXG4ucGFzcy1ob3ZlciB7XHJcbiAgbWFyZ2luLXRvcDogMHB4O1xyXG4gIGNvbG9yOiAjMDAxNjJiO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG5cclxuLnZlckhvcmFyaW8ge1xyXG4gIG1hcmdpbi10b3A6IDYwcHg7XHJcbn1cclxuXHJcblxyXG4iXX0= */";
 
 /***/ })
 
