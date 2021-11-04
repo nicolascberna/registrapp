@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-import { AlertController, ToastController, AnimationController } from '@ionic/angular';
+import { AlertController, ToastController, AnimationController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -16,12 +16,13 @@ export class LoginPage implements AfterViewInit {
     pass:''
   };
 
-  guardado: boolean = false;
+  guardado = false;
 
   constructor(private router: Router,
               public alertController: AlertController,
               public toastController: ToastController,
-              private animationCtrl: AnimationController) { }
+              private animationCtrl: AnimationController,
+              public navCtrl: NavController) { }
 
   ngAfterViewInit() {
     const animation = this.animationCtrl
@@ -43,17 +44,17 @@ export class LoginPage implements AfterViewInit {
 
   /* validado en bruto usuarios 'malcom', 'nicolas', contraseña '123', donde se muestra un */
   async ingresar(page){
-    if(this.user.usuario == 'malcom' && this.user.pass == '123' || this.user.usuario == 'nicolas' && this.user.pass == '123')
-    {  
-      localStorage.setItem('usuario',this.user.usuario);
+    if(this.user.usuario == 'malcom' && this.user.pass == '123' || this.user.usuario == 'nicolas' && this.user.pass == '123'){
+      this.user.usuario='';
+      this.user.pass='';
+      /* localStorage.setItem('usuario',this.user.usuario); */
+      localStorage.setItem('ingresado','true');
       const navigationExtras: NavigationExtras={
         state:{
           user: this.user.usuario
         }
       };
-      this.router.navigate(page, navigationExtras);
-      this.user.usuario='';
-      this.user.pass='';
+      this.navCtrl.navigateRoot(page,navigationExtras);
     } else if (this.user.usuario != 'malcom' && this.user.usuario != 'nicolas' || this.user.pass != '123'){
       this.router.navigate(['/login']);
       const toast = await this.toastController.create({

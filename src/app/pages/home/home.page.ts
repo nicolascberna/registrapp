@@ -19,7 +19,7 @@ import { EscaneoPage } from '../escaneo/escaneo.page';
 })
 export class HomePage{
   /* variable de tipo any que permite cualquiero tipo de dato */
-  dato = localStorage.getItem("usuario");
+  dato = localStorage.getItem('usuario');
   usuario: Usuario;
 
   constructor(private horarioService: HorarioService,
@@ -66,6 +66,9 @@ export class HomePage{
     });
   }
 
+  error404() {
+    this.router.navigate(['/404']);
+  }
 
   /* este metodo llamara al alert exit*/
   async salir() {
@@ -77,7 +80,7 @@ export class HomePage{
       },{
         text: 'Aceptar',
         handler: () => {
-          localStorage.removeItem("usuario");
+          localStorage.removeItem('usuario');
         this.router.navigate(['/login']);}
     }]
   });
