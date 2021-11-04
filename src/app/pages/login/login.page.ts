@@ -54,8 +54,6 @@ export class LoginPage implements AfterViewInit {
         }
       };
       this.navCtrl.navigateRoot(page,navigationExtras);
-      this.user.usuario='';
-      this.user.pass='';
 
     } else if (this.user.usuario != 'malcom' && this.user.usuario != 'nicolas' || this.user.pass != '123'){
       this.router.navigate(['/login']);

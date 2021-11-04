@@ -1,9 +1,14 @@
 <ion-app>
 
     <ion-header>
-      <ion-toolbar class="ion-text-end">
-          <ion-icon (click)="salir()" class="set" name="exit-outline"></ion-icon>
+      
+      <ion-toolbar>
+        <ion-title slot="start" color="light">
+          RegistrApp
+        </ion-title>
+          <ion-icon slot="end" (click)="salir()" class="set" name="exit-outline"></ion-icon>
       </ion-toolbar>
+      
     </ion-header>
 
   <ion-content class="ion-padding" scroll-y="false" [fullscreen]=true>
@@ -37,13 +42,14 @@
     </ion-label>
   </div>
   
+  </ion-content>
+
   <ion-label>
     <ion-button (click)="scan()"
                 expand="full">
       ESCANEAR CODIGO QR
+      <ion-icon name="qr-code-outline"></ion-icon>
     </ion-button>
   </ion-label>
-    
-  </ion-content>
 
 </ion-app>
