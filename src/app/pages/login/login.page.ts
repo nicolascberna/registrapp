@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AlertController, ToastController, AnimationController, NavController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,8 @@ export class LoginPage implements AfterViewInit {
 
   guardado = false;
 
-  constructor(private router: Router,
+  constructor(public loadingController: LoadingController,
+              private router: Router,
               public alertController: AlertController,
               public toastController: ToastController,
               private animationCtrl: AnimationController,
@@ -44,7 +46,16 @@ export class LoginPage implements AfterViewInit {
 
   /* validado en bruto usuarios 'malcom', 'nicolas', contraseña '123', donde se muestra un */
   async ingresar(page){
-    if(this.user.usuario == 'malcom' && this.user.pass == '123' || this.user.usuario == 'nicolas' && this.user.pass == '123'){
+
+    const loading = await this.loadingController.create({
+      cssClass: 'my-custom-class',
+      message: 'Please wait...',
+      duration: 2000
+    });
+    await loading.present();
+    const closed = await loading.onDidDismiss();
+
+    if(this.user.usuario == 'malcom' && this.user.pass == '123' || this.user.usuario == 'nicolas' && this.user.pass == '123' &&closed){
 
       localStorage.setItem('usuario',this.user.usuario);
       localStorage.setItem('ingresado','true');

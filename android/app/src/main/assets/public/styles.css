@@ -1250,6 +1250,9 @@ ion-toolbar {
 ion-back-button {
   --color: white;
 }
+ion-background-color {
+  --color: white;
+}
 
 
 /*# sourceMappingURL=styles.css.map*/

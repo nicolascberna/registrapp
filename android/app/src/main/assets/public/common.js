@@ -93,13 +93,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "a": () => (/* binding */ attachComponent),
 /* harmony export */   "d": () => (/* binding */ detachComponent)
 /* harmony export */ });
-/* harmony import */ var C_Users_malco_Desktop_registrapp_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@angular-devkit/build-angular/node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ 151);
+/* harmony import */ var C_Users_nicol_Desktop_Ionic_registrapp_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@angular-devkit/build-angular/node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ 151);
 /* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ 693);
 
 
 
 const attachComponent = /*#__PURE__*/function () {
-  var _ref = (0,C_Users_malco_Desktop_registrapp_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)(function* (delegate, container, component, cssClasses, componentProps) {
+  var _ref = (0,C_Users_nicol_Desktop_Ionic_registrapp_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)(function* (delegate, container, component, cssClasses, componentProps) {
     if (delegate) {
       return delegate.attachViewToDom(container, component, componentProps, cssClasses);
     }
@@ -406,7 +406,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "h": () => (/* binding */ hostContext),
 /* harmony export */   "o": () => (/* binding */ openURL)
 /* harmony export */ });
-/* harmony import */ var C_Users_malco_Desktop_registrapp_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@angular-devkit/build-angular/node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ 151);
+/* harmony import */ var C_Users_nicol_Desktop_Ionic_registrapp_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@angular-devkit/build-angular/node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ 151);
 
 
 const hostContext = (selector, el) => {
@@ -442,7 +442,7 @@ const getClassMap = classes => {
 const SCHEME = /^[a-z][a-z0-9+\-.]*:/;
 
 const openURL = /*#__PURE__*/function () {
-  var _ref = (0,C_Users_malco_Desktop_registrapp_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)(function* (url, ev, direction, animation) {
+  var _ref = (0,C_Users_nicol_Desktop_Ionic_registrapp_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)(function* (url, ev, direction, animation) {
     if (url != null && url[0] !== '#' && !SCHEME.test(url)) {
       const router = document.querySelector('ion-router');
 
@@ -478,7 +478,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AsignaturaComponent": () => (/* binding */ AsignaturaComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_asignatura_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./asignatura.component.html */ 6893);
+/* harmony import */ var _C_Users_nicol_Desktop_Ionic_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_asignatura_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./asignatura.component.html */ 6893);
 /* harmony import */ var _asignatura_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./asignatura.component.scss */ 8601);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2316);
 
@@ -496,7 +496,7 @@ AsignaturaComponent.propDecorators = {
 AsignaturaComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
         selector: 'app-asignatura',
-        template: _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_asignatura_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        template: _C_Users_nicol_Desktop_Ionic_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_asignatura_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_asignatura_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], AsignaturaComponent);
@@ -564,7 +564,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "HeaderComponent": () => (/* binding */ HeaderComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./header.component.html */ 669);
+/* harmony import */ var _C_Users_nicol_Desktop_Ionic_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./header.component.html */ 669);
 /* harmony import */ var _header_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.component.scss */ 294);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2316);
 
@@ -584,7 +584,7 @@ HeaderComponent.propDecorators = {
 HeaderComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
         selector: 'app-header',
-        template: _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        template: _C_Users_nicol_Desktop_Ionic_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_header_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_header_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], HeaderComponent);
@@ -604,7 +604,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "HorarioComponent": () => (/* binding */ HorarioComponent)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_horario_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./horario.component.html */ 1720);
+/* harmony import */ var _C_Users_nicol_Desktop_Ionic_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_horario_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./horario.component.html */ 1720);
 /* harmony import */ var _horario_component_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./horario.component.scss */ 6362);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2316);
 
@@ -624,7 +624,7 @@ HorarioComponent.propDecorators = {
 HorarioComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
         selector: 'app-horarioclases',
-        template: _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_horario_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        template: _C_Users_nicol_Desktop_Ionic_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_horario_component_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_horario_component_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], HorarioComponent);
@@ -681,7 +681,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "EscaneoPage": () => (/* binding */ EscaneoPage)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_escaneo_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./escaneo.page.html */ 2926);
+/* harmony import */ var _C_Users_nicol_Desktop_Ionic_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_escaneo_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./escaneo.page.html */ 2926);
 /* harmony import */ var _escaneo_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./escaneo.page.scss */ 711);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 2316);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 1258);
@@ -725,7 +725,7 @@ EscaneoPage.ctorParameters = () => [
 EscaneoPage = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
         selector: 'app-escaneo',
-        template: _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_escaneo_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        template: _C_Users_nicol_Desktop_Ionic_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_escaneo_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_escaneo_page_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], EscaneoPage);
@@ -745,7 +745,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "HorarioPage": () => (/* binding */ HorarioPage)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_horario_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./horario.page.html */ 1638);
+/* harmony import */ var _C_Users_nicol_Desktop_Ionic_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_horario_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./horario.page.html */ 1638);
 /* harmony import */ var _horario_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./horario.page.scss */ 4713);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 2316);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ 7602);
@@ -783,7 +783,7 @@ HorarioPage.ctorParameters = () => [
 HorarioPage = (0,tslib__WEBPACK_IMPORTED_MODULE_4__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
         selector: 'app-horario',
-        template: _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_horario_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        template: _C_Users_nicol_Desktop_Ionic_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_horario_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_horario_page_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], HorarioPage);
@@ -939,7 +939,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\n  <ion-toolbar>\n    <ion-title color=\"light\">QR Escaneados</ion-title>\n    <h6 class=\"cerrar\" (click)=\"dismiss()\" slot=\"end\">Cerrar</h6>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-list>\n    <ion-item *ngFor=\"let escaneo of dataLocal.guardados\">\n      <ion-icon name=\"book-outline\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <h2>{{escaneo.text}}</h2>\n        <p>{{escaneo.created | date: 'medium'}}</p>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n  \n\n</ion-content>\n\n<ion-label>\n  <ion-button (click)=\"error404()\"\n              expand=\"full\">\n    Borrar Historial\n  </ion-button>\n</ion-label>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title color=\"light\">QR Escaneados</ion-title>\r\n    <h6 class=\"cerrar\" (click)=\"dismiss()\" slot=\"end\">Cerrar</h6>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n\r\n  <ion-list>\r\n    <ion-item *ngFor=\"let escaneo of dataLocal.guardados\">\r\n      <ion-icon name=\"book-outline\" slot=\"start\"></ion-icon>\r\n      <ion-label>\r\n        <h2>{{escaneo.text}}</h2>\r\n        <p>{{escaneo.created | date: 'medium'}}</p>\r\n      </ion-label>\r\n    </ion-item>\r\n  </ion-list>\r\n  \r\n\r\n</ion-content>\r\n\r\n<ion-label>\r\n  <ion-button (click)=\"error404()\"\r\n              expand=\"full\">\r\n    Borrar Historial\r\n  </ion-button>\r\n</ion-label>\r\n");
 
 /***/ }),
 
@@ -993,7 +993,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
   \*************************************************/
 /***/ ((module) => {
 
-module.exports = "ion-title {\n  font-size: 16px;\n}\n\n.cerrar {\n  cursor: pointer;\n  color: white;\n  margin-right: 14px;\n  margin-bottom: 18px;\n}\n\nion-icon {\n  color: #FFB800;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVzY2FuZW8ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZUFBZTtBQUNuQjs7QUFFQTtFQUNJLGVBQWU7RUFDZixZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLG1CQUFtQjtBQUN2Qjs7QUFFQTtFQUNJLGNBQWM7QUFDbEIiLCJmaWxlIjoiZXNjYW5lby5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tdGl0bGUge1xyXG4gICAgZm9udC1zaXplOiAxNnB4O1xyXG59XHJcblxyXG4uY2VycmFyIHtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIG1hcmdpbi1yaWdodDogMTRweDtcclxuICAgIG1hcmdpbi1ib3R0b206IDE4cHg7XHJcbn1cclxuXHJcbmlvbi1pY29ue1xyXG4gICAgY29sb3I6ICNGRkI4MDA7XHJcbn0iXX0= */";
+module.exports = "ion-title {\n  font-size: 16px;\n}\n\n.cerrar {\n  cursor: pointer;\n  color: white;\n  margin-right: 14px;\n  margin-bottom: 18px;\n}\n\nion-icon {\n  color: #FFB800;\n}\n\nion-button {\n  font-weight: bold;\n  margin-top: 30px;\n  margin-left: 20px;\n  margin-right: 20px;\n  margin-bottom: 20px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVzY2FuZW8ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZUFBZTtBQUNuQjs7QUFFQTtFQUNJLGVBQWU7RUFDZixZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLG1CQUFtQjtBQUN2Qjs7QUFFQTtFQUNJLGNBQWM7QUFDbEI7O0FBRUE7RUFDSSxpQkFBaUI7RUFDakIsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtFQUNqQixrQkFBa0I7RUFDbEIsbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6ImVzY2FuZW8ucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLXRpdGxlIHtcclxuICAgIGZvbnQtc2l6ZTogMTZweDtcclxufVxyXG5cclxuLmNlcnJhciB7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDE0cHg7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxOHB4O1xyXG59XHJcblxyXG5pb24taWNvbntcclxuICAgIGNvbG9yOiAjRkZCODAwO1xyXG59XHJcblxyXG5pb24tYnV0dG9uIHtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgbWFyZ2luLXRvcDogMzBweDtcclxuICAgIG1hcmdpbi1sZWZ0OiAyMHB4O1xyXG4gICAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMjBweDtcclxufSJdfQ== */";
 
 /***/ }),
 
