@@ -16,35 +16,16 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compressed_assets/debug/out/assets/public/src_app_pages_home_home_module_ts.js.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compressed_assets/debug/out/assets/public/src_app_pages_home_home_module_ts.js.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compressed_assets/debug/out/assets/public/src_app_pages_home_home_module_ts.js.map.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compressed_assets/debug/out/assets/public/src_app_pages_home_home_module_ts.js.map.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compressed_assets/debug/out/assets/public/src_app_pages_login_login_module_ts.js.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compressed_assets/debug/out/assets/public/src_app_pages_login_login_module_ts.js.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compressed_assets/debug/out/assets/public/src_app_pages_login_login_module_ts.js.map.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compressed_assets/debug/out/assets/public/src_app_pages_login_login_module_ts.js.map.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compressed_assets/debug/out/assets/public/src_app_pages_splashscreen_splashscreen_module_ts.js.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compressed_assets/debug/out/assets/public/src_app_pages_splashscreen_splashscreen_module_ts.js.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compressed_assets/debug/out/assets/public/src_app_pages_splashscreen_splashscreen_module_ts.js.map.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compressed_assets/debug/out/assets/public/src_app_pages_splashscreen_splashscreen_module_ts.js.map.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/out/public/src_app_pages_home_home_module_ts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/out/public/src_app_pages_home_home_module_ts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/out/public/src_app_pages_home_home_module_ts.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/out/public/src_app_pages_home_home_module_ts.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/out/public/src_app_pages_login_login_module_ts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/out/public/src_app_pages_login_login_module_ts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/out/public/src_app_pages_login_login_module_ts.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/out/public/src_app_pages_login_login_module_ts.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/out/public/src_app_pages_splashscreen_splashscreen_module_ts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/out/public/src_app_pages_splashscreen_splashscreen_module_ts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/out/public/src_app_pages_splashscreen_splashscreen_module_ts.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_assets/debug/out/public/src_app_pages_splashscreen_splashscreen_module_ts.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/assets/img/profile.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/assets/img/profile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/common.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/common.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/main.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/src_app_pages_home_home_module_ts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/src_app_pages_home_home_module_ts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/src_app_pages_home_home_module_ts.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/src_app_pages_home_home_module_ts.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/src_app_pages_login_login_module_ts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/src_app_pages_login_login_module_ts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/src_app_pages_login_login_module_ts.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/src_app_pages_login_login_module_ts.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/src_app_pages_splashscreen_splashscreen_module_ts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/src_app_pages_splashscreen_splashscreen_module_ts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/public/src_app_pages_splashscreen_splashscreen_module_ts.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/public/src_app_pages_splashscreen_splashscreen_module_ts.js.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\malco\.android\avd\Galaxy_Nexus.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[190ad67f]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />

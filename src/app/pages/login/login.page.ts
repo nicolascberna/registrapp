@@ -44,7 +44,7 @@ export class LoginPage implements AfterViewInit {
 
   /* validado en bruto usuarios 'malcom', 'nicolas', contraseña '123', donde se muestra un */
   async ingresar(page){
-    if(this.user.usuario == 'malcom' && this.user.pass == '123' || this.user.usuario == 'nicolas' && this.user.pass == '123'){
+    if(this.user.usuario === 'malcom' && this.user.pass === '123' || this.user.usuario === 'nicolas' && this.user.pass === '123'){
 
       localStorage.setItem('usuario',this.user.usuario);
       localStorage.setItem('ingresado','true');
@@ -55,7 +55,7 @@ export class LoginPage implements AfterViewInit {
       };
       this.navCtrl.navigateRoot(page,navigationExtras);
 
-    } else if (this.user.usuario != 'malcom' && this.user.usuario != 'nicolas' || this.user.pass != '123'){
+    } else if (this.user.usuario !== 'malcom' && this.user.usuario !== 'nicolas' || this.user.pass !== '123'){
       this.router.navigate(['/login']);
       const toast = await this.toastController.create({
         message: 'Credenciales no validas',
