@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AlertController, ToastController, AnimationController, NavController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,8 @@ export class LoginPage implements AfterViewInit {
 
   guardado = false;
 
-  constructor(private router: Router,
+  constructor(public loadingController: LoadingController,
+              private router: Router,
               public alertController: AlertController,
               public toastController: ToastController,
               private animationCtrl: AnimationController,
