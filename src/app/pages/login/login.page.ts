@@ -53,9 +53,9 @@ export class LoginPage implements AfterViewInit {
       duration: 2000
     });
     await loading.present();
-    const closed = await loading.onDidDismiss();
+    await loading.onDidDismiss();
 
-    if(this.user.usuario == 'malcom' && this.user.pass == '123' || this.user.usuario == 'nicolas' && this.user.pass == '123' &&closed){
+    if(this.user.usuario == 'malcom' && this.user.pass == '123' || this.user.usuario == 'nicolas' && this.user.pass == '123'){
 
       localStorage.setItem('usuario',this.user.usuario);
       localStorage.setItem('ingresado','true');
