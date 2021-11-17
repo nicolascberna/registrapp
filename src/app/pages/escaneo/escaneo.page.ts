@@ -17,14 +17,12 @@ export class EscaneoPage implements OnInit {
   ngOnInit() {
   }
 
-  dismiss() {
-    this.modalController.dismiss({
-      dismissed: true
-    });
-  }
-
   verEscaneo(escaneo) {
     console.log(escaneo);
+  }
+
+  enviarCorreo() {
+    this.dataLocal.enviarCorreo();
   }
 
   error404() {

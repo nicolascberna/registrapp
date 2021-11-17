@@ -6,112 +6,132 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml
+8-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml
+9-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml
 10
 11    <!-- Permissions -->
 12
 13    <uses-permission android:name="android.permission.INTERNET" />
-13-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:40:5-67
-13-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:40:22-64
-14    <uses-permission android:name="android.permission.CAMERA" />
-14-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-65
-14-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-62
-15    <uses-permission android:name="android.permission.FLASHLIGHT" />
-15-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-69
-15-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-66
-16
-17    <uses-feature
-17-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-15:35
-18        android:name="android.hardware.camera"
-18-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-47
-19        android:required="true" />
-19-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-32
-20
-21    <uses-permission android:name="android.permission.VIBRATE" />
-21-->[:capacitor-haptics] C:\Users\nicol\Desktop\Ionic\registrapp\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-66
-21-->[:capacitor-haptics] C:\Users\nicol\Desktop\Ionic\registrapp\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-63
-22
-23    <application
-23-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:5:5-36:19
-24        android:allowBackup="true"
-24-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:6:9-35
-25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-25-->[androidx.core:core:1.3.2] C:\Users\nicol\.gradle\caches\transforms-3\2affdb6e6a1314389bbf6c67f425b6c6\transformed\core-1.3.2\AndroidManifest.xml:24:18-86
-26        android:debuggable="true"
-27        android:icon="@mipmap/ic_launcher"
-27-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:7:9-43
-28        android:label="@string/app_name"
-28-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:8:9-41
-29        android:roundIcon="@mipmap/ic_launcher_round"
-29-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:9:9-54
-30        android:supportsRtl="true"
-30-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:10:9-35
-31        android:testOnly="true"
-32        android:theme="@style/AppTheme" >
-32-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:11:9-40
-33        <activity
-33-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:13:9-25:20
-34            android:name="io.ionic.starter.MainActivity"
-34-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:15:13-57
-35            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
-35-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:14:13-129
-36            android:label="@string/title_activity_main"
-36-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:16:13-56
-37            android:launchMode="singleTask"
-37-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:18:13-44
-38            android:theme="@style/AppTheme.NoActionBarLaunch" >
-38-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:17:13-62
-39            <intent-filter>
-39-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:20:13-23:29
-40                <action android:name="android.intent.action.MAIN" />
-40-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:21:17-69
-40-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:21:25-66
-41
-42                <category android:name="android.intent.category.LAUNCHER" />
-42-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:22:17-77
-42-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:22:27-74
-43            </intent-filter>
-44        </activity>
-45
-46        <provider
-47            android:name="androidx.core.content.FileProvider"
-47-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:28:13-62
-48            android:authorities="io.ionic.starter.fileprovider"
-48-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:29:13-64
-49            android:exported="false"
-49-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:30:13-37
-50            android:grantUriPermissions="true" >
-50-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:31:13-47
-51            <meta-data
-51-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:32:13-34:64
-52                android:name="android.support.FILE_PROVIDER_PATHS"
-52-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:33:17-67
-53                android:resource="@xml/file_paths" />
-53-->C:\Users\nicol\Desktop\Ionic\registrapp\android\app\src\main\AndroidManifest.xml:34:17-51
-54        </provider>
-55
-56        <activity
-56-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-24:63
-57            android:name="com.google.zxing.client.android.CaptureActivity"
-57-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-75
-58            android:clearTaskOnLaunch="true"
-58-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-45
-59            android:configChanges="orientation|keyboardHidden|screenSize"
-59-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-74
-60            android:exported="false"
-60-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-37
-61            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-61-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-71
-62            android:windowSoftInputMode="stateAlwaysHidden" />
-62-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-60
-63        <activity
-63-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-27:37
-64            android:name="com.google.zxing.client.android.encode.EncodeActivity"
-64-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-81
-65            android:label="Share" />
-65-->[:capacitor-cordova-android-plugins] C:\Users\nicol\Desktop\Ionic\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-34
-66    </application>
-67
-68</manifest>
+13-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:40:5-67
+13-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:40:22-64
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-81
+14-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-78
+15    <uses-permission android:name="android.permission.CAMERA" />
+15-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-65
+15-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-62
+16    <uses-permission android:name="android.permission.FLASHLIGHT" />
+16-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-69
+16-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:22-66
+17
+18    <uses-feature
+18-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-16:35
+19        android:name="android.hardware.camera"
+19-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-47
+20        android:required="true" />
+20-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-32
+21
+22    <uses-permission android:name="android.permission.VIBRATE" />
+22-->[:capacitor-haptics] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-66
+22-->[:capacitor-haptics] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-63
+23
+24    <application
+24-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:5:5-36:19
+25        android:allowBackup="true"
+25-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:6:9-35
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.3.2] C:\Users\malco\.gradle\caches\transforms-3\2affdb6e6a1314389bbf6c67f425b6c6\transformed\core-1.3.2\AndroidManifest.xml:24:18-86
+27        android:debuggable="true"
+28        android:icon="@mipmap/ic_launcher"
+28-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:7:9-43
+29        android:label="@string/app_name"
+29-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:8:9-41
+30        android:roundIcon="@mipmap/ic_launcher_round"
+30-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:9:9-54
+31        android:supportsRtl="true"
+31-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:10:9-35
+32        android:testOnly="true"
+33        android:theme="@style/AppTheme" >
+33-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:11:9-40
+34        <activity
+34-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:13:9-25:20
+35            android:name="io.ionic.starter.MainActivity"
+35-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:15:13-57
+36            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
+36-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:14:13-129
+37            android:label="@string/title_activity_main"
+37-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:16:13-56
+38            android:launchMode="singleTask"
+38-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:18:13-44
+39            android:theme="@style/AppTheme.NoActionBarLaunch" >
+39-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:17:13-62
+40            <intent-filter>
+40-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:20:13-23:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:21:17-69
+41-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:21:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:22:17-77
+43-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:22:27-74
+44            </intent-filter>
+45        </activity>
+46
+47        <provider
+48            android:name="androidx.core.content.FileProvider"
+48-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:28:13-62
+49            android:authorities="io.ionic.starter.fileprovider"
+49-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:29:13-64
+50            android:exported="false"
+50-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:30:13-37
+51            android:grantUriPermissions="true" >
+51-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:31:13-47
+52            <meta-data
+52-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:32:13-34:64
+53                android:name="android.support.FILE_PROVIDER_PATHS"
+53-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:33:17-67
+54                android:resource="@xml/file_paths" />
+54-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:34:17-51
+55        </provider>
+56        <provider
+56-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:9-27:20
+57            android:name="de.appplant.cordova.emailcomposer.Provider"
+57-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-70
+58            android:authorities="io.ionic.starter.emailcomposer.provider"
+58-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-74
+59            android:exported="false"
+59-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-37
+60            android:grantUriPermissions="true" >
+60-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-47
+61            <meta-data
+61-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:32:13-34:64
+62                android:name="android.support.FILE_PROVIDER_PATHS"
+62-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:33:17-67
+63                android:resource="@xml/emailcomposer_provider_paths" />
+63-->C:\Users\malco\Desktop\registrapp\android\app\src\main\AndroidManifest.xml:34:17-51
+64        </provider>
+65
+66        <activity
+66-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:9-35:63
+67            android:name="com.google.zxing.client.android.CaptureActivity"
+67-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-75
+68            android:clearTaskOnLaunch="true"
+68-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:31:13-45
+69            android:configChanges="orientation|keyboardHidden|screenSize"
+69-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-74
+70            android:exported="false"
+70-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:13-37
+71            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+71-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:13-71
+72            android:windowSoftInputMode="stateAlwaysHidden" />
+72-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:13-60
+73        <activity
+73-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:9-38:37
+74            android:name="com.google.zxing.client.android.encode.EncodeActivity"
+74-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:37:13-81
+75            android:label="Share" />
+75-->[:capacitor-cordova-android-plugins] C:\Users\malco\Desktop\registrapp\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-34
+76    </application>
+77
+78</manifest>

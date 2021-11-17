@@ -50,13 +50,13 @@ export class LoginPage implements AfterViewInit {
 
     const loading = await this.loadingController.create({
       cssClass: 'my-custom-class',
-      message: 'Please wait...',
+      message: 'Cargando...',
       duration: 2000
     });
     await loading.present();
     await loading.onDidDismiss();
 
-    if(this.user.usuario == 'malcom' && this.user.pass == '123' || this.user.usuario == 'nicolas' && this.user.pass == '123'){
+    if(this.user.usuario === 'malcom' && this.user.pass === '123' || this.user.usuario === 'nicolas' && this.user.pass === '123'){
 
       localStorage.setItem('usuario',this.user.usuario);
       localStorage.setItem('ingresado','true');
@@ -67,7 +67,7 @@ export class LoginPage implements AfterViewInit {
       };
       this.navCtrl.navigateRoot(page,navigationExtras);
 
-    } else if (this.user.usuario != 'malcom' && this.user.usuario != 'nicolas' || this.user.pass != '123'){
+    } else if (this.user.usuario !== 'malcom' && this.user.usuario !== 'nicolas' || this.user.pass !== '123'){
       this.router.navigate(['/login']);
       const toast = await this.toastController.create({
         message: 'Credenciales no validas',

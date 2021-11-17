@@ -1,14 +1,20 @@
 <ion-header>
   <ion-toolbar>
     <ion-title color="light">QR Escaneados</ion-title>
-    <h6 class="cerrar" (click)="dismiss()" slot="end">Cerrar</h6>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="enviarCorreo()">
+        <ion-icon slot="icon-only" name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
   <ion-list>
-    <ion-item *ngFor="let escaneo of dataLocal.guardados">
+    <ion-item *ngFor="let escaneo of dataLocal.guardados" detail>
       <ion-icon name="book-outline" slot="start"></ion-icon>
       <ion-label>
         <h2>{{escaneo.text}}</h2>
@@ -24,5 +30,6 @@
   <ion-button (click)="error404()"
               expand="full">
     Borrar Historial
+    <ion-icon name="trash"></ion-icon>
   </ion-button>
 </ion-label>
