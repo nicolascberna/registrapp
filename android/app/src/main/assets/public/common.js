@@ -680,12 +680,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "EscaneoPage": () => (/* binding */ EscaneoPage)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tslib */ 3786);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
 /* harmony import */ var _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_escaneo_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./escaneo.page.html */ 2926);
 /* harmony import */ var _escaneo_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./escaneo.page.scss */ 711);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 2316);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 1258);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ 7602);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 1258);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ 7602);
 /* harmony import */ var _services_data_local_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/data-local.service */ 9324);
 
 
@@ -695,10 +695,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let EscaneoPage = class EscaneoPage {
-    constructor(modalController, dataLocal, router) {
+    constructor(modalController, dataLocal, router, toastController) {
         this.modalController = modalController;
         this.dataLocal = dataLocal;
         this.router = router;
+        this.toastController = toastController;
     }
     ngOnInit() {
     }
@@ -706,24 +707,24 @@ let EscaneoPage = class EscaneoPage {
         console.log(escaneo);
     }
     enviarCorreo() {
-        this.dataLocal.enviarCorreo();
-        this.modalController.dismiss({
-            dismissed: true
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(this, void 0, void 0, function* () {
+            this.dataLocal.enviarCorreo();
         });
     }
-    error404() {
-        this.router.navigate(['/404']);
+    volver() {
+        this.router.navigate(['/home']);
         this.modalController.dismiss({
             dismissed: true
         });
     }
 };
 EscaneoPage.ctorParameters = () => [
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__.ModalController },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.ModalController },
     { type: _services_data_local_service__WEBPACK_IMPORTED_MODULE_2__.DataLocalService },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__.Router }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__.Router },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.ToastController }
 ];
-EscaneoPage = (0,tslib__WEBPACK_IMPORTED_MODULE_5__.__decorate)([
+EscaneoPage = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
         selector: 'app-escaneo',
         template: _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_escaneo_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
@@ -804,11 +805,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "DataLocalService": () => (/* binding */ DataLocalService)
 /* harmony export */ });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 2316);
 /* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/storage */ 2314);
 /* harmony import */ var _models_registro_model__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/registro.model */ 3362);
 /* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic-native/file/ngx */ 8659);
 /* harmony import */ var _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic-native/email-composer/ngx */ 6543);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ 7602);
+
 
 
 
@@ -817,10 +820,11 @@ __webpack_require__.r(__webpack_exports__);
 
 let DataLocalService = class DataLocalService {
     /* private memoria: Storage | null = null; */
-    constructor(storage, file, emailComposer) {
+    constructor(storage, file, emailComposer, toastController) {
         this.storage = storage;
         this.file = file;
         this.emailComposer = emailComposer;
+        this.toastController = toastController;
         /* se declara un arreglo vacio que guardara los escaneos QR realizados */
         this.guardados = [];
         /* CARGAR REGISTROS (PERSISTENCIA DE DATOS)*/
@@ -841,17 +845,35 @@ let DataLocalService = class DataLocalService {
         });
     }
     enviarCorreo() {
-        const arrTemporal = []; /* arreglo temporal */
-        const titulos = 'Formato, Creado en, Texto\n'; /* definimos como sera la estructura de los datos enviados */
-        arrTemporal.push(titulos);
-        /* almacenar todos los registros guardados en el storage */
-        this.guardados.forEach(registro => {
-            const linea = registro.format + ',' + registro.created + ',' + registro.text + '\n';
-            arrTemporal.push(linea);
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(this, void 0, void 0, function* () {
+            if (this.guardados.length > 0) {
+                const arrTemporal = []; /* arreglo temporal */
+                const titulos = 'Formato, Creado en, Texto\n'; /* definimos como sera la estructura de los datos enviados */
+                arrTemporal.push(titulos);
+                /* almacenar todos los registros guardados en el storage */
+                this.guardados.forEach(registro => {
+                    const linea = registro.format + ',' + registro.created + ',' + registro.text + '\n';
+                    arrTemporal.push(linea);
+                });
+                /* enviamos el archivo */
+                console.log(arrTemporal.join(''));
+                this.crearArchivo(arrTemporal.join(''));
+                const toast = yield this.toastController.create({
+                    message: 'Generando correo',
+                    position: 'bottom',
+                    duration: 2000
+                });
+                yield toast.present();
+            }
+            else {
+                const toast = yield this.toastController.create({
+                    message: 'No existen registros',
+                    position: 'bottom',
+                    duration: 2000
+                });
+                yield toast.present();
+            }
         });
-        /* enviamos el archivo */
-        console.log(arrTemporal.join(''));
-        this.crearArchivo(arrTemporal.join(''));
     }
     /* creamos archivo CSV fisico para enviar registros por correo*/
     crearArchivo(text) {
@@ -885,10 +907,11 @@ let DataLocalService = class DataLocalService {
 DataLocalService.ctorParameters = () => [
     { type: _ionic_storage__WEBPACK_IMPORTED_MODULE_4__.Storage },
     { type: _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_1__.File },
-    { type: _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_2__.EmailComposer }
+    { type: _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_2__.EmailComposer },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__.ToastController }
 ];
 DataLocalService = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Injectable)({
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Injectable)({
         providedIn: 'root'
     })
 ], DataLocalService);
@@ -989,7 +1012,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\n  <ion-toolbar>\n    <ion-title color=\"light\">QR Escaneados</ion-title>\n\n    <ion-buttons slot=\"end\">\n      <ion-button (click)=\"enviarCorreo()\">\n        <ion-icon slot=\"icon-only\" name=\"send\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-list>\n    <ion-item *ngFor=\"let escaneo of dataLocal.guardados\" detail>\n      <ion-icon name=\"book-outline\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <h2>{{escaneo.text}}</h2>\n        <p>{{escaneo.created | date: 'medium'}}</p>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n  \n\n</ion-content>\n\n<ion-label>\n  <ion-button (click)=\"error404()\"\n              expand=\"full\">\n    Borrar Historial\n    <ion-icon name=\"trash\"></ion-icon>\n  </ion-button>\n</ion-label>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\n  <ion-toolbar>\n    <ion-title color=\"light\">QR Escaneados</ion-title>\n\n    <ion-buttons slot=\"end\">\n      <ion-button (click)=\"enviarCorreo()\">\n        <ion-icon slot=\"icon-only\" name=\"send\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-list>\n    <ion-item *ngFor=\"let escaneo of dataLocal.guardados\" detail>\n      <ion-icon name=\"book-outline\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <h2>{{escaneo.text}}</h2>\n        <p>{{escaneo.created | date: 'medium'}}</p>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n  \n\n</ion-content>\n\n<ion-label>\n  <ion-button (click)=\"volver()\"\n              expand=\"full\">\n    Volver\n    <ion-icon name=\"trash\"></ion-icon>\n  </ion-button>\n</ion-label>\n");
 
 /***/ }),
 

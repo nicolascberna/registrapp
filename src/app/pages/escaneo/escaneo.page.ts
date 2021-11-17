@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ModalController } from '@ionic/angular';
+import { ModalController, ToastController } from '@ionic/angular';
 import { DataLocalService } from '../../services/data-local.service';
 
 @Component({
@@ -12,7 +12,8 @@ export class EscaneoPage implements OnInit {
 
   constructor(  public modalController: ModalController,
                 public dataLocal: DataLocalService,
-                private router: Router ) { }
+                private router: Router,
+                public toastController: ToastController, ) { }
 
   ngOnInit() {
   }
@@ -21,12 +22,12 @@ export class EscaneoPage implements OnInit {
     console.log(escaneo);
   }
 
-  enviarCorreo() {
+  async enviarCorreo() {
     this.dataLocal.enviarCorreo();
   }
 
-  error404() {
-    this.router.navigate(['/404']);
+  volver() {
+    this.router.navigate(['/home']);
     this.modalController.dismiss({
       dismissed: true
     });

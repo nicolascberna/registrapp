@@ -22,8 +22,6 @@ npm install @ionic-native/core
 ```
 npm install @capacitor/android
 npx cap add android
-ionic capacitor sync android
-npx cap open android
 ```
 
 Dentro de Android Studio ejecutar la virtualizacion con android Pie (9) para prevenir errores de lanzamiento. <br>
@@ -31,6 +29,7 @@ Dentro de Android Studio ejecutar la virtualizacion con android Pie (9) para pre
 ### Agregar nuevos cambios a la app Android:
 ```
 ionic capacitor copy android
+npx cap open android
 ```
 
 ### Dependencia plugin NATIVE File para generar archivo CSV (capacitor):

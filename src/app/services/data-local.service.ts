@@ -4,6 +4,7 @@ import { Registro } from '../models/registro.model';
 
 import { File } from '@ionic-native/file/ngx';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { ToastController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,8 @@ export class DataLocalService {
 
   constructor(private storage: Storage,
               private file: File,
-              private emailComposer: EmailComposer) {
+              private emailComposer: EmailComposer,
+              public toastController: ToastController) {
 
   /* CARGAR REGISTROS (PERSISTENCIA DE DATOS)*/
     this.cargarEscaneo();
@@ -41,25 +43,42 @@ export class DataLocalService {
 
   }
 
-  enviarCorreo() {
+  async enviarCorreo() {
 
-    const arrTemporal = [];	/* arreglo temporal */
-    const titulos = 'Formato, Creado en, Texto\n'; /* definimos como sera la estructura de los datos enviados */
+    if (this.guardados.length > 0) {
+      const arrTemporal = [];	/* arreglo temporal */
+      const titulos = 'Formato, Creado en, Texto\n'; /* definimos como sera la estructura de los datos enviados */
 
-    arrTemporal.push( titulos );
+      arrTemporal.push( titulos );
 
 
-    /* almacenar todos los registros guardados en el storage */
-    this.guardados.forEach( registro => {
+      /* almacenar todos los registros guardados en el storage */
+      this.guardados.forEach( registro => {
 
-      const linea = registro.format + ',' + registro.created + ',' + registro.text + '\n';
-      arrTemporal.push( linea );
+        const linea = registro.format + ',' + registro.created + ',' + registro.text + '\n';
+        arrTemporal.push( linea );
 
-    });
+      });
 
-    /* enviamos el archivo */
-    console.log(arrTemporal.join(''));
-    //this.crearArchivo( arrTemporal.join('') );
+      /* enviamos el archivo */
+      console.log(arrTemporal.join(''));
+      this.crearArchivo( arrTemporal.join('') );
+
+      const toast = await this.toastController.create({
+        message: 'Generando correo',
+        position: 'bottom',
+        duration: 2000
+      });
+      await toast.present();
+    } else {
+      const toast = await this.toastController.create({
+        message: 'No existen registros',
+        position: 'bottom',
+        duration: 2000
+      });
+      await toast.present();
+    }
+
   }
 
   /* creamos archivo CSV fisico para enviar registros por correo*/
@@ -77,10 +96,10 @@ export class DataLocalService {
     console.log('escribirEnArchivo');
     await this.file.writeExistingFile( this.file.dataDirectory, 'registros.csv', text );
 
-    /* const archivo = `${this.file.dataDirectory}/registros.csv`; */
+    const archivo = `${this.file.dataDirectory}/registros.csv`;
 
     /* definimos la estructura del correo */
-    /* const email = {
+    const email = {
       to: 'mal.pozo@duocuc.cl',
       cc: 'malcompozo@gmail.com',
       attachments: [
@@ -89,10 +108,10 @@ export class DataLocalService {
       subject: 'Scans QR de asistencias',
       body: 'Registro de asistencias escaneadas por QR <strong>- RegistrAPP -</strong>',
       isHtml: true
-    }; */
+    };
 
     /* se envia correo */
-    /* this.emailComposer.open(email); */
+    this.emailComposer.open(email);
 
   }
 
