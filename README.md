@@ -10,7 +10,7 @@ npm install --save-dev @angular-devkit/build-angular
 npm install @ionic/storage@2.3.1 --save--save-exact
 ```
 
-### Instalacion plugin Barcode Scanner:
+### Instalacion plugin Barcode Scanner (capacitor):
 ```
 npm install phonegap-plugin-barcodescanner
 npm install @ionic-native/barcode-scanner
@@ -30,8 +30,27 @@ Dentro de Android Studio ejecutar la virtualizacion con android Pie (9) para pre
 
 ### Agregar nuevos cambios a la app Android:
 ```
-npx cap sync
 ionic capacitor copy android
+```
+
+### Dependencia plugin NATIVE File para generar archivo CSV (capacitor):
+```
+npm install cordova-plugin-file
+npm install @ionic-native/file
+ionic cap sync
+```
+
+### Dependencia plugin NATIVE Email Composer para generar correo (capacitor):
+```
+npm install cordova-plugin-email-composer
+npm install @ionic-native/email-composer
+ionic cap sync
+```
+### SOLUCION error file provider ANDROID:
+```
+npm install jetifier
+npx jetify
+npx cap sync android
 ```
 
 ### Credenciales para testeo:
