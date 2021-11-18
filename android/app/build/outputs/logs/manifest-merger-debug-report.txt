@@ -20,6 +20,7 @@ MERGED from [:barcodescanner-release-2.1.5:] C:\Users\malco\.gradle\caches\trans
 MERGED from [:capacitor-app] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:capacitor-haptics] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:capacitor-keyboard] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\keyboard\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:capacitor-splash-screen] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:capacitor-status-bar] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\status-bar\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:capacitor-android] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\android\capacitor\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\malco\.gradle\caches\transforms-3\ce3f79a523d89320dd464c2b2de6183e\transformed\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
@@ -138,6 +139,8 @@ MERGED from [:capacitor-haptics] C:\Users\malco\Desktop\registrapp\node_modules\
 MERGED from [:capacitor-haptics] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\haptics\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:capacitor-keyboard] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\keyboard\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:capacitor-keyboard] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\keyboard\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:capacitor-splash-screen] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:capacitor-splash-screen] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:capacitor-status-bar] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\status-bar\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:capacitor-status-bar] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\status-bar\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:capacitor-android] C:\Users\malco\Desktop\registrapp\node_modules\@capacitor\android\capacitor\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41

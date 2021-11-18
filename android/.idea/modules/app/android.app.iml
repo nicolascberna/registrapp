@@ -110,6 +110,7 @@
     <orderEntry type="module" module-name="android.capacitor-app" />
     <orderEntry type="module" module-name="android.capacitor-haptics" />
     <orderEntry type="module" module-name="android.capacitor-keyboard" />
+    <orderEntry type="module" module-name="android.capacitor-splash-screen" />
     <orderEntry type="module" module-name="android.capacitor-status-bar" />
   </component>
 </module>

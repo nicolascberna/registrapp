@@ -6,14 +6,14 @@ import { ProteccionGuard } from './guards/ingresado.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'splashscreen',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
-  {
+  /* {
     path: 'splashscreen',
     loadChildren: () => import('./pages/splashscreen/splashscreen.module').then( m => m.SplashscreenPageModule),
     canActivate: [NoIngresadoGuard]
-  },
+  }, */
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
