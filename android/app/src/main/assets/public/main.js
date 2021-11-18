@@ -46,14 +46,14 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: '',
-        redirectTo: 'splashscreen',
+        redirectTo: 'login',
         pathMatch: 'full'
     },
-    {
-        path: 'splashscreen',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_splashscreen_splashscreen_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/splashscreen/splashscreen.module */ 4236)).then(m => m.SplashscreenPageModule),
-        canActivate: [_guards_no_ingresado_guard__WEBPACK_IMPORTED_MODULE_0__.NoIngresadoGuard]
-    },
+    /* {
+      path: 'splashscreen',
+      loadChildren: () => import('./pages/splashscreen/splashscreen.module').then( m => m.SplashscreenPageModule),
+      canActivate: [NoIngresadoGuard]
+    }, */
     {
         path: 'login',
         loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_login_login_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/login/login.module */ 1053)).then(m => m.LoginPageModule),
