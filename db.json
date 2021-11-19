@@ -1,20 +1,20 @@
 {
     
-        "horario": [
-            {
-                "idAsignatura": "CSY4111",
-                "nombre": "Calidad de Software",
-                "horaInicio": "22:16",
-                "horaTermino": "23:45",
-                "estado": "ausente"
-            },
-            {
-                "idAsignatura": "PGY4121",
-                "nombre": "Programación de aplicaciones móviles",
-                "horaInicio": "19:15",
-                "horaTermino": "21:30",
-                "estado": "ausente"
-            }
-        ]
+    "usuarios":[
+        {
+            "id": 1,
+            "username": "ni.canete",
+            "password": "123",
+            "nombre": "Nicolas",
+            "email": "ni.canete@duocuc.cl"
+        },
+        {
+            "id": 2,
+            "username": "mal.pozo",
+            "password": "123",
+            "nombre": "Malcom",
+            "email": "mal.pozo@duocuc.cl"
+        }
+    ]
         
 }
