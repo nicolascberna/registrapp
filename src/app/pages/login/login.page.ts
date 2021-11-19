@@ -72,18 +72,7 @@ export class LoginPage implements AfterViewInit {
 
     let login = this.usuario.find(u => u.username===this.user.usuario)
 
-    if(this.user.usuario === login.username && this.user.pass === login.password){
-
-      localStorage.setItem('usuario',this.user.usuario);
-      localStorage.setItem('ingresado','true');
-      const navigationExtras: NavigationExtras={
-        state:{
-          user: this.user.usuario
-        }
-      };
-      this.navCtrl.navigateRoot(page,navigationExtras);
-
-    } else {
+    if(login == undefined){
       this.router.navigate(['/login']);
       const toast = await this.toastController.create({
         message: 'Credenciales no validas',
@@ -93,6 +82,17 @@ export class LoginPage implements AfterViewInit {
       await toast.present();
       this.user.usuario='';
       this.user.pass='';
+
+    } else if (this.user.usuario === login.username && this.user.pass === login.password) {
+    
+      localStorage.setItem('usuario',this.user.usuario);
+      localStorage.setItem('ingresado','true');
+      const navigationExtras: NavigationExtras={
+        state:{
+          user: this.user.usuario
+        }
+      };
+      this.navCtrl.navigateRoot(page,navigationExtras);
     }
   }
 
