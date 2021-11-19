@@ -19,7 +19,7 @@ export class HorarioPage implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.horarioService.getUsuario().subscribe(resp=>
+    this.horarioService.getHorario().subscribe(resp=>
       {
         console.log(resp.horario);
         this.horario.push(...resp.horario);

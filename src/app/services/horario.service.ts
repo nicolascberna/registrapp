@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Usuario } from '../interfaces/horariointerface';
+import { Usuario, User } from '../interfaces/horariointerface';
 
 @Injectable({
   providedIn: 'root'
@@ -9,13 +9,18 @@ export class HorarioService {
 
   constructor(private http: HttpClient) { }
 
-  getUsuario()
+  getHorario()
   {
     return this.http.get<Usuario>('https://malcompozo.github.io/Data/db.json');
   }
 
-  getUsuarioo(username: any)
+  getUser()
   {
-    return this.http.get<Usuario>(`https://malcompozo.github.io/Data/db.json=${username}`);
+    return this.http.get<User>(`http://localhost:3000/usuarios`);
   }
+
+  // getUsuarioo(username: any)
+  // {
+  //   return this.http.get<Usuario>(`https://malcompozo.github.io/Data/db.json=${username}`);
+  // }
 }

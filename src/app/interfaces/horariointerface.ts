@@ -1,5 +1,5 @@
 export interface Horario {
-  lunes: Asignatura[];
+  horario: Asignatura[];
   martes: Asignatura[];
   miercoles: Asignatura[];
   jueves: Asignatura[];
@@ -21,4 +21,12 @@ export interface Usuario {
   carrera: string;
   sede: string;
   horario: Horario[];
+}
+
+export interface User {
+  id: number,
+  username: string,
+  password: string,
+  nombre: string,
+  email: string
 }

@@ -5,7 +5,7 @@ import { AlertController, ModalController, NavController } from '@ionic/angular'
 
 
 import { HorarioService } from 'src/app/services/horario.service';
-import { Usuario } from 'src/app/interfaces/horariointerface';
+import { User, Usuario } from 'src/app/interfaces/horariointerface';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { DataLocalService } from '../../services/data-local.service';
 import { HorarioPage } from '../horario/horario.page';
@@ -19,7 +19,7 @@ import { EscaneoPage } from '../escaneo/escaneo.page';
 export class HomePage{
   /* variable de tipo any que permite cualquiero tipo de dato */
   dato = localStorage.getItem('usuario');
-  usuario: Usuario;
+  usuario: User;
 
   constructor(private horarioService: HorarioService,
               public alertController: AlertController,
@@ -34,19 +34,19 @@ export class HomePage{
                   if (this.router.getCurrentNavigation().extras.state){
                     /* si existen parametros los rescata en una variable */
                     this.dato = this.router.getCurrentNavigation().extras.state.user;
-                    console.log(this.dato);
+                    //console.log(this.dato);
                   }
                 });
               }
 
   /* se dispara apenas entra */
-  ionViewWillEnter() {;
-    this.horarioService.getUsuario().subscribe(resp=>
-      {
-        console.log('usuario', resp);
-        this.usuario = resp;
-      });
-  }
+  // ionViewWillEnter() {;
+  //   this.horarioService.getUser().subscribe(resp=>
+  //     {
+  //       console.log('usuario', resp);
+  //       this.usuario = resp;
+  //     });
+  // }
 
   /* metodo para escanear QR */
   scan() {

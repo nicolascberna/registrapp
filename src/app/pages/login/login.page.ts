@@ -4,6 +4,9 @@ import { NavigationExtras, Router } from '@angular/router';
 import { AlertController, ToastController, AnimationController, NavController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
 
+import { User } from 'src/app/interfaces/horariointerface';
+import { HorarioService } from 'src/app/services/horario.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -17,10 +20,12 @@ export class LoginPage implements AfterViewInit {
     usuario:'',
     pass:''
   };
+  usuario: any = [];
 
   guardado = false;
 
-  constructor(public loadingController: LoadingController,
+  constructor(private horarioService: HorarioService,
+              public loadingController: LoadingController,
               private router: Router,
               public alertController: AlertController,
               public toastController: ToastController,
@@ -41,6 +46,15 @@ export class LoginPage implements AfterViewInit {
     animation.play();
   }
 
+  ionViewWillEnter() {
+    this.horarioService.getUser().subscribe(resp=>
+      {
+        console.log('usuario', resp);
+        this.usuario = resp;
+        console.log(this.usuario)
+      });
+  }
+
   recovery(page){
     this.router.navigate(page);
   }
@@ -56,7 +70,9 @@ export class LoginPage implements AfterViewInit {
     await loading.present();
     await loading.onDidDismiss();
 
-    if(this.user.usuario === 'malcom' && this.user.pass === '123' || this.user.usuario === 'nicolas' && this.user.pass === '123'){
+    let login = this.usuario.find(u => u.username===this.user.usuario)
+
+    if(this.user.usuario === login.username && this.user.pass === login.password){
 
       localStorage.setItem('usuario',this.user.usuario);
       localStorage.setItem('ingresado','true');
@@ -67,7 +83,7 @@ export class LoginPage implements AfterViewInit {
       };
       this.navCtrl.navigateRoot(page,navigationExtras);
 
-    } else if (this.user.usuario !== 'malcom' && this.user.usuario !== 'nicolas' || this.user.pass !== '123'){
+    } else {
       this.router.navigate(['/login']);
       const toast = await this.toastController.create({
         message: 'Credenciales no validas',
