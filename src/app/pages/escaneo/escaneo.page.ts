@@ -20,6 +20,7 @@ export class EscaneoPage implements OnInit {
 
   verEscaneo(escaneo) {
     console.log(escaneo);
+    this.dataLocal.envioRegistro(escaneo);
   }
 
   async enviarCorreo() {
