@@ -85,14 +85,14 @@ export class LoginPage implements AfterViewInit {
 
     } else if (this.user.usuario === login.username && this.user.pass === login.password) {
     
-      localStorage.setItem('usuario',this.user.usuario);
+      localStorage.setItem('usuario',login.nombre);
       localStorage.setItem('ingresado','true');
-      const navigationExtras: NavigationExtras={
-        state:{
-          user: this.user.usuario
-        }
-      };
-      this.navCtrl.navigateRoot(page,navigationExtras);
+      // const navigationExtras: NavigationExtras={
+      //   state:{
+      //     user: this.user.usuario
+      //   }
+      // };
+      this.navCtrl.navigateRoot(page);
     }
   }
 

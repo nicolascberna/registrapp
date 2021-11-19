@@ -16,7 +16,7 @@ export class HorarioService {
 
   getUser()
   {
-    return this.http.get<User>(`http://localhost:3000/usuarios`);
+    return this.http.get<User>(`https://nicolascberna.github.io/data/db.json`);
   }
 
   // getUsuarioo(username: any)
