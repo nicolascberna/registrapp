@@ -705,6 +705,7 @@ let EscaneoPage = class EscaneoPage {
     }
     verEscaneo(escaneo) {
         console.log(escaneo);
+        this.dataLocal.envioRegistro(escaneo);
     }
     enviarCorreo() {
         return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(this, void 0, void 0, function* () {
@@ -848,7 +849,7 @@ let DataLocalService = class DataLocalService {
         return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(this, void 0, void 0, function* () {
             if (this.guardados.length > 0) {
                 const arrTemporal = []; /* arreglo temporal */
-                const titulos = 'Formato, Creado en, Texto\n'; /* definimos como sera la estructura de los datos enviados */
+                const titulos = '--RegistrApp-- \n Formato, Creado en, Texto\n'; /* definimos como sera la estructura de los datos enviados */
                 arrTemporal.push(titulos);
                 /* almacenar todos los registros guardados en el storage */
                 this.guardados.forEach(registro => {
@@ -891,7 +892,7 @@ let DataLocalService = class DataLocalService {
             /* definimos la estructura del correo */
             const email = {
                 to: 'mal.pozo@duocuc.cl',
-                cc: 'malcompozo@gmail.com',
+                cc: '',
                 attachments: [
                     archivo
                 ],
@@ -901,6 +902,25 @@ let DataLocalService = class DataLocalService {
             };
             /* se envia correo */
             this.emailComposer.open(email);
+        });
+    }
+    envioRegistro(escaneo) {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(this, void 0, void 0, function* () {
+            const arrTemporal = []; /* arreglo temporal */
+            const titulos = '--RegistrApp-- \n  Formato, Creado en, Texto\n'; /* definimos como sera la estructura de los datos enviados */
+            arrTemporal.push(titulos);
+            /* almacenar todos los registros guardados en el storage */
+            const linea = escaneo.format + ',' + escaneo.created + ',' + escaneo.text;
+            arrTemporal.push(linea);
+            /* enviamos el archivo */
+            console.log(arrTemporal.join(''));
+            this.crearArchivo(arrTemporal.join(''));
+            const toast = yield this.toastController.create({
+                message: 'Generando correo',
+                position: 'bottom',
+                duration: 2000
+            });
+            yield toast.present();
         });
     }
 };
@@ -1012,7 +1032,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+<<<<<<< HEAD
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title color=\"light\">QR Escaneados</ion-title>\r\n\r\n    <ion-buttons slot=\"end\">\r\n      <ion-button (click)=\"enviarCorreo()\">\r\n        <ion-icon slot=\"icon-only\" name=\"send\"></ion-icon>\r\n      </ion-button>\r\n    </ion-buttons>\r\n\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n\r\n  <ion-list>\r\n    <ion-item *ngFor=\"let escaneo of dataLocal.guardados\" detail>\r\n      <ion-icon name=\"book-outline\" slot=\"start\"></ion-icon>\r\n      <ion-label>\r\n        <h2>{{escaneo.text}}</h2>\r\n        <p>{{escaneo.created | date: 'medium'}}</p>\r\n      </ion-label>\r\n    </ion-item>\r\n  </ion-list>\r\n  \r\n\r\n</ion-content>\r\n\r\n<ion-label>\r\n  <ion-button (click)=\"volver()\"\r\n              expand=\"full\">\r\n    Volver\r\n  </ion-button>\r\n</ion-label>\r\n");
+=======
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\n  <ion-toolbar>\n    <ion-title color=\"light\">QR Escaneados</ion-title>\n\n    <ion-buttons slot=\"end\">\n      <ion-button (click)=\"enviarCorreo()\">\n        <ion-icon slot=\"icon-only\" name=\"send\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-list>\n    <ion-item *ngFor=\"let escaneo of dataLocal.guardados\" detail (click)=\"verEscaneo(escaneo)\">\n      <ion-icon name=\"book-outline\" slot=\"start\"></ion-icon>\n      <ion-label>\n        <h2>{{escaneo.text}}</h2>\n        <p>{{escaneo.created | date: 'medium'}}</p>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n  \n\n</ion-content>\n\n<ion-label>\n  <ion-button (click)=\"volver()\"\n              expand=\"full\">\n    Volver\n  </ion-button>\n</ion-label>\n");
+>>>>>>> f1f7fe5256e85ddcaa86aa353c6a6b6477ec3a68
 
 /***/ }),
 

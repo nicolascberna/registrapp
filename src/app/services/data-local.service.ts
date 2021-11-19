@@ -47,7 +47,7 @@ export class DataLocalService {
 
     if (this.guardados.length > 0) {
       const arrTemporal = [];	/* arreglo temporal */
-      const titulos = 'Formato, Creado en, Texto\n'; /* definimos como sera la estructura de los datos enviados */
+      const titulos = '--RegistrApp-- \n Formato, Creado en, Texto\n'; /* definimos como sera la estructura de los datos enviados */
 
       arrTemporal.push( titulos );
 
@@ -101,7 +101,7 @@ export class DataLocalService {
     /* definimos la estructura del correo */
     const email = {
       to: 'mal.pozo@duocuc.cl',
-      cc: 'malcompozo@gmail.com',
+      cc: '',
       attachments: [
         archivo
       ],
@@ -112,6 +112,33 @@ export class DataLocalService {
 
     /* se envia correo */
     this.emailComposer.open(email);
+
+  }
+
+  async envioRegistro(escaneo){
+
+    const arrTemporal = [];	/* arreglo temporal */
+      const titulos = '--RegistrApp-- \n  Formato, Creado en, Texto\n'; /* definimos como sera la estructura de los datos enviados */
+
+      arrTemporal.push( titulos );
+
+
+      /* almacenar todos los registros guardados en el storage */
+
+        const linea = escaneo.format + ',' + escaneo.created + ',' + escaneo.text ;
+        arrTemporal.push( linea );
+
+
+      /* enviamos el archivo */
+      console.log(arrTemporal.join(''));
+      this.crearArchivo( arrTemporal.join('') );
+
+      const toast = await this.toastController.create({
+        message: 'Generando correo',
+        position: 'bottom',
+        duration: 2000
+      });
+      await toast.present();
 
   }
 
