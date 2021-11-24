@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { ModalController, ToastController } from '@ionic/angular';
+import { IonList, ModalController, ToastController } from '@ionic/angular';
 import { DataLocalService } from '../../services/data-local.service';
 
 @Component({
@@ -9,6 +9,8 @@ import { DataLocalService } from '../../services/data-local.service';
   styleUrls: ['./escaneo.page.scss'],
 })
 export class EscaneoPage implements OnInit {
+
+  @ViewChild(IonList) ionList: IonList;
 
   constructor(  public modalController: ModalController,
                 public dataLocal: DataLocalService,
@@ -21,6 +23,7 @@ export class EscaneoPage implements OnInit {
   verEscaneo(escaneo) {
     console.log(escaneo);
     this.dataLocal.envioRegistro(escaneo);
+    this.ionList.closeSlidingItems();
   }
 
   async enviarCorreo() {
@@ -29,6 +32,15 @@ export class EscaneoPage implements OnInit {
 
   volver() {
     this.router.navigate(['/home']);
+    this.modalController.dismiss({
+      dismissed: true
+    });
+  }
+
+  delete(escaneo){
+    console.log(escaneo);
+    this.router.navigate(['/not-found']);
+    this.ionList.closeSlidingItems();
     this.modalController.dismiss({
       dismissed: true
     });

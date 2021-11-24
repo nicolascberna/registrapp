@@ -90,12 +90,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LoginPage": () => (/* binding */ LoginPage)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tslib */ 3786);
-/* harmony import */ var _C_Users_nicol_Desktop_Ionic_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_login_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./login.page.html */ 7230);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tslib */ 3786);
+/* harmony import */ var _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_login_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !./node_modules/@ngtools/webpack/src/loaders/direct-resource.js!./login.page.html */ 7230);
 /* harmony import */ var _login_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login.page.scss */ 2032);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 2316);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 1258);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ 7602);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 2316);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 1258);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ 7602);
+/* harmony import */ var src_app_services_horario_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/horario.service */ 8856);
+
 
 
 
@@ -104,7 +106,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let LoginPage = class LoginPage {
-    constructor(loadingController, router, alertController, toastController, animationCtrl, navCtrl) {
+    constructor(horarioService, loadingController, router, alertController, toastController, animationCtrl, navCtrl) {
+        this.horarioService = horarioService;
         this.loadingController = loadingController;
         this.router = router;
         this.alertController = alertController;
@@ -116,6 +119,7 @@ let LoginPage = class LoginPage {
             usuario: '',
             pass: ''
         };
+        this.usuario = [];
         this.guardado = false;
     }
     ngAfterViewInit() {
@@ -131,12 +135,19 @@ let LoginPage = class LoginPage {
         ]);
         animation.play();
     }
+    ionViewWillEnter() {
+        this.horarioService.getUser().subscribe(resp => {
+            console.log('usuario', resp);
+            this.usuario = resp;
+            console.log(this.usuario);
+        });
+    }
     recovery(page) {
         this.router.navigate(page);
     }
     /* validado en bruto usuarios 'malcom', 'nicolas', contraseña '123', donde se muestra un */
     ingresar(page) {
-        return (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__awaiter)(this, void 0, void 0, function* () {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(this, void 0, void 0, function* () {
             const loading = yield this.loadingController.create({
                 cssClass: 'my-custom-class',
                 message: 'Cargando...',
@@ -144,17 +155,8 @@ let LoginPage = class LoginPage {
             });
             yield loading.present();
             yield loading.onDidDismiss();
-            if (this.user.usuario === 'malcom' && this.user.pass === '123' || this.user.usuario === 'nicolas' && this.user.pass === '123') {
-                localStorage.setItem('usuario', this.user.usuario);
-                localStorage.setItem('ingresado', 'true');
-                const navigationExtras = {
-                    state: {
-                        user: this.user.usuario
-                    }
-                };
-                this.navCtrl.navigateRoot(page, navigationExtras);
-            }
-            else if (this.user.usuario !== 'malcom' && this.user.usuario !== 'nicolas' || this.user.pass !== '123') {
+            let login = this.usuario.find(u => u.username === this.user.usuario);
+            if (login == undefined) {
                 this.router.navigate(['/login']);
                 const toast = yield this.toastController.create({
                     message: 'Credenciales no validas',
@@ -165,6 +167,16 @@ let LoginPage = class LoginPage {
                 this.user.usuario = '';
                 this.user.pass = '';
             }
+            else if (this.user.usuario === login.username && this.user.pass === login.password) {
+                localStorage.setItem('usuario', login.nombre);
+                localStorage.setItem('ingresado', 'true');
+                // const navigationExtras: NavigationExtras={
+                //   state:{
+                //     user: this.user.usuario
+                //   }
+                // };
+                this.navCtrl.navigateRoot(page);
+            }
         });
     }
     guardarUsuario() {
@@ -172,20 +184,21 @@ let LoginPage = class LoginPage {
     }
 };
 LoginPage.ctorParameters = () => [
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__.LoadingController },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__.Router },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__.AlertController },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__.ToastController },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__.AnimationController },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__.NavController }
+    { type: src_app_services_horario_service__WEBPACK_IMPORTED_MODULE_2__.HorarioService },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.LoadingController },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__.Router },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.AlertController },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.ToastController },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.AnimationController },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__.NavController }
 ];
 LoginPage.propDecorators = {
-    logo: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_5__.ViewChild, args: ['logo', { read: _angular_core__WEBPACK_IMPORTED_MODULE_5__.ElementRef, static: true },] }]
+    logo: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_6__.ViewChild, args: ['logo', { read: _angular_core__WEBPACK_IMPORTED_MODULE_6__.ElementRef, static: true },] }]
 };
-LoginPage = (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_5__.Component)({
+LoginPage = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.Component)({
         selector: 'app-login',
-        template: _C_Users_nicol_Desktop_Ionic_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_login_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
+        template: _C_Users_malco_Desktop_registrapp_node_modules_ngtools_webpack_src_loaders_direct_resource_js_login_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_login_page_scss__WEBPACK_IMPORTED_MODULE_1__]
     })
 ], LoginPage);

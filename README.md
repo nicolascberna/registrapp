@@ -52,8 +52,17 @@ npx jetify
 npx cap sync android
 ```
 
+### CAMBIAR Splash he icon de apk (CAPACITOR)
+```
+npm install -g cordova-res
+CREAR carpeta "resourses" en el directorio raiz
+pegar imagenes PNG icon - splash
+cordova-res ios --skip-config --copy
+cordova-res android --skip-config --copy
+```
+
 ### Credenciales para testeo:
-- Usuario: "malcom" o "nicolas"
+- Usuario: "mal.pozo" o "ni.canete"
 - Contraseña: 123
 <hr>
 

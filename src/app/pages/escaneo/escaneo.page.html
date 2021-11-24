@@ -14,13 +14,32 @@
 <ion-content>
 
   <ion-list>
-    <ion-item *ngFor="let escaneo of dataLocal.guardados" detail (click)="verEscaneo(escaneo)">
-      <ion-icon name="book-outline" slot="start"></ion-icon>
-      <ion-label>
-        <h2>{{escaneo.text}}</h2>
+    <ion-item-sliding *ngFor="let escaneo of dataLocal.guardados" detail>
+
+      <!-- sliding en lista que muestra iconos al deslizar hacia la derecha -->
+      <ion-item-options side="start">
+        <ion-item-option class="mail" (click)="verEscaneo(escaneo)">
+          <ion-icon slot="icon-only" name="mail"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    
+    <!-- implementando lista consumiendo servicios api con json impórtado desde el services/data.services.ts -> app.module.ts -> list.pages.ts -->
+      <ion-item>
+        <ion-icon name="book-outline" slot="start"></ion-icon>
+        <ion-label>
+          <h2>{{escaneo.text}}</h2>
         <p>{{escaneo.created | date: 'medium'}}</p>
-      </ion-label>
-    </ion-item>
+        </ion-label>
+      </ion-item>
+
+      <!-- sliding en lista que muestra iconos al deslizar hacia la izquierda -->
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="delete(escaneo)">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
   </ion-list>
   
 
