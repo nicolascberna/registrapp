@@ -19,8 +19,4 @@ export class HorarioService {
     return this.http.get<User>(`https://nicolascberna.github.io/data/db.json`);
   }
 
-  // getUsuarioo(username: any)
-  // {
-  //   return this.http.get<Usuario>(`https://malcompozo.github.io/Data/db.json=${username}`);
-  // }
 }

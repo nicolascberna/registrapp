@@ -24,9 +24,9 @@ export interface Usuario {
 }
 
 export interface User {
-  id: number,
-  username: string,
-  password: string,
-  nombre: string,
-  email: string
+  id: number;
+  username: string;
+  password: string;
+  nombre: string;
+  email: string;
 }

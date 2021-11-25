@@ -100,7 +100,7 @@ export class DataLocalService {
 
     /* definimos la estructura del correo */
     const email = {
-      to: 'mal.pozo@duocuc.cl',
+      to: '',
       cc: '',
       attachments: [
         archivo
@@ -118,7 +118,7 @@ export class DataLocalService {
   async envioRegistro(escaneo){
 
     const arrTemporal = [];	/* arreglo temporal */
-      const titulos = '--RegistrApp-- \n  Formato, Creado en, Texto\n'; /* definimos como sera la estructura de los datos enviados */
+      const titulos = '--RegistrApp--\nFormato,Creado en\n,Información\n'; /* definimos como sera la estructura de los datos enviados */
 
       arrTemporal.push( titulos );
 
