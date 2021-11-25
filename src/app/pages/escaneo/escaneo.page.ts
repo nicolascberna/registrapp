@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonList, ModalController, ToastController } from '@ionic/angular';
 import { DataLocalService } from '../../services/data-local.service';
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'app-escaneo',
@@ -13,6 +15,7 @@ export class EscaneoPage implements OnInit {
   @ViewChild(IonList) ionList: IonList;
 
   constructor(  public modalController: ModalController,
+                public storage: Storage,
                 public dataLocal: DataLocalService,
                 private router: Router,
                 public toastController: ToastController, ) { }

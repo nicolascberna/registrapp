@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+
 import { HorarioPage } from './horario.page';
 
 describe('HorarioPage', () => {
@@ -10,7 +12,7 @@ describe('HorarioPage', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ HorarioPage ],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot(), HttpClientTestingModule ] //se declara el uso de http
     }).compileComponents();
 
     fixture = TestBed.createComponent(HorarioPage);

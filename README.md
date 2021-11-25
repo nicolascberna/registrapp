@@ -52,7 +52,7 @@ npx jetify
 npx cap sync android
 ```
 
-### CAMBIAR Splash he icon de apk (CAPACITOR)
+### CAMBIAR Splash e icon de apk (CAPACITOR)
 ```
 npm install -g cordova-res
 CREAR carpeta "resourses" en el directorio raiz

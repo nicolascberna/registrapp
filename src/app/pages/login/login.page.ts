@@ -1,6 +1,6 @@
 
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { AlertController, ToastController, AnimationController, NavController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
 
@@ -51,7 +51,7 @@ export class LoginPage implements AfterViewInit {
       {
         console.log('usuario', resp);
         this.usuario = resp;
-        console.log(this.usuario)
+        console.log(this.usuario);
       });
   }
 
@@ -70,9 +70,9 @@ export class LoginPage implements AfterViewInit {
     await loading.present();
     await loading.onDidDismiss();
 
-    let login = this.usuario.find(u => u.username===this.user.usuario)
+    const login = this.usuario.find(u => u.username===this.user.usuario)
 
-    if(login == undefined){
+    if(login === undefined){
       this.router.navigate(['/login']);
       const toast = await this.toastController.create({
         message: 'Credenciales no validas',
@@ -84,14 +84,8 @@ export class LoginPage implements AfterViewInit {
       this.user.pass='';
 
     } else if (this.user.usuario === login.username && this.user.pass === login.password) {
-    
       localStorage.setItem('usuario',login.nombre);
       localStorage.setItem('ingresado','true');
-      // const navigationExtras: NavigationExtras={
-      //   state:{
-      //     user: this.user.usuario
-      //   }
-      // };
       this.navCtrl.navigateRoot(page);
     }
   }
