@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController, ToastController } from '@ionic/angular';
 import { DataLocalService } from '../../services/data-local.service';
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'app-escaneo',
@@ -10,7 +12,8 @@ import { DataLocalService } from '../../services/data-local.service';
 })
 export class EscaneoPage implements OnInit {
 
-  constructor(  public modalController: ModalController,
+  constructor(  public storage: Storage,
+                public modalController: ModalController,
                 public dataLocal: DataLocalService,
                 private router: Router,
                 public toastController: ToastController, ) { }
