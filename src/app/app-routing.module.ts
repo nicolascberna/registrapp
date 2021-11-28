@@ -3,17 +3,12 @@ import { PreloadAllModules, RouterModule, Routes,  } from '@angular/router';
 import { NoIngresadoGuard } from './guards/no-ingresado.guard';
 import { ProteccionGuard } from './guards/ingresado.guard';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
   },
-  /* {
-    path: 'splashscreen',
-    loadChildren: () => import('./pages/splashscreen/splashscreen.module').then( m => m.SplashscreenPageModule),
-    canActivate: [NoIngresadoGuard]
-  }, */
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),

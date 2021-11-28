@@ -10,6 +10,7 @@ import { LoginPage } from './login.page';
 describe('LoginPage', () => {
   let component: LoginPage; //declaracion del componente a testear
   let fixture: ComponentFixture<LoginPage>; //declaracion del componente bajo prueba
+  //ComponentFixture permite acceder a todas las propiedades de la clase y su template
 
   //configuracion del modulo mediante configureTestingModule
   //compilando las definiciones con compileComponents
@@ -30,5 +31,9 @@ describe('LoginPage', () => {
   //prueba individual
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should verify navigation controller', () => {
+    expect(component.ingresar).toBeTruthy()
   });
 });
