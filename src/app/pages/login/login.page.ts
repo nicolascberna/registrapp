@@ -70,7 +70,7 @@ export class LoginPage implements AfterViewInit {
     await loading.present();
     await loading.onDidDismiss();
 
-    const login = this.usuario.find(u => u.username===this.user.usuario)
+    const login = this.usuario.find(u => u.username===this.user.usuario);
 
     if(login === undefined){
       this.router.navigate(['/login']);

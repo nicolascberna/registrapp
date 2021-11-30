@@ -12,7 +12,7 @@
     <form #formulario="ngForm" (ngSubmit)="submit()">
 
       <ion-item>
-        <ion-label position="floating">Usuario</ion-label>
+        <ion-label id="user" position="floating">Usuario</ion-label>
         <ion-input  required 
                     name="user"
                     [(ngModel)]="user.usuario" 
@@ -23,7 +23,7 @@
       </ion-item>
     
       <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
+        <ion-label id="pass" position="floating">Contraseña</ion-label>
         <ion-input  required 
                     name="pass"
                     [(ngModel)]="user.pass" 
@@ -49,7 +49,7 @@
       <ion-label>Guardar sesión</ion-label>
     </ion-item>
     
-    <p class="pass-hover" (click)="recovery(['/password'])">Recuperar contraseña</p>
+    <p class="pass-hover" id="password" (click)="recovery(['/password'])">Recuperar contraseña</p>
   </div>
   
 

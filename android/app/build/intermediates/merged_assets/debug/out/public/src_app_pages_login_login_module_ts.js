@@ -155,8 +155,8 @@ let LoginPage = class LoginPage {
             });
             yield loading.present();
             yield loading.onDidDismiss();
-            let login = this.usuario.find(u => u.username === this.user.usuario);
-            if (login == undefined) {
+            const login = this.usuario.find(u => u.username === this.user.usuario);
+            if (login === undefined) {
                 this.router.navigate(['/login']);
                 const toast = yield this.toastController.create({
                     message: 'Credenciales no validas',
@@ -170,11 +170,6 @@ let LoginPage = class LoginPage {
             else if (this.user.usuario === login.username && this.user.pass === login.password) {
                 localStorage.setItem('usuario', login.nombre);
                 localStorage.setItem('ingresado', 'true');
-                // const navigationExtras: NavigationExtras={
-                //   state:{
-                //     user: this.user.usuario
-                //   }
-                // };
                 this.navCtrl.navigateRoot(page);
             }
         });

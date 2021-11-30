@@ -124,23 +124,7 @@ let HomePage = class HomePage {
         this.navCtrl = navCtrl;
         /* variable de tipo any que permite cualquiero tipo de dato */
         this.dato = localStorage.getItem('usuario');
-        this.activeroute.queryParams.subscribe(params => {
-            /* validar si la navegacion tiene parametros */
-            if (this.router.getCurrentNavigation().extras.state) {
-                /* si existen parametros los rescata en una variable */
-                this.dato = this.router.getCurrentNavigation().extras.state.user;
-                //console.log(this.dato);
-            }
-        });
     }
-    /* se dispara apenas entra */
-    // ionViewWillEnter() {;
-    //   this.horarioService.getUser().subscribe(resp=>
-    //     {
-    //       console.log('usuario', resp);
-    //       this.usuario = resp;
-    //     });
-    // }
     /* metodo para escanear QR */
     scan() {
         this.barcodeScanner.scan().then(barcodeData => {

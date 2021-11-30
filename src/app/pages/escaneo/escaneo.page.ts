@@ -23,7 +23,7 @@ export class EscaneoPage implements OnInit {
   ngOnInit() {
   }
 
-  verEscaneo(escaneo) {
+  enviarScan(escaneo) {
     console.log(escaneo);
     this.dataLocal.envioRegistro(escaneo);
     this.ionList.closeSlidingItems();

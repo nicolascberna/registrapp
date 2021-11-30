@@ -118,7 +118,7 @@ export class DataLocalService {
   async envioRegistro(escaneo){
 
     const arrTemporal = [];	/* arreglo temporal */
-      const titulos = '--RegistrApp--\nFormato,Creado en\n,Información\n'; /* definimos como sera la estructura de los datos enviados */
+      const titulos = '--RegistrApp--\nFormato,Creado en,Información\n'; /* definimos como sera la estructura de los datos enviados */
 
       arrTemporal.push( titulos );
 
