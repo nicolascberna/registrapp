@@ -1,14 +1,14 @@
 import { AppPage } from './app.po';
 
-describe('new App', () => {
+describe('nueva App', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should be blank', () => {
+  it('Prueba de e2e', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toContain('Start with Ionic UI Components');
+    expect(page.getParagraphText()).toContain('prueba 1');
   });
 });

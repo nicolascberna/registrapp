@@ -741,7 +741,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-card>\r\n  <ion-item>\r\n    <ion-icon name=\"book-outline\" slot=\"start\"></ion-icon>\r\n    <ion-label>{{asignatura.nombre}}</ion-label>\r\n  </ion-item>\r\n\r\n  <ion-card-content class=\"ion-text-center\">\r\n    <p>FECHA: 02/11/2021</p>\r\n    <p>HORARIO: {{asignatura.horaInicio}} - {{asignatura.horaTermino}}</p>\r\n    <p>ESTADO: {{asignatura.estado}}</p>\r\n  </ion-card-content>\r\n</ion-card>");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-card>\r\n  <ion-item>\r\n    <ion-icon name=\"book-outline\" slot=\"start\"></ion-icon>\r\n    <ion-label>{{asignatura.nombre}}</ion-label>\r\n  </ion-item>\r\n\r\n  <ion-card-content class=\"ion-text-center\">\r\n    <p>HORARIO: {{asignatura.horaInicio}} - {{asignatura.horaTermino}}</p>\r\n    <p>ESTADO: {{asignatura.estado}}</p>\r\n  </ion-card-content>\r\n</ion-card>");
 
 /***/ }),
 
