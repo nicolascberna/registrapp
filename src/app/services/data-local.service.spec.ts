@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DataLocalService } from './data-local.service'
+import { DataLocalService } from './data-local.service';
 
 import { Storage } from '@ionic/storage';
 import { File } from '@ionic-native/file/ngx';
