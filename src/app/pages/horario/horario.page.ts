@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 import { HorarioService } from 'src/app/services/horario.service';
-import { Horario, Usuario, Asignatura } from 'src/app/interfaces/horariointerface';
+import { Horario } from 'src/app/interfaces/horariointerface';
 
 @Component({
   selector: 'app-horario',
