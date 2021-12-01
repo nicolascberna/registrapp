@@ -1,26 +1,14 @@
-export interface Horario {
-  horario: Asignatura[];
-  martes: Asignatura[];
-  miercoles: Asignatura[];
-  jueves: Asignatura[];
-  viernes: Asignatura[];
-}
-
 export interface Asignatura {
-  idAsignatura: string;
-  nombre: string;
-  horaInicio: string;
-  horaTermino: string;
-  estado: string;
+  horario: Horario[];
 }
 
-export interface Usuario {
-  id: number;
-  username: string;
-  password: string;
-  email: string;
-  carrera: string;
-  sede: string;
+export interface Horario {
+  idAsignatura: string;
+  nombre:       string;
+  horaInicio:   string;
+  horaTermino:  string;
+  profesor:     string;
+  sede:         string;
   horario: Horario[];
 }
 

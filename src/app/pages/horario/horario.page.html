@@ -7,6 +7,23 @@
 
 <ion-content class="ion-padding">
 
-  <app-horarioclases [horario]="horario"></app-horarioclases>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col *ngFor="let asignatura of horario" size="12" sizeLg="3" sizeMd="4" sizeSm="6" sizeXs="12">
+        <ion-card>
+          <ion-item>
+            <ion-icon name="book-outline" slot="start"></ion-icon>
+            <ion-label>{{asignatura.nombre}}</ion-label>
+          </ion-item>
+        
+          <ion-card-content class="ion-text-center">
+            <p>HORARIO: {{asignatura.horaInicio}} a {{asignatura.horaTermino}}</p>
+            <p>Profesor: {{asignatura.profesor}}</p>
+            <p>Sede: {{asignatura.sede}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
 
 </ion-content>
