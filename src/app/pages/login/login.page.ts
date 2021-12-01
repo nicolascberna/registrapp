@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { AlertController, ToastController, AnimationController, NavController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
 
-import { User } from 'src/app/interfaces/horariointerface';
 import { HorarioService } from 'src/app/services/horario.service';
 
 @Component({
@@ -60,7 +59,7 @@ export class LoginPage implements AfterViewInit {
   }
 
   /* validado en bruto usuarios 'malcom', 'nicolas', contraseña '123', donde se muestra un */
-  async ingresar(page){
+  async ingresar(){
 
     const loading = await this.loadingController.create({
       cssClass: 'my-custom-class',
@@ -86,11 +85,15 @@ export class LoginPage implements AfterViewInit {
     } else if (this.user.usuario === login.username && this.user.pass === login.password) {
       localStorage.setItem('usuario',login.nombre);
       localStorage.setItem('ingresado','true');
-      this.navCtrl.navigateRoot(page);
+      this.navCtrl.navigateRoot(['/home']);
     }
   }
 
   guardarUsuario() {
     console.log(this.guardado);
+  }
+
+  submit() {
+    console.log('ingresado con exito');
   }
 }
