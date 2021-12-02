@@ -57,8 +57,6 @@ export class LoginPage implements AfterViewInit {
   recovery(page){
     this.router.navigate(page);
   }
-
-  /* validado en bruto usuarios 'malcom', 'nicolas', contraseña '123', donde se muestra un */
   async ingresar(){
 
     const loading = await this.loadingController.create({
