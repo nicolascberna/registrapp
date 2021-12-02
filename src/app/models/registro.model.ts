@@ -18,7 +18,7 @@ export class Registro {
     private tipoRegistro(): void {
 
         const ini = this.text.substr(0,4);
-        console.log(ini);
+        //console.log(ini);
         switch (ini) {
             case 'http':
                 this.type = 'http';

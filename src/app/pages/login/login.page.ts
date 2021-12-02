@@ -48,9 +48,9 @@ export class LoginPage implements AfterViewInit {
   ionViewWillEnter() {
     this.horarioService.getUser().subscribe(resp=>
       {
-        console.log('usuario', resp);
+        //console.log('usuario', resp);
         this.usuario = resp;
-        console.log(this.usuario);
+        //console.log(this.usuario);
       });
   }
 
@@ -88,7 +88,7 @@ export class LoginPage implements AfterViewInit {
   }
 
   guardarUsuario() {
-    console.log(this.guardado);
+    //console.log(this.guardado);
   }
 
   submit() {
